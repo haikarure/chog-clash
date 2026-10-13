@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-13T19:50:05.826572+00:00",
+  "frontend": {
+    "url": "https://chog-clash-two.vercel.app",
+    "deploymentId": "dpl_34eaYqSbxXkDHq4sCpadezgoSYvk",
+    "deploymentUrl": "https://chog-clash-fnpy8daxl-haikarures-projects.vercel.app",
+    "account": "haikarure",
+    "scope": "haikarures-projects",
+    "state": "READY"
+  },
+  "backend": {
+    "origin": "https://chog-clash-backend-production.up.railway.app",
+    "deploymentId": "fe083414-2f07-4704-9215-52fb072d2cf2",
+    "state": "SUCCESS",
+    "workspace": "haikarure's Projects",
+    "region": "asia-southeast1-eqsg3a",
+    "replicas": 1,
+    "volumeMount": "/data"
+  },
+  "contracts": {
+    "cup": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+    "paidDuel": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+    "chainId": 10143,
+    "sourceVerified": true
+  },
+  "runtimeVersion": "c5d725db0c7a",
+  "publicTestnetPrizesEnabled": true,
+  "localGameServerRequired": false,
+  "actualSubmissionPerformed": false
+}

@@ -1,0 +1,25 @@
+{
+  "evidenceType": "Read-only capture of deployed public site and verified onchain reports; earlier live fight/payment capture uses automated clients",
+  "segments": [
+    {
+      "name": "landing",
+      "seconds": 1.425
+    },
+    {
+      "name": "paid-terms",
+      "seconds": 14.172
+    },
+    {
+      "name": "paid-transfers",
+      "seconds": 19.259
+    },
+    {
+      "name": "cup-bracket",
+      "seconds": 30.441
+    },
+    {
+      "name": "cup-transfers",
+      "seconds": 38.622
+    }
+  ]
+}

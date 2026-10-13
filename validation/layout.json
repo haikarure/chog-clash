@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "roster": 12,
+      "places": 5,
+      "controls_fit": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "roster": 12,
+      "places": 5,
+      "controls_fit": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "roster": 12,
+      "places": 5,
+      "controls_fit": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "roster": 12,
+      "places": 5,
+      "controls_fit": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "roster": 12,
+      "places": 5,
+      "controls_fit": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "roster": 12,
+      "places": 5,
+      "controls_fit": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "roster": 12,
+      "places": 5,
+      "controls_fit": true
+    }
+  ],
+  "errors": [],
+  "http_errors": [],
+  "versus_showcases": "Independent player/rival previews, player lock, explicit confirm, mirror match and Back passed",
+  "keyboard_menu": "Arrow/WASD grid navigation, Enter confirm/start passed",
+  "settings_preview_back": "passed",
+  "shared_motion_preference": "Landing pause, game settings, reload and return to landing passed; system reduce disables motion",
+  "touch_layout": "Four actions and d-pad fit at 844\u00d7390 and 740\u00d7360",
+  "reduced_motion": "passed"
+}

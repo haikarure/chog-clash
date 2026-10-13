@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "verifiedAt": "2026-10-13T19:29:00.103147+00:00",
+  "baseUrl": "https://chog-clash-two.vercel.app",
+  "socketOrigins": [
+    "wss://chog-clash-backend-production.up.railway.app"
+  ],
+  "evidenceType": "Chromium mobile emulation with landscape iframe",
+  "roomQuerySyncedToParent": true,
+  "reloadKeepsHostSeat": true,
+  "exitClearsParentRoomQuery": true,
+  "errors": []
+}

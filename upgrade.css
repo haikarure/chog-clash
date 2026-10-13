@@ -1,0 +1,56 @@
+/* Post-landing readability and interaction upgrades. Landing uses its own CSS. */
+:root{--text-primary:#211827;--text-secondary:#59346e;--p1:#56ccff;--cpu:#ff674f;--danger:#bf283c;--counter:#26775b;--impact:#ffe13b;--hud-scale:1}
+.combat-header{width:min(980px,calc(100% - 160px));top:18px;gap:18px;padding:14px 18px}
+.name-row h1,.name-row h2{font-size:calc(21px * var(--hud-scale));font-family:var(--display);letter-spacing:.7px}
+.class-tag,.player-tag,.bar-caption,.mode-kicker{font-size:12px}
+#player-title,#enemy-title,.fighter-mark>span,.class-tag{display:none}
+.bar-caption{font-size:calc(14px * var(--hud-scale));margin-top:5px}
+.life-track{height:15px;background:#45324d}
+.life-track:after{content:'';position:absolute;left:50%;top:0;height:100%;border-left:1px solid #21182766}
+.reserve-fill{display:none}
+.round-wins{font-size:16px;color:#67269d}
+.mode-kicker{letter-spacing:.3px}.match-rule{font-size:13px}.match-clock{font-size:42px}
+.match-actions button{width:44px;height:44px}
+.skill-name{font-size:calc(14px * var(--hud-scale));max-width:112px}.skill-art kbd{font-size:11px;line-height:15px}
+.skill-card{min-width:145px;max-width:165px;min-height:54px}.deck-heading{font-size:12px}
+.skill-card.on-cooldown{opacity:.85}.cooldown-label{position:absolute;right:5px;bottom:4px;padding:2px 5px;background:var(--ink);color:var(--paper);font:700 12px ComicBody,sans-serif;z-index:2}
+.stage-sign>small,.stage-sign>span{font-size:12px}.stage-sign>small{display:none}
+.training-data{top:150px;transform:none;padding:12px;gap:8px}.training-data:before,.training-data>div>span,.training-data strong small,.reset-hint{font-size:12px}
+.combo-counter strong,.combo-counter small,#round-call small,.announcement{font-size:14px}
+.form-timer{font-size:12px}.cutin-kicker,.cutin-detail{font-size:13px}
+.setting-row{font-size:16px}.setting-row small{font-size:13px;line-height:1.4}.volume-row{font-size:15px;gap:12px}.volume-row input{min-width:0}
+dialog{max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}
+dialog select,dialog input[type=checkbox],dialog button{min-height:44px}.dialog-buttons button{font-size:14px}
+.controls-help{font-size:14px}.controls-help summary{min-height:44px;display:flex;align-items:center}.controls-help p{font-size:14px;line-height:1.6}
+body:not(.settings-training) #settings-panel .training-only{display:none}
+.binding-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.binding-grid button{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--paper);border:1px solid var(--ink);font-size:14px}
+.binding-grid kbd{font-size:13px}.lab-controls{display:flex;flex-wrap:wrap;gap:7px}.lab-controls button{padding:8px 12px;font-size:13px;border:1px solid var(--ink);background:var(--paper)}
+.voice-caption{position:fixed;z-index:11;left:50%;bottom:108px;transform:translateX(-50%);max-width:80vw;padding:7px 14px;background:#211827ed;color:var(--paper);border:1px solid #f8f0dd9e;font:700 15px/1.4 ComicBody,sans-serif;text-align:center;pointer-events:none}
+.in-menu .voice-caption{bottom:28px}.tutorial-card{position:absolute;z-index:4;left:50%;top:24%;transform:translateX(-50%);background:var(--paper);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:14px 18px;min-width:300px;max-width:80vw}
+.tutorial-card strong{font-size:20px}.tutorial-card p{font-size:15px;margin:7px 0}.tutorial-card button{min-height:44px;padding:8px 14px;border:1px solid var(--ink);background:var(--yellow);font-size:14px}
+.training-timeline{position:absolute;left:50%;bottom:125px;transform:translateX(-50%);z-index:3;background:#211827de;color:var(--paper);padding:7px 12px;max-width:75vw;font:700 13px/1.4 ComicBody,sans-serif;pointer-events:none}.in-versus .training-timeline,.in-menu .training-timeline{display:none}
+.house-nav button,.house-nav a,.difficulty-buttons button,.start-battle,.fullscreen-menu{min-height:44px}
+.dossier-moves div,.dossier-moves kbd,.dossier-moves span{font-size:14px}.dossier-heading span{font-size:12px;color:var(--text-secondary)}
+.collection-note{font-size:12px}.quiet-button,.house-back{min-height:44px;font-size:13px}
+.house-nav .is-active{color:var(--ink)}
+.hub-crew{grid-template-columns:110px minmax(0,1fr)170px}.hub-crew>.ready-pill{display:none}
+@media(max-width:1100px){.hub-crew{grid-template-columns:minmax(0,1fr)160px}.hub-crew>span:first-child{display:none}}
+@media(max-width:600px) and (min-height:601px){.hub-crew{grid-template-columns:1fr}.hub-crew>[data-cmd=lesson]{width:100%}}
+@media(max-height:600px){
+ .combat-header{top:10px;left:12px;transform:none;width:calc(100% - 132px);max-width:none;grid-template-columns:minmax(0,1fr) 55px minmax(0,1fr);padding:8px 10px;gap:8px}
+ .name-row h1,.name-row h2{font-size:calc(18px * var(--hud-scale))}.portrait-frame{width:32px;height:32px}.player-tag{display:none}
+ .bar-caption{font-size:12px}.life-track{height:10px}.fighter-mark{margin-top:3px}.round-wins{font-size:12px}.mode-kicker,.fighter-mark>span{display:none}.match-rule{font-size:12px}.match-clock{font-size:30px}
+ .match-actions{top:10px;right:10px;gap:6px}.match-actions button{width:44px;height:44px}.form-timers{top:92px}.form-timer{font-size:12px}
+ .skill-deck{padding:6px;bottom:10px}.deck-heading{display:none}.skill-card{min-width:105px;max-width:125px;grid-template-columns:32px 1fr;min-height:46px;gap:5px}.skill-art{width:32px;height:32px}.skill-name{font-size:12px}.skill-art kbd{font-size:10px;line-height:12px}
+ .training-data,.touch .training-data{top:90px;left:12px;min-width:100px;padding:7px;gap:5px}.training-data:before,.reset-hint,.training-data strong small{display:none}.training-data>div>span{font-size:11px}.training-data strong{font-size:20px}
+ .stage-sign{display:none}.voice-caption{bottom:67px;font-size:14px;padding:5px 10px}.touch .voice-caption{bottom:18px}.training-timeline{bottom:67px;font-size:12px}.touch .training-timeline{bottom:95px;max-width:45vw;font-size:12px}
+ .tutorial-card{top:27%;padding:10px 14px;max-width:55vw}.tutorial-card strong{font-size:17px}.tutorial-card p{font-size:14px}
+ .cutin-kicker,.cutin-detail{font-size:12px}.cutin-detail{display:none}#round-call small,.combo-counter small{font-size:12px}
+ .setting-row{font-size:15px;padding:10px 0}.setting-row small{font-size:12px}.dialog-kicker{font-size:12px}
+ .dossier-moves div,.dossier-moves kbd,.dossier-moves span{font-size:12px}.dossier-heading span,.collection-note{display:none}
+ .difficulty-buttons button{font-size:12px}.difficulty-buttons small{display:none}.start-battle{font-size:14px}.house-nav button,.quiet-button{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.ultimate-cutin,.combo-counter{transition:none!important;animation:none!important}.voice-caption{transform:translateX(-50%)}}
+
+#controls-current{white-space:pre-line}.showcase-name>span,.map-pin strong{font-size:12px}.showcase-name p{font-size:13px;line-height:1.4}
+@media(max-height:600px){.showcase-name p{display:none}.showcase-name>span{font-size:11px}}

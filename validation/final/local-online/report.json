@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "date": "2026-10-13",
+  "baseUrl": "http://localhost:5198",
+  "evidenceType": "automated Chromium browser contexts; no physical device or human playtest",
+  "checks": {
+    "creationWaitsForSessionAndSdk": true,
+    "inputMovementDamageTransformAndSummon": true,
+    "touchDpadSkillAndUltimateInLiveRoom": true,
+    "settingsDoNotPauseOpponent": true,
+    "reloadRejoinsSameSeat": true,
+    "twoVotesStartFreshRematch": true,
+    "cupHostInvitesAndUnreadyLock": true,
+    "touchRoster": true,
+    "landing12HashesUnchanged": true
+  },
+  "errors": [],
+  "httpErrors": [],
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "roster": 12,
+      "targetsAtLeast44": true,
+      "horizontalFit": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "roster": 12,
+      "targetsAtLeast44": true,
+      "horizontalFit": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "roster": 12,
+      "targetsAtLeast44": true,
+      "horizontalFit": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "roster": 12,
+      "targetsAtLeast44": true,
+      "horizontalFit": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "roster": 12,
+      "targetsAtLeast44": true,
+      "horizontalFit": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "roster": 12,
+      "targetsAtLeast44": true,
+      "horizontalFit": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "roster": 12,
+      "targetsAtLeast44": true,
+      "horizontalFit": true
+    }
+  ],
+  "correctionsPx": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

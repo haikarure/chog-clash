@@ -1,0 +1,18 @@
+{
+  "generatedFrom": "Attributed MIT kit/combat source",
+  "hashes": {
+    "fenr.js": "f9baaa3ce0b39bf6c9a2fab97e47856b4326ee6da0238b0a25c698e6cc1d288d",
+    "mira.js": "bd1edd415a8d2635fa144481eb161f9feff9960e78fa3a58f7e03e4f508570d7",
+    "cora.js": "98b02c4da76500472667709ecc75df6e99fea6dcd395dc8df0aed79a6b147d97",
+    "naja.js": "9782e47224aa4829ef6c324f4a27cd5b870b9520721ca16c325ec12f9f04ce33",
+    "haldor.js": "bbb2623d3115861d2977cfecf162726c930089f6a01d15ef08cfd23ce13d21bb",
+    "zanni.js": "c92fc162a468d882c3de79bc0ac410e37f67069741a7ae503dbcbd98c0646462",
+    "isolde.js": "ecee60b9c94559f30eca59ee6cbe720095d71b9bfef2c5d4c7f495ffdb946470",
+    "rhea.js": "5cc8b2a0f5e8a0889f27f2364ed194ff7e8567e9be72bd69f085ab087b4b9483",
+    "solan.js": "9a3cc80110507413799913b15eff3166706ff833718ea916a6801905d0aa1793",
+    "nib.js": "54d089e4059e9b24b75609a4cf3599bbe790fa9724d041fb0e987363563525fa",
+    "edda.js": "0c46d3843921de1fd8241694318046225e28794a07e3ad003133e9da99e236bd",
+    "game.js": "723b86b841c1b73644eea9bfed7f46a5453aa69bd09df763898b3768269abc10"
+  },
+  "ownerHitMetadata": "P2 hit metadata normalized to P1 counterpart; symmetric physics in core.mjs"
+}

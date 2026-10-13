@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-13T13:03:50.865Z",
+  "chainId": 10143,
+  "status": "PASS",
+  "scope": "Actual Monad testnet AUSD; automated clients and surrender outcomes, not a four-human playtest",
+  "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+  "checks": [
+    "Live runtime, token, relay, signer, chain and decimals verified by backend",
+    "Sponsor remote-session SIWE and four independent recipient SIWE proofs verified",
+    "Actual 100 AUSD deposit recovered after backend restart with missing deposit hash; approval was reused",
+    "Three authoritative surrender results accepted onchain; actual AUSD Transfer events and balances prove 70/30 payout",
+    "Repeated relay polling does not pay twice",
+    "Cancelled funded Cup returned all 100 AUSD to sponsor; receipt, token transfer and final balance verified"
+  ],
+  "transactions": [
+    {
+      "label": "payout Cup approval",
+      "hash": "0x34336a4caba5666f06137a0f5f145823e7a7e28a4aaff70b676904528f37c834"
+    },
+    {
+      "label": "payout Cup deposit",
+      "hash": "0xa83ef1f891bdf931dfacf3a0e1dddc0f283d83902c76799e936b8aa5dda43793"
+    },
+    {
+      "label": "refund Cup approval",
+      "hash": "0x1da1d63b323ad3caa1decbd472f8c9f514f6d748d72b3c19c5a38ebfe42bbb14"
+    },
+    {
+      "label": "refund Cup deposit",
+      "hash": "0x666fb23cbbaebabbcefed57022c7670cc10d0789a554e68adc621970d47c583b"
+    },
+    {
+      "label": "sponsor cancellation",
+      "hash": "0x86bf68769fd98e5c64a38c8031dd0ed61ebe7e6d99061434f9f665de6c2a2459"
+    }
+  ],
+  "payoutCupId": "9d63a0aa-07c2-4da7-a76e-dc5b1eb89862",
+  "payouts": [
+    {
+      "recipient": "0x64632B12d1d15D768a43Bdf3fF3DaF04647CeCB0",
+      "amountUnits": "70000000",
+      "hash": "0x0177afc9a886f2bfa9c4eee6167767ca30dfcddeb217a1cb6b2bea38b6110a5f"
+    },
+    {
+      "recipient": "0x928862f0d11F4C05F43D47fa18D570a61CcbF37a",
+      "amountUnits": "30000000",
+      "hash": "0x715513c1b37c49ed9ff2b8c49a613a4b6b60ef141dfa487842ca478ad0c743a5"
+    }
+  ],
+  "relayTransactions": [
+    {
+      "kind": "lock",
+      "state": "confirmed",
+      "hash": "0xab8ccff2b66e33d8b95ee75fdc8bdb02f76b4a15fc8f68347e69b27ffbff2acd"
+    },
+    {
+      "kind": "result",
+      "state": "confirmed",
+      "hash": "0xcff8239900cf02eb00d0df1bcc3851f3cafdef383a641e602ee9edee63457ed2"
+    },
+    {
+      "kind": "result",
+      "state": "confirmed",
+      "hash": "0x4c4856c519cb79e3992aff81a9b5c933c3c8d3961f80dd20a77755c57fd360cd"
+    },
+    {
+      "kind": "result",
+      "state": "confirmed",
+      "hash": "0x546ce8994d0a847e704b487882801f442254a75c4adf2645662530f789f5e12d"
+    },
+    {
+      "kind": "withdraw",
+      "state": "paid",
+      "hash": "0x0177afc9a886f2bfa9c4eee6167767ca30dfcddeb217a1cb6b2bea38b6110a5f"
+    },
+    {
+      "kind": "withdraw",
+      "state": "paid",
+      "hash": "0x715513c1b37c49ed9ff2b8c49a613a4b6b60ef141dfa487842ca478ad0c743a5"
+    }
+  ],
+  "refundCupId": "01c09a2c-990b-4225-a24c-a18e8210f274",
+  "refund": {
+    "recipient": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+    "amountUnits": "100000000",
+    "hash": "0xfbd5efabe13e03b7ed7f5d53b8af044a3375c348ec608965ae326fb01c5585ab"
+  },
+  "completedAt": "2026-10-13T13:04:46.188Z"
+}

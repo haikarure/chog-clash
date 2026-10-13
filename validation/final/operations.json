@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-13T19:54:14.469Z",
+  "relay": "0x71EBcaF6dd37DCcAAdb1dD4986c70CA0BA97AC22",
+  "relayBalanceMON": "1.568855",
+  "faucetFunded": true,
+  "faucetHash": "0x595a8e2afee764fb446cb27ece9d6e168b247984f2827a16efa9401f39687542",
+  "paidEscrowBalanceAtomic": "0",
+  "scope": "Final demo gas funding and paid escrow balance; no raw keys or RPC credential disclosed"
+}

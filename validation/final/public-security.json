@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-13T19:30:00.799544+00:00",
+  "checks": [
+    {
+      "host": "https://chog-clash-two.vercel.app",
+      "path": "/server/.env",
+      "status": 404
+    },
+    {
+      "host": "https://chog-clash-two.vercel.app",
+      "path": "/server/paid-duels.mjs",
+      "status": 404
+    },
+    {
+      "host": "https://chog-clash-two.vercel.app",
+      "path": "/contracts/out/PaidDuelEscrow.sol/PaidDuelEscrow.json",
+      "status": 404
+    },
+    {
+      "host": "https://chog-clash-two.vercel.app",
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "host": "https://chog-clash-backend-production.up.railway.app",
+      "path": "/server/.env",
+      "status": 404
+    },
+    {
+      "host": "https://chog-clash-backend-production.up.railway.app",
+      "path": "/server/paid-duels.mjs",
+      "status": 404
+    },
+    {
+      "host": "https://chog-clash-backend-production.up.railway.app",
+      "path": "/contracts/out/PaidDuelEscrow.sol/PaidDuelEscrow.json",
+      "status": 404
+    },
+    {
+      "host": "https://chog-clash-backend-production.up.railway.app",
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "origin": "https://chog-clash-two.vercel.app",
+      "status": 200
+    },
+    {
+      "origin": "https://chog-clash-backend-production.up.railway.app",
+      "status": 200
+    },
+    {
+      "origin": "https://chog-clash-fnpy8daxl-haikarures-projects.vercel.app",
+      "status": 200
+    },
+    {
+      "origin": "https://chog-clash-two.vercel.app.evil.example",
+      "status": 403
+    },
+    {
+      "origin": "https://foreign.example",
+      "status": 403
+    }
+  ],
+  "publicConfig": {
+    "ruleset": "house-cup-online-v1",
+    "buildHash": "0xb4ba050a3bdc4d6d0c6a155c007cdede12944ca27924375707a22ab5d34bf740",
+    "online": true,
+    "settlement": {
+      "enabled": true,
+      "mode": "testnet",
+      "label": "Monad testnet \u00b7 AUSD test token",
+      "chainId": 10143,
+      "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+      "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "pool": "100",
+      "split": [
+        70,
+        30
+      ],
+      "reason": null
+    },
+    "paidDuel": {
+      "enabled": true,
+      "chainId": 10143,
+      "contract": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "entry": "1",
+      "pool": "2",
+      "feeBps": 500,
+      "winnerAward": "1900000",
+      "treasury": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+      "label": "Monad testnet \u00b7 AUSD test token",
+      "reason": null
+    },
+    "quickMatch": true,
+    "roster": [
+      "yot",
+      "mamio",
+      "benja",
+      "toad",
+      "ping",
+      "novee",
+      "tonashiro",
+      "bigchog",
+      "rogue",
+      "tabsu",
+      "venty",
+      "cookie"
+    ]
+  }
+}

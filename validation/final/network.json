@@ -1,0 +1,221 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-13T19:21:14.606Z",
+  "evidenceType": "Automated bot clients over a real localhost WebSocket proxy; no browser prediction, physical devices or human playtest",
+  "technique": "Seeded uniform delay per direction, ordered delivery; 1% Bernoulli loss on input/snapshot application messages only. Handshake, Ready, ping/pong and control messages retained. This is application-message loss, not TCP/kernel packet loss.",
+  "profiles": [
+    {
+      "targetRttMs": 100,
+      "oneWayJitterRangeMs": [
+        -15,
+        15
+      ],
+      "lossProbability": 0.01,
+      "frames": 117893,
+      "lossEligible": 114955,
+      "dropped": 1120
+    },
+    {
+      "targetRttMs": 200,
+      "oneWayJitterRangeMs": [
+        -15,
+        15
+      ],
+      "lossProbability": 0.01,
+      "frames": 12819,
+      "lossEligible": 12501,
+      "dropped": 120,
+      "stress": true
+    }
+  ],
+  "matches": [
+    {
+      "index": 0,
+      "profileRttMs": 100,
+      "character": "yot",
+      "matchId": "137491a1-b431-4248-8a77-7d784b2ac61b",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 2.0120979999919655,
+      "observedRttMedianMs": 101.97213099999863,
+      "observedRttP95Ms": 121.1175860000003,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4365
+    },
+    {
+      "index": 1,
+      "profileRttMs": 100,
+      "character": "mamio",
+      "matchId": "4e3477e7-61bd-4e1d-9e97-af72860e6f73",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 2.0429580000054557,
+      "observedRttMedianMs": 103.11018999999942,
+      "observedRttP95Ms": 122.20726999999897,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4834
+    },
+    {
+      "index": 3,
+      "profileRttMs": 100,
+      "character": "toad",
+      "matchId": "20f1226c-2f08-4e06-b30b-f9fe59314c84",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 0.5288170000130776,
+      "observedRttMedianMs": 101.83849300000293,
+      "observedRttP95Ms": 121.9384710000013,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4370
+    },
+    {
+      "index": 2,
+      "profileRttMs": 100,
+      "character": "benja",
+      "matchId": "35d230f4-646d-40a5-8540-713f3d27f438",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 0.5847739999881014,
+      "observedRttMedianMs": 100.77836700000626,
+      "observedRttP95Ms": 122.15744400001131,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4506
+    },
+    {
+      "index": 4,
+      "profileRttMs": 100,
+      "character": "ping",
+      "matchId": "1c9a98fa-f924-4d52-9447-840ef90778c4",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 0.7007359999988694,
+      "observedRttMedianMs": 101.04050699999789,
+      "observedRttP95Ms": 123.59712699998636,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 3595
+    },
+    {
+      "index": 5,
+      "profileRttMs": 100,
+      "character": "novee",
+      "matchId": "b322e17f-ebe8-4103-9a6d-2f7ce48948ca",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 2.1514310000056867,
+      "observedRttMedianMs": 102.84088200001861,
+      "observedRttP95Ms": 122.44552800001111,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4876
+    },
+    {
+      "index": 7,
+      "profileRttMs": 100,
+      "character": "bigchog",
+      "matchId": "ac37b192-13fb-4748-953c-38dcf82e236d",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 0.5974999999743886,
+      "observedRttMedianMs": 104.72781000001123,
+      "observedRttP95Ms": 118.83786100003636,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 3115
+    },
+    {
+      "index": 6,
+      "profileRttMs": 100,
+      "character": "tonashiro",
+      "matchId": "02dd84cb-b978-4458-a0ed-208132a14220",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 1.9968479999806732,
+      "observedRttMedianMs": 99.61638600000879,
+      "observedRttP95Ms": 120.23713500000304,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 3643
+    },
+    {
+      "index": 8,
+      "profileRttMs": 100,
+      "character": "rogue",
+      "matchId": "2436cfc3-ccbf-4e3d-9d9a-07801419c032",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 0.7168459999957122,
+      "observedRttMedianMs": 102.55673499999102,
+      "observedRttP95Ms": 119.29588600003626,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4225
+    },
+    {
+      "index": 9,
+      "profileRttMs": 100,
+      "character": "tabsu",
+      "matchId": "981e56c4-ffa9-4277-9df9-c70259ef1442",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 0.726569999998901,
+      "observedRttMedianMs": 101.05950800003484,
+      "observedRttP95Ms": 119.11057700001402,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4426
+    },
+    {
+      "index": 10,
+      "profileRttMs": 200,
+      "character": "cookie",
+      "matchId": "449cc7ac-c30b-40c4-b90e-58f76702a2a6",
+      "outcome": "Finished",
+      "wins": [
+        2,
+        0
+      ],
+      "serverStepP95Ms": 1.0832309999968857,
+      "observedRttMedianMs": 201.34592399996473,
+      "observedRttP95Ms": 223.704813999997,
+      "clientsAgree": true,
+      "replayHashMatches": true,
+      "inputFrames": 4555
+    }
+  ],
+  "completedAt": "2026-10-13T19:28:45.139Z"
+}

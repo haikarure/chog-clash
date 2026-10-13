@@ -1,0 +1,222 @@
+{
+  "downloaded_on": "2026-10-11",
+  "reference_commit": "1ac9751f86569b6b8c177994d5074a0d85faf94d",
+  "sources": [
+    {
+      "id": "yot",
+      "name": "Yot",
+      "url": "https://www.chog.xyz/team/yot.png",
+      "path": "assets/chog/reference/yot.png",
+      "sha256": "fcc3cf7a5f958300c0a14612ee9120940a6c79ef63ca22db63abf4e3291b7c8a",
+      "size": [
+        765,
+        1128
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        765,
+        1128
+      ]
+    },
+    {
+      "id": "mamio",
+      "name": "Mamio",
+      "url": "https://www.chog.xyz/team/mamio.png",
+      "path": "assets/chog/reference/mamio.png",
+      "sha256": "49cf87f6dcc43a3bbf4fcd87b13c743362c873987177ea0934e4c8742646f60f",
+      "size": [
+        834,
+        1080
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        833,
+        1080
+      ]
+    },
+    {
+      "id": "benja",
+      "name": "Benja",
+      "url": "https://www.chog.xyz/team/benja.png",
+      "path": "assets/chog/reference/benja.png",
+      "sha256": "959e708c5639400837c3c1aade6e925ed4172277b0044e0e523e792699e93d9b",
+      "size": [
+        801,
+        1134
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        800,
+        1134
+      ]
+    },
+    {
+      "id": "toad",
+      "name": "Toad",
+      "url": "https://www.chog.xyz/team/toad.png",
+      "path": "assets/chog/reference/toad.png",
+      "sha256": "2ad8020dde1c19cace9b67c5efd170595dd3cd16716744e63f88622398108eb0",
+      "size": [
+        666,
+        849
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        666,
+        849
+      ]
+    },
+    {
+      "id": "ping",
+      "name": "PingPingPingPing",
+      "url": "https://www.chog.xyz/team/ping.png",
+      "path": "assets/chog/reference/ping.png",
+      "sha256": "b443f524b658084a122758eb2233feb650ca16b3ee4fcdfe445cea36db6685e9",
+      "size": [
+        720,
+        768
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        720,
+        768
+      ]
+    },
+    {
+      "id": "novee",
+      "name": "Novee",
+      "url": "https://www.chog.xyz/team/novee.png",
+      "path": "assets/chog/reference/novee.png",
+      "sha256": "dfbafd988bb420ece38921d3705dc3467149dbccb2f86d072d6dbfb5218be2c6",
+      "size": [
+        771,
+        990
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        771,
+        990
+      ]
+    },
+    {
+      "id": "tonashiro",
+      "name": "Tonashiro",
+      "url": "https://www.chog.xyz/team/shiro.png",
+      "path": "assets/chog/reference/tonashiro.png",
+      "sha256": "35611e96ce84a333fc575ccc066e7973ebfbc76725d2896109584579e02692a1",
+      "size": [
+        702,
+        804
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        1,
+        0,
+        701,
+        804
+      ]
+    },
+    {
+      "id": "bigchog",
+      "name": "Bigchog",
+      "url": "https://www.chog.xyz/team/bigchog.png",
+      "path": "assets/chog/reference/bigchog.png",
+      "sha256": "a720f93756f74e73bdcb2de6c097c87a69825c48c40391c102a2e2af2bc2f99c",
+      "size": [
+        1311,
+        1935
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        1,
+        1311,
+        1935
+      ]
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "url": "https://www.chog.xyz/team/rogue.png",
+      "path": "assets/chog/reference/rogue.png",
+      "sha256": "b37853053641387461b24a5a0af5fc23151c4b2fc06001e9fbab60dbbfbf5f47",
+      "size": [
+        1191,
+        1104
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1191,
+        1104
+      ]
+    },
+    {
+      "id": "tabsu",
+      "name": "Tabsu",
+      "url": "https://www.chog.xyz/team/tabsu.png",
+      "path": "assets/chog/reference/tabsu.png",
+      "sha256": "0a1e163b8ca1e7388b75811af4a30f277aad7dfab1dd936ab4069574c9fe0d53",
+      "size": [
+        822,
+        915
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        822,
+        915
+      ]
+    },
+    {
+      "id": "venty",
+      "name": "Venty",
+      "url": "https://www.chog.xyz/team/venti.png",
+      "path": "assets/chog/reference/venty.png",
+      "sha256": "12352a9bc74539c1fb594aad1d3e0cc022e1c64e7ee7c325edc75a84824dfde9",
+      "size": [
+        663,
+        873
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        663,
+        873
+      ]
+    },
+    {
+      "id": "cookie",
+      "name": "Cookie",
+      "url": "https://www.chog.xyz/team/cookie.png",
+      "path": "assets/chog/reference/cookie.png",
+      "sha256": "271a3fe9f3c8dad4cd6704332f0e0599bb0268a90ccda4bee70198b2f534c400",
+      "size": [
+        1482,
+        1080
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        1,
+        0,
+        1481,
+        1080
+      ]
+    }
+  ]
+}

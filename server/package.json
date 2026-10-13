@@ -1,0 +1,31 @@
+{
+  "name": "chog-house-cup-server",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --experimental-strip-types index.ts",
+    "test": "node --test --test-force-exit test/*.test.mjs",
+    "build:client": "node tools/build-ports.mjs && node tools/build-client.mjs",
+    "build:contracts": "forge build --root ../contracts",
+    "test:contracts": "forge test --root ../contracts",
+    "deploy:testnet": "node --env-file-if-exists=.env tools/deploy-escrow.mjs",
+    "setup:testnet-roles": "node --env-file-if-exists=.env tools/setup-testnet-roles.mjs",
+    "prepare:testnet": "node --env-file-if-exists=.env tools/prepare-deployment.mjs",
+    "verify:testnet": "node --env-file-if-exists=.env tools/verify-deployment.mjs"
+  },
+  "dependencies": {
+    "@colyseus/core": "0.18.9",
+    "@colyseus/ws-transport": "0.18.4",
+    "@colyseus/sdk": "0.18.5",
+    "viem": "2.57.4",
+    "@openzeppelin/contracts": "5.4.0",
+    "express": "5.3.0"
+  },
+  "devDependencies": {
+    "acorn": "8.15.0"
+  }
+}

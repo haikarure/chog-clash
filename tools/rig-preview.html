@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>CHOG · animation rig preview</title>
+<style>
+body{background:#eee8f3;color:#362545;margin:0;padding:22px;font:15px sans-serif}header{display:flex;gap:20px;align-items:center;margin-bottom:20px}h1{font-size:22px}select{padding:10px;border-radius:8px}main{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}article{background:white;border-radius:12px;text-align:center}h2{font-size:15px;margin:12px 0 0}canvas{width:100%;height:230px;object-fit:contain}article small{display:block;padding-bottom:12px;color:#856397}
+</style>
+<header><h1>CHOG character rigs</h1><select id="state"><option>idle</option><option>walk</option><option>run</option><option>jump</option><option>doublejump</option><option>crouch</option><option>attack1</option><option>attack2</option><option>attack3</option><option>skill1</option><option>skill2</option><option>ultimate</option><option>hurt</option><option>down</option><option>recover</option></select><label><input id="animated" type="checkbox" checked> Animate frames</label></header>
+<main></main><script src="chog-art.js"></script><script>
+window.ART_READY=ChogArt.load().then(()=>{
+  const cards=Object.keys(ChogArt.designs).map(id=>{const a=document.createElement('article');a.innerHTML='<h2>'+id+'</h2><canvas width="300" height="230"></canvas><small>'+ChogArt.designs[id].kit+' · rigged 2D animation</small>';document.querySelector('main').append(a);return{id,canvas:a.querySelector('canvas')};});
+  function draw(now){for(const {id,canvas} of cards){const c=canvas.getContext('2d');c.clearRect(0,0,300,230);const state=document.querySelector('#state').value,frame=document.querySelector('#animated').checked?Math.floor(now/150)%4:2;c.save();c.translate(150,216);ChogArt.render(c,id,state,frame,['jump','doublejump'].includes(state)?1:4);c.restore();}requestAnimationFrame(draw);}
+  requestAnimationFrame(draw);
+});
+</script></html>

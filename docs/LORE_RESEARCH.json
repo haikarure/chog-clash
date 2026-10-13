@@ -1,0 +1,138 @@
+{
+  "checked_on": "2026-10-11",
+  "purpose": "Research for CHOG game identity; no gameplay or PRD requirement changes applied",
+  "official_team_source": "https://www.chog.xyz/team",
+  "official_team_access_method": "Clicked Yot modal in rendered browser; extracted all 12 shared team entries from the public team-page JavaScript",
+  "official_team_data_source": "https://www.chog.xyz/_next/static/chunks/02a0y~gwfp0i..js",
+  "official_team_data_sha256": "4664fe61ec5f95aa99cdfe9b080ecf291c908c6202ba7249309dc4a473aa1738",
+  "profiles": [
+    {
+      "name": "Yot",
+      "role": "Collab Manager",
+      "twitter": "https://x.com/Yotdanz"
+    },
+    {
+      "name": "Mamio",
+      "role": "Community team",
+      "twitter": "https://x.com/realmamio"
+    },
+    {
+      "name": "Benja",
+      "role": "Co-Founder",
+      "twitter": "https://x.com/1stBenjaNAD"
+    },
+    {
+      "name": "Toad",
+      "role": "Co-Founder",
+      "twitter": "https://x.com/Toadster69"
+    },
+    {
+      "name": "PingPingPingPing",
+      "role": "Chog Police",
+      "twitter": "https://x.com/0x_PingPing"
+    },
+    {
+      "name": "Novee",
+      "role": "Developer",
+      "twitter": "https://x.com/Novee_VeenoX"
+    },
+    {
+      "name": "Tonashiro",
+      "role": "Developer",
+      "twitter": "https://x.com/tonashiro_"
+    },
+    {
+      "name": "Bigchog",
+      "role": "Community Team",
+      "twitter": "https://x.com/bigchogenergy1"
+    },
+    {
+      "name": "Rogue",
+      "role": "Artist",
+      "twitter": "https://x.com/rogue110797"
+    },
+    {
+      "name": "Tabsu",
+      "role": "Chog Police",
+      "twitter": "https://x.com/tabsuuu"
+    },
+    {
+      "name": "Venty",
+      "role": "Community Team",
+      "twitter": "https://x.com/venti_nft"
+    },
+    {
+      "name": "Cookie",
+      "role": "Community Team",
+      "twitter": "https://x.com/hatwifcookie"
+    }
+  ],
+  "official_film": {
+    "url": "https://www.youtube.com/watch?v=P8NSHkL7Fxs",
+    "title": "Chog Lore",
+    "channel": "Chog",
+    "channel_id": "UCetinlbNkxemZ-BCcUHowOw",
+    "duration_seconds": 130,
+    "published_date": "2025-09-29",
+    "review_method": "Downloaded public auto captions and sampled 18 frames locally; no external video-analysis service",
+    "caption_caveat": "Automatic captions misrecognize some proper names"
+  },
+  "scene_observations": [
+    {
+      "time_seconds": 0,
+      "context": "small house",
+      "proposed_arena_name": "Ray J's House",
+      "name_status": "game proposal"
+    },
+    {
+      "time_seconds": 54,
+      "context": "Bill Monday graffiti scene",
+      "proposed_arena_name": "CWO Alley",
+      "name_status": "game proposal"
+    },
+    {
+      "time_seconds": 64,
+      "context": "House Cup trophy hall",
+      "proposed_arena_name": "House Cup Hall",
+      "name_status": "game proposal"
+    },
+    {
+      "time_seconds": 79,
+      "context": "urban street and CWO billboard",
+      "proposed_arena_name": "Neon CWO Street",
+      "name_status": "game proposal"
+    },
+    {
+      "time_seconds": 84,
+      "context": "purple crowd rally stage",
+      "proposed_arena_name": "CWO Rally",
+      "name_status": "game proposal"
+    },
+    {
+      "time_seconds": 91,
+      "context": "Global Alert news studio",
+      "proposed_arena_name": "Global Alert Studio",
+      "name_status": "game proposal"
+    },
+    {
+      "time_seconds": 67,
+      "context": "drawing room",
+      "proposed_arena_name": "Sketch Room",
+      "name_status": "game proposal"
+    }
+  ],
+  "historical_claim_requiring_primary_archive": {
+    "claim": "RayJ created the mascot on 2023-12-10; Monald is an earlier name",
+    "source": "https://chicoarroz.com/monanimals-monad/",
+    "status": "community secondary account; original Discord archive unavailable"
+  },
+  "unverified": [
+    "individual fictional birthplaces",
+    "individual birth dates",
+    "official fighting abilities",
+    "a complete named world map",
+    "equivalence of Monadverse stories to CHOG project canon"
+  ],
+  "proposals_are_canon": false,
+  "current_game_changed": false
+}

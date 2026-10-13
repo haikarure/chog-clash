@@ -1,0 +1,1214 @@
+{
+  "files": 302,
+  "bytes": 28000441,
+  "list": [
+    {
+      "file": "announcer.js",
+      "bytes": 3197
+    },
+    {
+      "file": "chog-adapter.js",
+      "bytes": 762
+    },
+    {
+      "file": "chog-roster.js",
+      "bytes": 3334
+    },
+    {
+      "file": "comic.css",
+      "bytes": 37682
+    },
+    {
+      "file": "comic.js",
+      "bytes": 13483
+    },
+    {
+      "file": "cora.js",
+      "bytes": 2271
+    },
+    {
+      "file": "edda.js",
+      "bytes": 2796
+    },
+    {
+      "file": "fenr.js",
+      "bytes": 2903
+    },
+    {
+      "file": "game.js",
+      "bytes": 185036
+    },
+    {
+      "file": "haldor.js",
+      "bytes": 2642
+    },
+    {
+      "file": "house-base.css",
+      "bytes": 2546
+    },
+    {
+      "file": "house-combat.css",
+      "bytes": 25104
+    },
+    {
+      "file": "house-menu.css",
+      "bytes": 34796
+    },
+    {
+      "file": "house-menu.js",
+      "bytes": 21491
+    },
+    {
+      "file": "index.html",
+      "bytes": 18249
+    },
+    {
+      "file": "isolde.js",
+      "bytes": 2600
+    },
+    {
+      "file": "match.js",
+      "bytes": 4509
+    },
+    {
+      "file": "mira.js",
+      "bytes": 2023
+    },
+    {
+      "file": "mobile.html",
+      "bytes": 4172
+    },
+    {
+      "file": "naja.js",
+      "bytes": 2476
+    },
+    {
+      "file": "nib.js",
+      "bytes": 2489
+    },
+    {
+      "file": "online-launcher.js",
+      "bytes": 645
+    },
+    {
+      "file": "play.html",
+      "bytes": 15481
+    },
+    {
+      "file": "preload.js",
+      "bytes": 2796
+    },
+    {
+      "file": "rhea.js",
+      "bytes": 2620
+    },
+    {
+      "file": "solan.js",
+      "bytes": 2665
+    },
+    {
+      "file": "sw.js",
+      "bytes": 1749
+    },
+    {
+      "file": "touch.js",
+      "bytes": 4793
+    },
+    {
+      "file": "upgrade.css",
+      "bytes": 7014
+    },
+    {
+      "file": "zanni.js",
+      "bytes": 2763
+    },
+    {
+      "file": "assets/chog/arenas/config.js",
+      "bytes": 162
+    },
+    {
+      "file": "assets/chog/arenas/cwo-alley.webp",
+      "bytes": 314674
+    },
+    {
+      "file": "assets/chog/arenas/cwo-rally.webp",
+      "bytes": 227364
+    },
+    {
+      "file": "assets/chog/arenas/house-cup.webp",
+      "bytes": 205804
+    },
+    {
+      "file": "assets/chog/arenas/neon-street.webp",
+      "bytes": 299606
+    },
+    {
+      "file": "assets/chog/arenas/rayj-house.webp",
+      "bytes": 195274
+    },
+    {
+      "file": "assets/chog/audio/ambience-cwo-alley.mp3",
+      "bytes": 193148
+    },
+    {
+      "file": "assets/chog/audio/ambience-cwo-rally.mp3",
+      "bytes": 193148
+    },
+    {
+      "file": "assets/chog/audio/ambience-house-cup.mp3",
+      "bytes": 193148
+    },
+    {
+      "file": "assets/chog/audio/ambience-neon-street.mp3",
+      "bytes": 193148
+    },
+    {
+      "file": "assets/chog/audio/ambience-rayj-house.mp3",
+      "bytes": 193148
+    },
+    {
+      "file": "assets/chog/audio/benja-select.mp3",
+      "bytes": 7724
+    },
+    {
+      "file": "assets/chog/audio/benja-ultimate.mp3",
+      "bytes": 9260
+    },
+    {
+      "file": "assets/chog/audio/benja-wins.mp3",
+      "bytes": 9260
+    },
+    {
+      "file": "assets/chog/audio/bigchog-select.mp3",
+      "bytes": 8108
+    },
+    {
+      "file": "assets/chog/audio/bigchog-ultimate.mp3",
+      "bytes": 19436
+    },
+    {
+      "file": "assets/chog/audio/bigchog-wins.mp3",
+      "bytes": 10028
+    },
+    {
+      "file": "assets/chog/audio/cookie-select.mp3",
+      "bytes": 6572
+    },
+    {
+      "file": "assets/chog/audio/cookie-ultimate.mp3",
+      "bytes": 10028
+    },
+    {
+      "file": "assets/chog/audio/cookie-wins.mp3",
+      "bytes": 8492
+    },
+    {
+      "file": "assets/chog/audio/double_ko.mp3",
+      "bytes": 11372
+    },
+    {
+      "file": "assets/chog/audio/draw.mp3",
+      "bytes": 6380
+    },
+    {
+      "file": "assets/chog/audio/fight.mp3",
+      "bytes": 6188
+    },
+    {
+      "file": "assets/chog/audio/house-cup-battle.mp3",
+      "bytes": 781964
+    },
+    {
+      "file": "assets/chog/audio/house-cup-final.mp3",
+      "bytes": 781964
+    },
+    {
+      "file": "assets/chog/audio/house-cup-groove.mp3",
+      "bytes": 781964
+    },
+    {
+      "file": "assets/chog/audio/ko.mp3",
+      "bytes": 9260
+    },
+    {
+      "file": "assets/chog/audio/mamio-select.mp3",
+      "bytes": 8108
+    },
+    {
+      "file": "assets/chog/audio/mamio-ultimate.mp3",
+      "bytes": 11372
+    },
+    {
+      "file": "assets/chog/audio/mamio-wins.mp3",
+      "bytes": 9644
+    },
+    {
+      "file": "assets/chog/audio/manifest.js",
+      "bytes": 3979
+    },
+    {
+      "file": "assets/chog/audio/novee-select.mp3",
+      "bytes": 7532
+    },
+    {
+      "file": "assets/chog/audio/novee-ultimate.mp3",
+      "bytes": 11180
+    },
+    {
+      "file": "assets/chog/audio/novee-wins.mp3",
+      "bytes": 9068
+    },
+    {
+      "file": "assets/chog/audio/ping-select.mp3",
+      "bytes": 13484
+    },
+    {
+      "file": "assets/chog/audio/ping-ultimate.mp3",
+      "bytes": 14444
+    },
+    {
+      "file": "assets/chog/audio/ping-wins.mp3",
+      "bytes": 15788
+    },
+    {
+      "file": "assets/chog/audio/rogue-select.mp3",
+      "bytes": 6572
+    },
+    {
+      "file": "assets/chog/audio/rogue-ultimate.mp3",
+      "bytes": 7916
+    },
+    {
+      "file": "assets/chog/audio/rogue-wins.mp3",
+      "bytes": 8492
+    },
+    {
+      "file": "assets/chog/audio/round_1.mp3",
+      "bytes": 7532
+    },
+    {
+      "file": "assets/chog/audio/round_2.mp3",
+      "bytes": 8300
+    },
+    {
+      "file": "assets/chog/audio/round_3.mp3",
+      "bytes": 8492
+    },
+    {
+      "file": "assets/chog/audio/tabsu-select.mp3",
+      "bytes": 7724
+    },
+    {
+      "file": "assets/chog/audio/tabsu-ultimate.mp3",
+      "bytes": 13100
+    },
+    {
+      "file": "assets/chog/audio/tabsu-wins.mp3",
+      "bytes": 9260
+    },
+    {
+      "file": "assets/chog/audio/time_up.mp3",
+      "bytes": 7340
+    },
+    {
+      "file": "assets/chog/audio/toad-select.mp3",
+      "bytes": 6764
+    },
+    {
+      "file": "assets/chog/audio/toad-ultimate.mp3",
+      "bytes": 12908
+    },
+    {
+      "file": "assets/chog/audio/toad-wins.mp3",
+      "bytes": 8108
+    },
+    {
+      "file": "assets/chog/audio/tonashiro-select.mp3",
+      "bytes": 8876
+    },
+    {
+      "file": "assets/chog/audio/tonashiro-ultimate.mp3",
+      "bytes": 14444
+    },
+    {
+      "file": "assets/chog/audio/tonashiro-wins.mp3",
+      "bytes": 10988
+    },
+    {
+      "file": "assets/chog/audio/venty-select.mp3",
+      "bytes": 7532
+    },
+    {
+      "file": "assets/chog/audio/venty-ultimate.mp3",
+      "bytes": 10220
+    },
+    {
+      "file": "assets/chog/audio/venty-wins.mp3",
+      "bytes": 9260
+    },
+    {
+      "file": "assets/chog/audio/yot-select.mp3",
+      "bytes": 6380
+    },
+    {
+      "file": "assets/chog/audio/yot-ultimate.mp3",
+      "bytes": 9068
+    },
+    {
+      "file": "assets/chog/audio/yot-wins.mp3",
+      "bytes": 8492
+    },
+    {
+      "file": "assets/chog/effects/drone-config.js",
+      "bytes": 131
+    },
+    {
+      "file": "assets/chog/effects/partner-drone.webp",
+      "bytes": 5532
+    },
+    {
+      "file": "assets/chog/fighters/benja/manifest.js",
+      "bytes": 11756
+    },
+    {
+      "file": "assets/chog/fighters/benja/run/sprite-sheet-alpha.webp",
+      "bytes": 955858
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/cutin.webp",
+      "bytes": 54356
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/fx-crescent.webp",
+      "bytes": 8282
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/fx-impact.webp",
+      "bytes": 24198
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/fx-roar.webp",
+      "bytes": 13102
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/fx-sunburst.webp",
+      "bytes": 16166
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/icon-basic.webp",
+      "bytes": 12620
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/icon-skill1.webp",
+      "bytes": 4530
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/icon-skill2.webp",
+      "bytes": 5518
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/icon-ultimate.webp",
+      "bytes": 7930
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/portrait.webp",
+      "bytes": 18784
+    },
+    {
+      "file": "assets/chog/fighters/benja/ui/select.webp",
+      "bytes": 57162
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/manifest.js",
+      "bytes": 11761
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/run/sprite-sheet-alpha.webp",
+      "bytes": 932384
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/cutin.webp",
+      "bytes": 42332
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/fx-quake.webp",
+      "bytes": 19550
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/fx-slag.webp",
+      "bytes": 6752
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/fx-splash.webp",
+      "bytes": 9294
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/fx-steam.webp",
+      "bytes": 7958
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/icon-basic.webp",
+      "bytes": 9982
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/icon-skill1.webp",
+      "bytes": 3302
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/icon-skill2.webp",
+      "bytes": 3532
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/icon-ultimate.webp",
+      "bytes": 6974
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/portrait.webp",
+      "bytes": 19216
+    },
+    {
+      "file": "assets/chog/fighters/bigchog/ui/select.webp",
+      "bytes": 47572
+    },
+    {
+      "file": "assets/chog/fighters/cookie/manifest.js",
+      "bytes": 11722
+    },
+    {
+      "file": "assets/chog/fighters/cookie/run/sprite-sheet-alpha.webp",
+      "bytes": 825602
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/cutin.webp",
+      "bytes": 86468
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/fx-burst.webp",
+      "bytes": 23504
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/fx-drift.webp",
+      "bytes": 21696
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/fx-planet.webp",
+      "bytes": 11292
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/fx-well.webp",
+      "bytes": 15712
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/icon-basic.webp",
+      "bytes": 11468
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/icon-skill1.webp",
+      "bytes": 6312
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/icon-skill2.webp",
+      "bytes": 4886
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/icon-ultimate.webp",
+      "bytes": 7808
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/portrait.webp",
+      "bytes": 17968
+    },
+    {
+      "file": "assets/chog/fighters/cookie/ui/select.webp",
+      "bytes": 43754
+    },
+    {
+      "file": "assets/chog/fighters/mamio/base/manifest.js",
+      "bytes": 11782
+    },
+    {
+      "file": "assets/chog/fighters/mamio/base/run/sprite-sheet-alpha.webp",
+      "bytes": 1058512
+    },
+    {
+      "file": "assets/chog/fighters/mamio/empowered/manifest.js",
+      "bytes": 11779
+    },
+    {
+      "file": "assets/chog/fighters/mamio/empowered/run/sprite-sheet-alpha.webp",
+      "bytes": 1275400
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/cutin.webp",
+      "bytes": 65762
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/fx-bite.webp",
+      "bytes": 24942
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/fx-claw.webp",
+      "bytes": 11622
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/fx-gale.webp",
+      "bytes": 11622
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/fx-howl.webp",
+      "bytes": 16080
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/fx-rush.webp",
+      "bytes": 11622
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/fx-transform.webp",
+      "bytes": 45716
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-base-basic.webp",
+      "bytes": 12456
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-base-skill1.webp",
+      "bytes": 4982
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-base-skill2.webp",
+      "bytes": 4982
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-basic.webp",
+      "bytes": 12456
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-empowered-basic.webp",
+      "bytes": 12624
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-empowered-skill1.webp",
+      "bytes": 4982
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-empowered-skill2.webp",
+      "bytes": 4982
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-skill1.webp",
+      "bytes": 4982
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-skill2.webp",
+      "bytes": 4982
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/icon-ultimate.webp",
+      "bytes": 8246
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/portrait-base.webp",
+      "bytes": 17738
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/portrait-empowered.webp",
+      "bytes": 20038
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/portrait.webp",
+      "bytes": 17738
+    },
+    {
+      "file": "assets/chog/fighters/mamio/ui/select.webp",
+      "bytes": 63098
+    },
+    {
+      "file": "assets/chog/fighters/novee/manifest.js",
+      "bytes": 11714
+    },
+    {
+      "file": "assets/chog/fighters/novee/run/sprite-sheet-alpha.webp",
+      "bytes": 822612
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/cutin.webp",
+      "bytes": 55938
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/fx-feather.webp",
+      "bytes": 13116
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/fx-gust.webp",
+      "bytes": 6204
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/fx-raven.webp",
+      "bytes": 12554
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/icon-basic.webp",
+      "bytes": 12018
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/icon-skill1.webp",
+      "bytes": 5642
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/icon-skill2.webp",
+      "bytes": 5148
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/icon-ultimate.webp",
+      "bytes": 8354
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/portrait.webp",
+      "bytes": 17960
+    },
+    {
+      "file": "assets/chog/fighters/novee/ui/select.webp",
+      "bytes": 52784
+    },
+    {
+      "file": "assets/chog/fighters/ping/manifest.js",
+      "bytes": 11781
+    },
+    {
+      "file": "assets/chog/fighters/ping/run/sprite-sheet-alpha.webp",
+      "bytes": 1056056
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/cutin.webp",
+      "bytes": 64458
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/fx-cyclone.webp",
+      "bytes": 10644
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/fx-ripple.webp",
+      "bytes": 14842
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/fx-sandwave.webp",
+      "bytes": 15082
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/fx-serpent.webp",
+      "bytes": 13028
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/icon-basic.webp",
+      "bytes": 12360
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/icon-skill1.webp",
+      "bytes": 5812
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/icon-skill2.webp",
+      "bytes": 4522
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/icon-ultimate.webp",
+      "bytes": 8088
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/portrait.webp",
+      "bytes": 21424
+    },
+    {
+      "file": "assets/chog/fighters/ping/ui/select.webp",
+      "bytes": 51412
+    },
+    {
+      "file": "assets/chog/fighters/rogue/manifest.js",
+      "bytes": 11735
+    },
+    {
+      "file": "assets/chog/fighters/rogue/run/sprite-sheet-alpha.webp",
+      "bytes": 769100
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/cutin.webp",
+      "bytes": 71312
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/fx-bigring.webp",
+      "bytes": 19168
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/fx-confetti.webp",
+      "bytes": 14662
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/fx-ring.webp",
+      "bytes": 14792
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/fx-snatch.webp",
+      "bytes": 12370
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/icon-basic.webp",
+      "bytes": 10034
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/icon-skill1.webp",
+      "bytes": 4746
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/icon-skill2.webp",
+      "bytes": 5572
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/icon-ultimate.webp",
+      "bytes": 7394
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/portrait.webp",
+      "bytes": 14058
+    },
+    {
+      "file": "assets/chog/fighters/rogue/ui/select.webp",
+      "bytes": 48236
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/manifest.js",
+      "bytes": 11749
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/run/sprite-sheet-alpha.webp",
+      "bytes": 909650
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/cutin.webp",
+      "bytes": 64956
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/fx-burst.webp",
+      "bytes": 15836
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/fx-crash.webp",
+      "bytes": 23386
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/fx-rocket.webp",
+      "bytes": 11206
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/fx-star.webp",
+      "bytes": 17590
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/icon-basic.webp",
+      "bytes": 11360
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/icon-skill1.webp",
+      "bytes": 6222
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/icon-skill2.webp",
+      "bytes": 5070
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/icon-ultimate.webp",
+      "bytes": 7402
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/portrait.webp",
+      "bytes": 16156
+    },
+    {
+      "file": "assets/chog/fighters/tabsu/ui/select.webp",
+      "bytes": 52296
+    },
+    {
+      "file": "assets/chog/fighters/toad/manifest.js",
+      "bytes": 11732
+    },
+    {
+      "file": "assets/chog/fighters/toad/run/sprite-sheet-alpha.webp",
+      "bytes": 897232
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/cutin.webp",
+      "bytes": 58458
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/fx-ripple.webp",
+      "bytes": 14354
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/fx-shell.webp",
+      "bytes": 10754
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/fx-stomp.webp",
+      "bytes": 23846
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/fx-stone.webp",
+      "bytes": 7622
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/fx-tortoise.webp",
+      "bytes": 28618
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/icon-basic.webp",
+      "bytes": 12844
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/icon-skill1.webp",
+      "bytes": 4044
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/icon-skill2.webp",
+      "bytes": 4794
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/icon-ultimate.webp",
+      "bytes": 8218
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/portrait.webp",
+      "bytes": 19444
+    },
+    {
+      "file": "assets/chog/fighters/toad/ui/select.webp",
+      "bytes": 54782
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/manifest.js",
+      "bytes": 11784
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/run/sprite-sheet-alpha.webp",
+      "bytes": 898544
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/cutin.webp",
+      "bytes": 59882
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/fx-frost.webp",
+      "bytes": 14140
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/fx-piercer.webp",
+      "bytes": 10930
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/fx-shatter.webp",
+      "bytes": 6050
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/fx-skyfall.webp",
+      "bytes": 10930
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/icon-basic.webp",
+      "bytes": 9456
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/icon-skill1.webp",
+      "bytes": 4688
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/icon-skill2.webp",
+      "bytes": 4688
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/icon-ultimate.webp",
+      "bytes": 6988
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/portrait.webp",
+      "bytes": 11902
+    },
+    {
+      "file": "assets/chog/fighters/tonashiro/ui/select.webp",
+      "bytes": 50174
+    },
+    {
+      "file": "assets/chog/fighters/venty/manifest.js",
+      "bytes": 11706
+    },
+    {
+      "file": "assets/chog/fighters/venty/run/sprite-sheet-alpha.webp",
+      "bytes": 793442
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/cutin.webp",
+      "bytes": 55460
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/fx-letter.webp",
+      "bytes": 5846
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/fx-plane.webp",
+      "bytes": 12966
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/fx-slip.webp",
+      "bytes": 14220
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/fx-stamp.webp",
+      "bytes": 5846
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/icon-basic.webp",
+      "bytes": 11660
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/icon-skill1.webp",
+      "bytes": 2946
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/icon-skill2.webp",
+      "bytes": 4544
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/icon-ultimate.webp",
+      "bytes": 7380
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/portrait.webp",
+      "bytes": 21682
+    },
+    {
+      "file": "assets/chog/fighters/venty/ui/select.webp",
+      "bytes": 54602
+    },
+    {
+      "file": "assets/chog/fighters/yot/manifest.js",
+      "bytes": 11160
+    },
+    {
+      "file": "assets/chog/fighters/yot/run/sprite-sheet-alpha.webp",
+      "bytes": 848872
+    },
+    {
+      "file": "assets/chog/fighters/yot/ui/cutin.webp",
+      "bytes": 55838
+    },
+    {
+      "file": "assets/chog/fighters/yot/ui/icon-basic.webp",
+      "bytes": 11068
+    },
+    {
+      "file": "assets/chog/fighters/yot/ui/icon-skill1.webp",
+      "bytes": 5958
+    },
+    {
+      "file": "assets/chog/fighters/yot/ui/icon-skill2.webp",
+      "bytes": 6698
+    },
+    {
+      "file": "assets/chog/fighters/yot/ui/icon-ultimate.webp",
+      "bytes": 8484
+    },
+    {
+      "file": "assets/chog/fighters/yot/ui/portrait.webp",
+      "bytes": 19540
+    },
+    {
+      "file": "assets/chog/fighters/yot/ui/select.webp",
+      "bytes": 60870
+    },
+    {
+      "file": "assets/chog/landing/comic-city.webp",
+      "bytes": 399032
+    },
+    {
+      "file": "assets/chog/landing/comic-heroes.webp",
+      "bytes": 448882
+    },
+    {
+      "file": "assets/chog/landing/comic-showdown.webp",
+      "bytes": 518394
+    },
+    {
+      "file": "assets/chog/landing/comic-spark.webp",
+      "bytes": 514216
+    },
+    {
+      "file": "assets/chog/landing/fonts/Bangers-Regular.ttf",
+      "bytes": 93148
+    },
+    {
+      "file": "assets/chog/landing/fonts/Barlow-Bold.ttf",
+      "bytes": 108220
+    },
+    {
+      "file": "assets/chog/landing/fonts/Barlow-Regular.ttf",
+      "bytes": 104068
+    },
+    {
+      "file": "assets/chog/reference/benja.png",
+      "bytes": 373832
+    },
+    {
+      "file": "assets/chog/reference/bigchog.png",
+      "bytes": 510837
+    },
+    {
+      "file": "assets/chog/reference/cookie.png",
+      "bytes": 651118
+    },
+    {
+      "file": "assets/chog/reference/mamio.png",
+      "bytes": 470729
+    },
+    {
+      "file": "assets/chog/reference/novee.png",
+      "bytes": 349819
+    },
+    {
+      "file": "assets/chog/reference/ping.png",
+      "bytes": 304477
+    },
+    {
+      "file": "assets/chog/reference/rogue.png",
+      "bytes": 588923
+    },
+    {
+      "file": "assets/chog/reference/tabsu.png",
+      "bytes": 417486
+    },
+    {
+      "file": "assets/chog/reference/toad.png",
+      "bytes": 322908
+    },
+    {
+      "file": "assets/chog/reference/tonashiro.png",
+      "bytes": 318660
+    },
+    {
+      "file": "assets/chog/reference/venty.png",
+      "bytes": 320137
+    },
+    {
+      "file": "assets/chog/reference/yot.png",
+      "bytes": 367652
+    },
+    {
+      "file": "assets/chog/ui/favicon.svg",
+      "bytes": 450
+    },
+    {
+      "file": "assets/chog/ui/locked.svg",
+      "bytes": 319
+    },
+    {
+      "file": "online/build.mjs",
+      "bytes": 133
+    },
+    {
+      "file": "online/client.mjs",
+      "bytes": 51577
+    },
+    {
+      "file": "online/core.mjs",
+      "bytes": 13941
+    },
+    {
+      "file": "online/kit-combat.mjs",
+      "bytes": 62217
+    },
+    {
+      "file": "online/kit-data.mjs",
+      "bytes": 86972
+    },
+    {
+      "file": "online/kits/cora.mjs",
+      "bytes": 2265
+    },
+    {
+      "file": "online/kits/edda.mjs",
+      "bytes": 2770
+    },
+    {
+      "file": "online/kits/fenr.mjs",
+      "bytes": 2902
+    },
+    {
+      "file": "online/kits/haldor.mjs",
+      "bytes": 2629
+    },
+    {
+      "file": "online/kits/isolde.mjs",
+      "bytes": 2576
+    },
+    {
+      "file": "online/kits/mira.mjs",
+      "bytes": 2020
+    },
+    {
+      "file": "online/kits/naja.mjs",
+      "bytes": 2463
+    },
+    {
+      "file": "online/kits/nib.mjs",
+      "bytes": 2474
+    },
+    {
+      "file": "online/kits/rhea.mjs",
+      "bytes": 2591
+    },
+    {
+      "file": "online/kits/solan.mjs",
+      "bytes": 2638
+    },
+    {
+      "file": "online/kits/zanni.mjs",
+      "bytes": 2722
+    },
+    {
+      "file": "online/online.css",
+      "bytes": 13653
+    },
+    {
+      "file": "online/payments.mjs",
+      "bytes": 8642
+    },
+    {
+      "file": "online/port-provenance.json",
+      "bytes": 1178
+    },
+    {
+      "file": "online/vendor/colyseus-LICENSE.txt",
+      "bytes": 1075
+    },
+    {
+      "file": "online/vendor/colyseus.js",
+      "bytes": 221712
+    },
+    {
+      "file": "precache.js",
+      "bytes": 18667
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 1070
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4165
+    },
+    {
+      "file": "assets/chog/landing/fonts/bangers-OFL.txt",
+      "bytes": 4479
+    },
+    {
+      "file": "assets/chog/landing/fonts/barlow-OFL.txt",
+      "bytes": 4377
+    }
+  ]
+}

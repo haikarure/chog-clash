@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "evidenceType": "Automated Chromium with stubbed wallet/API; no blockchain transaction or human playtest",
+  "checks": {
+    "approvalReloadSendsDepositOnly": true,
+    "pendingDepositReloadCannotSendAgain": true,
+    "pendingDepositAutoConfirms": true,
+    "minedDepositReloadRecoversBackendConfirmation": true,
+    "gasFailureNeverSendsAndRetryWorks": true,
+    "allWalletTransactionsUseExplicitEstimatedGas": true,
+    "cancellationAndClaimReloadReuseHashesWithoutResending": true
+  },
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 720,
+      "horizontalFit": true,
+      "controlsAtLeast44": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "horizontalFit": true,
+      "controlsAtLeast44": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalFit": true,
+      "controlsAtLeast44": true
+    }
+  ],
+  "pageErrors": []
+}

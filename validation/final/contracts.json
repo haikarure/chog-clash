@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-13T19:39:24.747320+00:00",
+  "command": "forge test --summary",
+  "evidence": "Observed successful Foundry run in this session, 20 Cup and 18 Duel tests; contract sources unchanged since that run",
+  "passed": 38,
+  "failed": 0,
+  "fuzzRuns": {
+    "HouseCupEscrow:testFuzzSolvencyAndWithdrawalOrder(bool)": 256,
+    "HouseCupEscrow:testFuzzUnauthorizedRecipientCannotDrain(uint160)": 256,
+    "PaidDuelEscrow:testFuzzUnauthorizedRecipientHasNoCredit(uint160)": 256,
+    "PaidDuelEscrow:testFuzzWithdrawalOrderPreservesSolvency(bool)": 256
+  },
+  "sourceSha256": {
+    "contracts/src/HouseCupEscrow.sol": "0df3c214578dfe73416dff9fffb5c781b09495d44727426935e0fd67307a3935",
+    "contracts/src/PaidDuelEscrow.sol": "3bbc71b2a05e69f3440f689b3b70b2aff8e8d9e0967a13693b02152079866fa7"
+  }
+}

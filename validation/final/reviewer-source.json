@@ -1,0 +1,10 @@
+{
+  "status": "PASS_SOURCE_PACKET",
+  "files": 482,
+  "selectedFiles": 405,
+  "privateValueScanCount": 5,
+  "credentialsIncluded": false,
+  "databasesIncluded": false,
+  "oldGitHistoryIncluded": false,
+  "output": "server/deployment/reviewer-source"
+}

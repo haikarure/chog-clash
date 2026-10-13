@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const root=path.resolve(import.meta.dirname,'../..');
+fs.mkdirSync(path.join(root,'online/vendor'),{recursive:true});
+fs.copyFileSync(path.join(root,'server/node_modules/@colyseus/sdk/dist/colyseus.js'),path.join(root,'online/vendor/colyseus.js'));
+fs.copyFileSync(path.join(root,'server/node_modules/@colyseus/sdk/LICENSE'),path.join(root,'online/vendor/colyseus-LICENSE.txt'));
+const files=['core.mjs','kit-combat.mjs','kit-data.mjs',...fs.readdirSync(path.join(root,'online/kits')).sort().map(f=>'kits/'+f)];
+const hash=crypto.createHash('sha256');for(const file of files)hash.update(fs.readFileSync(path.join(root,'online',file)));
+fs.writeFileSync(path.join(root,'online/build.mjs'),'/* Generated combat build identity. */\nexport const BUILD_HASH='+JSON.stringify('0x'+hash.digest('hex'))+';\n');
+console.log('Browser SDK and shared combat build identity updated.');

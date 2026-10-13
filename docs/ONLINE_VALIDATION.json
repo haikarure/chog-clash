@@ -1,0 +1,1417 @@
+{
+  "status": "PASS_AUTOMATED_RELEASE",
+  "recordedAt": "2026-10-13T19:44:18.976483+00:00",
+  "product": "CHOG Clash",
+  "baselinePrdVersion": "2.0",
+  "extensions": [
+    "Quick Match",
+    "paid invitation and queue duel"
+  ],
+  "combatBuildHash": "0xb4ba050a3bdc4d6d0c6a155c007cdede12944ca27924375707a22ab5d34bf740",
+  "nodeTests": {
+    "tests": 27,
+    "pass": 27,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "contractTests": {
+    "status": "PASS",
+    "recordedAt": "2026-10-13T19:39:24.747320+00:00",
+    "command": "forge test --summary",
+    "evidence": "Observed successful Foundry run in this session, 20 Cup and 18 Duel tests; contract sources unchanged since that run",
+    "passed": 38,
+    "failed": 0,
+    "fuzzRuns": {
+      "HouseCupEscrow:testFuzzSolvencyAndWithdrawalOrder(bool)": 256,
+      "HouseCupEscrow:testFuzzUnauthorizedRecipientCannotDrain(uint160)": 256,
+      "PaidDuelEscrow:testFuzzUnauthorizedRecipientHasNoCredit(uint160)": 256,
+      "PaidDuelEscrow:testFuzzWithdrawalOrderPreservesSolvency(bool)": 256
+    },
+    "sourceSha256": {
+      "contracts/src/HouseCupEscrow.sol": "0df3c214578dfe73416dff9fffb5c781b09495d44727426935e0fd67307a3935",
+      "contracts/src/PaidDuelEscrow.sol": "3bbc71b2a05e69f3440f689b3b70b2aff8e8d9e0967a13693b02152079866fa7"
+    }
+  },
+  "economy": {
+    "environment": "Monad testnet AUSD, no monetary value",
+    "paidDuel": {
+      "entryPerPlayer": "1",
+      "pool": "2",
+      "winner": "1.90",
+      "treasury": "0.10",
+      "feeBps": 500,
+      "refundFee": "0"
+    },
+    "houseCup": {
+      "sponsorPool": "100",
+      "champion": "70",
+      "runnerUp": "30",
+      "playerEntry": "0",
+      "platformFee": "0"
+    }
+  },
+  "evidence": {
+    "cupTestnet": {
+      "checkedAt": "2026-10-13T13:03:50.865Z",
+      "chainId": 10143,
+      "status": "PASS",
+      "scope": "Actual Monad testnet AUSD; automated clients and surrender outcomes, not a four-human playtest",
+      "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+      "checks": [
+        "Live runtime, token, relay, signer, chain and decimals verified by backend",
+        "Sponsor remote-session SIWE and four independent recipient SIWE proofs verified",
+        "Actual 100 AUSD deposit recovered after backend restart with missing deposit hash; approval was reused",
+        "Three authoritative surrender results accepted onchain; actual AUSD Transfer events and balances prove 70/30 payout",
+        "Repeated relay polling does not pay twice",
+        "Cancelled funded Cup returned all 100 AUSD to sponsor; receipt, token transfer and final balance verified"
+      ],
+      "transactions": [
+        {
+          "label": "payout Cup approval",
+          "hash": "0x34336a4caba5666f06137a0f5f145823e7a7e28a4aaff70b676904528f37c834"
+        },
+        {
+          "label": "payout Cup deposit",
+          "hash": "0xa83ef1f891bdf931dfacf3a0e1dddc0f283d83902c76799e936b8aa5dda43793"
+        },
+        {
+          "label": "refund Cup approval",
+          "hash": "0x1da1d63b323ad3caa1decbd472f8c9f514f6d748d72b3c19c5a38ebfe42bbb14"
+        },
+        {
+          "label": "refund Cup deposit",
+          "hash": "0x666fb23cbbaebabbcefed57022c7670cc10d0789a554e68adc621970d47c583b"
+        },
+        {
+          "label": "sponsor cancellation",
+          "hash": "0x86bf68769fd98e5c64a38c8031dd0ed61ebe7e6d99061434f9f665de6c2a2459"
+        }
+      ],
+      "payoutCupId": "9d63a0aa-07c2-4da7-a76e-dc5b1eb89862",
+      "payouts": [
+        {
+          "recipient": "0x64632B12d1d15D768a43Bdf3fF3DaF04647CeCB0",
+          "amountUnits": "70000000",
+          "hash": "0x0177afc9a886f2bfa9c4eee6167767ca30dfcddeb217a1cb6b2bea38b6110a5f"
+        },
+        {
+          "recipient": "0x928862f0d11F4C05F43D47fa18D570a61CcbF37a",
+          "amountUnits": "30000000",
+          "hash": "0x715513c1b37c49ed9ff2b8c49a613a4b6b60ef141dfa487842ca478ad0c743a5"
+        }
+      ],
+      "relayTransactions": [
+        {
+          "kind": "lock",
+          "state": "confirmed",
+          "hash": "0xab8ccff2b66e33d8b95ee75fdc8bdb02f76b4a15fc8f68347e69b27ffbff2acd"
+        },
+        {
+          "kind": "result",
+          "state": "confirmed",
+          "hash": "0xcff8239900cf02eb00d0df1bcc3851f3cafdef383a641e602ee9edee63457ed2"
+        },
+        {
+          "kind": "result",
+          "state": "confirmed",
+          "hash": "0x4c4856c519cb79e3992aff81a9b5c933c3c8d3961f80dd20a77755c57fd360cd"
+        },
+        {
+          "kind": "result",
+          "state": "confirmed",
+          "hash": "0x546ce8994d0a847e704b487882801f442254a75c4adf2645662530f789f5e12d"
+        },
+        {
+          "kind": "withdraw",
+          "state": "paid",
+          "hash": "0x0177afc9a886f2bfa9c4eee6167767ca30dfcddeb217a1cb6b2bea38b6110a5f"
+        },
+        {
+          "kind": "withdraw",
+          "state": "paid",
+          "hash": "0x715513c1b37c49ed9ff2b8c49a613a4b6b60ef141dfa487842ca478ad0c743a5"
+        }
+      ],
+      "refundCupId": "01c09a2c-990b-4225-a24c-a18e8210f274",
+      "refund": {
+        "recipient": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+        "amountUnits": "100000000",
+        "hash": "0xfbd5efabe13e03b7ed7f5d53b8af044a3375c348ec608965ae326fb01c5585ab"
+      },
+      "completedAt": "2026-10-13T13:04:46.188Z"
+    },
+    "paidTestnet": {
+      "checkedAt": "2026-10-13T19:18:54.218Z",
+      "status": "PASS",
+      "chainId": 10143,
+      "contract": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "scope": "Actual Monad testnet AUSD and transfers; automated simulated players and surrender result, no human playtest",
+      "checks": [
+        "Deployed runtime, AUSD, signer, relay, treasury and fee verified",
+        "Two distinct simulated player wallets verified through SIWE",
+        "Real 1 AUSD entry recovered after backend restart without a second deposit",
+        "Actual token transfers: winner 1.90 AUSD, treasury 0.10 AUSD; no duplicate payout",
+        "Paid auto-match and single-entry cancellation refund verified; no platform fee",
+        "Backend restart Void returns both real entries, preserves fee balance and leaves escrow solvent"
+      ],
+      "transactions": [
+        {
+          "label": "simulated player test MON faucet",
+          "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0x723b34260b20cd8d879ee46d614f3bd1c3140223ad98d4016b40eb9b6109a8d5"
+        },
+        {
+          "label": "owner remote-session funds simulated player 5 test AUSD",
+          "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0xe1d428f7177e9a5f6e08c1364e139c11ca25f7bf10201fa6b2409f987b255029"
+        },
+        {
+          "label": "simulated player test MON faucet",
+          "recipient": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+          "hash": "0x448130c1b2bb98589ecdcb0610d55aa533e4118449d6c7e5546ca53f1913ee73"
+        },
+        {
+          "label": "owner remote-session funds simulated player 5 test AUSD",
+          "recipient": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+          "hash": "0x1dcafaa3f2809e8ace85b0b0cd0f4976456af83c42c37a601b1d4eeb86f2f06f"
+        },
+        {
+          "label": "approval",
+          "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+          "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0xcca4f2086f0e376bd443e082d92e3dfcc73014093c9463b5ee2be3c784284708"
+        },
+        {
+          "label": "deposit",
+          "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+          "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0xb180bb1613de5198b8ebfc3f88cb99314075d3e9b8517168411ea16eadf76ef6"
+        },
+        {
+          "label": "approval",
+          "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+          "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+          "hash": "0xb7c2a40e0473e95e25c566c9f162e245b387fa06b32212fe0ab89c78a12d4f67"
+        },
+        {
+          "label": "deposit",
+          "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+          "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+          "hash": "0xfc985d2ed62e05d5438d0fff80a2dc63839c3c360be1cc99e99ea18a2cffc8ca"
+        },
+        {
+          "label": "approval",
+          "duelId": "813e84bd-e612-4e3a-beb9-b520fb6ddd63",
+          "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0x8329f83891a6d8a22b5f59e314f7c9a6c1fdb521518f1fb1cd02e8860878195b"
+        },
+        {
+          "label": "deposit",
+          "duelId": "813e84bd-e612-4e3a-beb9-b520fb6ddd63",
+          "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0x2a31b7e255a746b0b953c8274e06a80371100dfc14d06051dac9d0409ab2d67a"
+        },
+        {
+          "label": "approval",
+          "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+          "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0x52d93d27a6ebe0fc7b7dad4e65bf9ca4cbf9fe5bcb9bce0f60c9752c31c90809"
+        },
+        {
+          "label": "deposit",
+          "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+          "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "hash": "0x32900f1dde704a849c0e85a589b1bc7106898b1b92a175532f40c61f80e2d303"
+        },
+        {
+          "label": "approval",
+          "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+          "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+          "hash": "0x1eb57783a4d04b1bf5b43c7011e2202114f2742859217983143e6596f3a44493"
+        },
+        {
+          "label": "deposit",
+          "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+          "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+          "hash": "0x3c94a2bffb6a74b4bc5d0820d406c937c07f75b14282f54c37b86a84e9febe5b"
+        }
+      ],
+      "cases": [
+        {
+          "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+          "state": "Complete",
+          "result": {
+            "outcome": "Forfeit",
+            "reason": "surrender",
+            "wins": [
+              0,
+              0
+            ],
+            "replayHash": "0xcbc66d6d458f69a8ccda84e67a7feabfcbbc33b2261b9e513e8bc2c65844df2a",
+            "winnerSeat": 0
+          },
+          "transactions": [
+            {
+              "kind": "duel-create",
+              "state": "confirmed",
+              "hash": "0xc325ec675e7a3be122f2bbb39a7abda1c994e396157d7bfb13c148ebc35aa153",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-activate",
+              "state": "confirmed",
+              "hash": "0x4ea9bd293334c934cde258e00d33a6fef4df13a7398b4789887b1368a157c3b9",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-result",
+              "state": "confirmed",
+              "hash": "0x2493477fe23aa61bf913486eed4602be3bb3d08e69a7afec1eb352e9262cfe6c",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-withdraw",
+              "state": "paid",
+              "hash": "0xf98d1302ca17dab15b80f73a91c14b17c7d734857644189128b7b64c396053fe",
+              "error": null,
+              "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+              "amount": "1900000"
+            },
+            {
+              "kind": "duel-withdraw",
+              "state": "paid",
+              "hash": "0xe399cc04df4be07787e06c66c01136576e1ec3fd260161204bb2ebc8770be4f8",
+              "error": null,
+              "recipient": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+              "amount": "100000"
+            }
+          ]
+        },
+        {
+          "duelId": "813e84bd-e612-4e3a-beb9-b520fb6ddd63",
+          "state": "Cancelled",
+          "result": null,
+          "transactions": [
+            {
+              "kind": "duel-create",
+              "state": "confirmed",
+              "hash": "0xb13092c74d9415dc1eedbb21e8c80a790383ea1cd1ab1d5bd8978cfa6a1c4c35",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-cancel",
+              "state": "confirmed",
+              "hash": "0x0893a3c9bd6aa1e787790b3e479c5e5165d899cdc34a7bcec9f906ae92c03b70",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-withdraw",
+              "state": "paid",
+              "hash": "0xc1667086137a88938ee5417e0b2abc3a298ccbb2bc49b8b5ef1e409e599ce173",
+              "error": null,
+              "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+              "amount": "1000000"
+            }
+          ]
+        },
+        {
+          "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+          "state": "Cancelled",
+          "result": {
+            "outcome": "Void",
+            "reason": "room_disposed",
+            "wins": [
+              0,
+              0
+            ],
+            "replayHash": "0x78d06c9d2a20314a67d452b238edafeb092da5992fb95abafac1c1f308dca610",
+            "winnerSeat": null
+          },
+          "transactions": [
+            {
+              "kind": "duel-create",
+              "state": "confirmed",
+              "hash": "0x047902472b62937f8461b37cd19a36d27ad1fff475bc9fbdebbe1ed798f68103",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-activate",
+              "state": "confirmed",
+              "hash": "0xc9d1b51ff98a834c881045738d8f7d9212c7088526768faad11142d7f71dd3a2",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-result",
+              "state": "confirmed",
+              "hash": "0xb6cd69da0f78ad1075825811dc7c4a5c4e1e0b972699c73f3ceba757fdfcf411",
+              "error": null,
+              "recipient": null,
+              "amount": null
+            },
+            {
+              "kind": "duel-withdraw",
+              "state": "paid",
+              "hash": "0xbc70f0a0e4f93be6157fc39279f80c9878aaef5b16f91dced914e6cd9e235593",
+              "error": null,
+              "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+              "amount": "1000000"
+            },
+            {
+              "kind": "duel-withdraw",
+              "state": "paid",
+              "hash": "0x5a16258fcf942b91eb1e0c1bd756705b67b6d9a03681ef862e4cd701b8022b1b",
+              "error": null,
+              "recipient": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+              "amount": "1000000"
+            }
+          ]
+        }
+      ],
+      "completedAt": "2026-10-13T19:20:15.040Z",
+      "balances": {
+        "players": [
+          {
+            "address": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+            "amountUnits": "5900000"
+          },
+          {
+            "address": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+            "amountUnits": "4000000"
+          }
+        ],
+        "treasuryFeeUnits": "100000",
+        "escrowUnits": "0"
+      }
+    },
+    "paidLocalBrowser": {
+      "status": "PASS",
+      "evidenceType": "Automated Chromium with real localhost Anvil escrow and injected simulated player wallets; no physical device or humans",
+      "chainId": 31337,
+      "checks": {
+        "cancelFreeSearch": true,
+        "freeQuickMatchCombatAndResult": true,
+        "localFixtureLabelIsExplicit": true,
+        "minedEntryReloadNeverResends": true,
+        "twoEntriesWinnerFeeVerifiedLedger": true,
+        "paidQueueCancellationRefundLedger": true,
+        "mobileQueueAndDuelReloadRetainContext": true
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        }
+      ],
+      "errors": [],
+      "walletTransactions": [
+        {
+          "player": 0,
+          "hash": "0x6ff96b38c7c4ce8836aa3bc055a49410d2c00e350717c59551d05cfd4a8d5432",
+          "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+          "gas": "0xc552"
+        },
+        {
+          "player": 0,
+          "hash": "0x23f15e5fcbd82baa7f39d2276f175f98c309bc2af3b57f6e8d2ac72f93a0a78b",
+          "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+          "gas": "0x1cd54"
+        },
+        {
+          "player": 1,
+          "hash": "0x8d2be1fb11e0926eacb516cab238bfffd9c896798f73579bd44e44bcb0c7d88b",
+          "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+          "gas": "0xc552"
+        },
+        {
+          "player": 1,
+          "hash": "0x9636eff7ef02790dff736a6616dd22de5acaaf373f4bfcdc1403f821133b8bb0",
+          "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+          "gas": "0x143ac"
+        },
+        {
+          "player": 0,
+          "hash": "0x10742a725f8bbbd926282281d9f3a902a385fc299d97dda04092ed14aa2838d7",
+          "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+          "gas": "0xc552"
+        },
+        {
+          "player": 0,
+          "hash": "0x275486831a47777922cdc466c6693d440c3db29586e67bce8e6ae8f9b11ec500",
+          "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+          "gas": "0x1cd47"
+        }
+      ]
+    },
+    "publicBrowser": {
+      "status": "PASS",
+      "date": "2026-10-13",
+      "baseUrl": "https://chog-clash-two.vercel.app",
+      "evidenceType": "automated Chromium browser contexts; no physical device or human playtest",
+      "checks": {
+        "creationWaitsForSessionAndSdk": true,
+        "inputMovementDamageTransformAndSummon": true,
+        "touchDpadSkillAndUltimateInLiveRoom": true,
+        "settingsDoNotPauseOpponent": true,
+        "reloadRejoinsSameSeat": true,
+        "twoVotesStartFreshRematch": true,
+        "cupHostInvitesAndUnreadyLock": true,
+        "touchRoster": true,
+        "landing12HashesUnchanged": true
+      },
+      "errors": [],
+      "httpErrors": [],
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "roster": 12,
+          "targetsAtLeast44": true,
+          "horizontalFit": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "roster": 12,
+          "targetsAtLeast44": true,
+          "horizontalFit": true
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "roster": 12,
+          "targetsAtLeast44": true,
+          "horizontalFit": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "roster": 12,
+          "targetsAtLeast44": true,
+          "horizontalFit": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "roster": 12,
+          "targetsAtLeast44": true,
+          "horizontalFit": true
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "roster": 12,
+          "targetsAtLeast44": true,
+          "horizontalFit": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "roster": 12,
+          "targetsAtLeast44": true,
+          "horizontalFit": true
+        }
+      ],
+      "correctionsPx": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "publicMobile": {
+      "status": "PASS",
+      "verifiedAt": "2026-10-13T19:29:00.103147+00:00",
+      "baseUrl": "https://chog-clash-two.vercel.app",
+      "socketOrigins": [
+        "wss://chog-clash-backend-production.up.railway.app"
+      ],
+      "evidenceType": "Chromium mobile emulation with landscape iframe",
+      "roomQuerySyncedToParent": true,
+      "reloadKeepsHostSeat": true,
+      "exitClearsParentRoomQuery": true,
+      "errors": []
+    },
+    "publicPaidBrowser": {
+      "status": "PASS",
+      "evidenceType": "Automated Chromium with actual Monad testnet and public Vercel/Railway escrow and injected simulated player wallets; no physical device or humans",
+      "chainId": 10143,
+      "baseUrl": "https://chog-clash-two.vercel.app",
+      "checks": {
+        "cancelFreeSearch": true,
+        "freeQuickMatchCombatAndResult": true,
+        "fixtureNetworkLabelIsExplicit": true,
+        "minedEntryReloadNeverResends": true,
+        "twoEntriesWinnerFeeVerifiedLedger": true,
+        "paidQueueCancellationRefundLedger": true,
+        "mobileQueueAndDuelReloadRetainContext": true
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        }
+      ],
+      "errors": [],
+      "timeline": [
+        {
+          "seconds": 4.68,
+          "label": "Free Quick Match"
+        },
+        {
+          "seconds": 30.66,
+          "label": "Paid invitation and two equal entries"
+        },
+        {
+          "seconds": 43.94,
+          "label": "Reload recovers the confirmed first entry"
+        },
+        {
+          "seconds": 62.56,
+          "label": "Paid match; automated opponent surrenders"
+        },
+        {
+          "seconds": 73.46,
+          "label": "Verified winner 1.90 and platform 0.10 transfers"
+        },
+        {
+          "seconds": 73.6,
+          "label": "Paid queue and full cancellation refund"
+        }
+      ],
+      "currentUrl": "https://chog-clash-two.vercel.app/play.html?room=2ATzEeL9_&duel=0587715f-ad3a-49cd-8590-577a009e60f4&touch=0",
+      "walletTransactions": [
+        {
+          "player": 0,
+          "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "hash": "0x6cfea05d4ba3956154dfe91dadb1ed26beda0ffe9d95fa0a8a19db0305661598",
+          "gas": "0x13181"
+        },
+        {
+          "player": 0,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0x590c5a0b3c49d10b206e78006a5909c49b20ed09b5f52d8ae8da239223c5438d",
+          "gas": "0x2949a"
+        },
+        {
+          "player": 0,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0x998f1fd1b33e079261d56c2943c5378e42dbd3763b4203cf2ef97bf6221d5526",
+          "gas": "0x11c7a"
+        },
+        {
+          "player": 0,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0x2b8352623e5528642bfc83886c04ec89762648c75e094de51840202122958621",
+          "gas": "0x1c557"
+        },
+        {
+          "player": 0,
+          "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "hash": "0x1c37d6bd4100f1aa960eb13737b7d74d311067c149c064863dff79caf9d9978f",
+          "gas": "0x13181"
+        },
+        {
+          "player": 0,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0x4f3342b09031dc492be9de89c0358b67dffbb87348b13ad2a002dff9ab77ba61",
+          "gas": "0x2949a"
+        },
+        {
+          "player": 1,
+          "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "hash": "0x59eb9027a98caf0800bc294bc5aa0efa456a11ff1423f32774752678ee990ff5",
+          "gas": "0x13181"
+        },
+        {
+          "player": 1,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0xa397b1deb27f52f161f6136601f3a55d1a541ee3c0525be38c5b8665066ce80d",
+          "gas": "0x20693"
+        },
+        {
+          "player": 0,
+          "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "hash": "0x4ea4291e8b7badce959f0409c9286adfe3280db41531cf669771647cfe291bd4",
+          "gas": "0x13181"
+        },
+        {
+          "player": 0,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0xd279624fff6c456980269268cbcf825e90cc00f87c3d4ab9966943823d08b3ec",
+          "gas": "0x2949a"
+        },
+        {
+          "player": 1,
+          "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "hash": "0x866f7f79b0dcb32d915dbd48c0f4b878471a160b09b5ca1338cefaa88516cf7a",
+          "gas": "0x13181"
+        },
+        {
+          "player": 1,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0x33c01fa3f76c1231b8a99e2c791bb63eeaba969edadc62262d4ac8e3cfe795de",
+          "gas": "0x20693"
+        },
+        {
+          "player": 0,
+          "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "hash": "0xcc2e96e5ac2f2bc69b6939f13ed49df70e4a4763751604d2d71b0f0890ea09d8",
+          "gas": "0x13181"
+        },
+        {
+          "player": 0,
+          "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "hash": "0xc51c136d0e8ee5bbede69795118cc60324d8e71c3fc9b0209400c0b344308c3e",
+          "gas": "0x2949a"
+        }
+      ]
+    },
+    "publicCup": {
+      "status": "PASS",
+      "checkedAt": "2026-10-13T19:36:53.278Z",
+      "baseUrl": "https://chog-clash-two.vercel.app",
+      "chainId": 10143,
+      "evidenceType": "Actual Monad testnet Cup over public Vercel HTTPS and Railway WSS; automated simulated players and three Forfeits, no human playtest",
+      "transactions": [
+        {
+          "label": "public Cup approval",
+          "hash": "0x2baf079cb6dbb79833952de6972822dc36a70b192bb7aa90bf3e1bc9b374e68d"
+        },
+        {
+          "label": "public Cup deposit",
+          "hash": "0x1848af524157c14b4962a246d2732f91a460c67a646e07ff6d02a2c5bd518d90"
+        },
+        {
+          "label": "SF1 observed connection",
+          "rttMs": [
+            61.57742999999755,
+            61.315002000003005
+          ]
+        },
+        {
+          "label": "SF2 observed connection",
+          "rttMs": [
+            57.264609999998356,
+            57.123020999999426
+          ]
+        },
+        {
+          "label": "FINAL observed connection",
+          "rttMs": [
+            20.0119299999933,
+            21.392596999998204
+          ]
+        }
+      ],
+      "checks": [
+        "Public host deposited 100 actual test AUSD",
+        "Four distinct SIWE recipients checked in and bracket locked onchain",
+        "Public two semifinal rooms and final settled three explicit Forfeits; actual 70/30 transfers verified"
+      ],
+      "cupId": "9084a0f3-8098-4848-9db8-ce917f45957f",
+      "cup": {
+        "id": "9084a0f3-8098-4848-9db8-ce917f45957f",
+        "name": "Verified public House Cup testnet",
+        "mode": "testnet",
+        "state": "Complete",
+        "host": true,
+        "created": 1791920218613,
+        "locked": 1791920228000,
+        "pool": "100000000",
+        "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+        "chainId": "10143",
+        "fundingTx": "0x1848af524157c14b4962a246d2732f91a460c67a646e07ff6d02a2c5bd518d90",
+        "cancelReason": null,
+        "participants": [
+          {
+            "slot": 0,
+            "nickname": "Public fixture 1",
+            "chog": "mamio",
+            "wallet": "0xde5d16a86de0ced78cf84bc0676432b2d1371168",
+            "checked": true,
+            "accepted": true,
+            "isYou": false
+          },
+          {
+            "slot": 1,
+            "nickname": "Public fixture 2",
+            "chog": "novee",
+            "wallet": "0xa23ab167674db86595751b2e6d705d40957adb03",
+            "checked": true,
+            "accepted": true,
+            "isYou": false
+          },
+          {
+            "slot": 2,
+            "nickname": "Public fixture 3",
+            "chog": "rogue",
+            "wallet": "0x7f84181682a0f9313f8177c4f9714a217151948d",
+            "checked": true,
+            "accepted": true,
+            "isYou": false
+          },
+          {
+            "slot": 3,
+            "nickname": "Public fixture 4",
+            "chog": "toad",
+            "wallet": "0x4483d73fd2264d3deaeb725011840d3bcec82128",
+            "checked": true,
+            "accepted": true,
+            "isYou": false
+          }
+        ],
+        "matches": [
+          {
+            "id": "0a6d2c2a-a471-49d8-9345-6a74eaa24e88",
+            "stage": "FINAL",
+            "state": "Forfeit",
+            "roomId": null,
+            "players": [
+              {
+                "slot": 0,
+                "nickname": "Public fixture 1",
+                "chog": "mamio"
+              },
+              {
+                "slot": 2,
+                "nickname": "Public fixture 3",
+                "chog": "rogue"
+              }
+            ],
+            "winnerSlot": 0,
+            "outcome": "Forfeit",
+            "reason": "surrender",
+            "started": 1791920253861,
+            "finished": 1791920254177,
+            "replayHash": "0xbf97de08911e05534e8cd57894d9818d2ae7b02370584930ae6b0940f581a7d7"
+          },
+          {
+            "id": "42166b8d-b471-4880-8e1c-71d60aa313c3",
+            "stage": "SF1",
+            "state": "Forfeit",
+            "roomId": null,
+            "players": [
+              {
+                "slot": 0,
+                "nickname": "Public fixture 1",
+                "chog": "mamio"
+              },
+              {
+                "slot": 1,
+                "nickname": "Public fixture 2",
+                "chog": "novee"
+              }
+            ],
+            "winnerSlot": 0,
+            "outcome": "Forfeit",
+            "reason": "surrender",
+            "started": 1791920240807,
+            "finished": 1791920241117,
+            "replayHash": "0x9170dedc9f4e96ec4bc2d757dc1bd478330c31dcdeea5beb6a484bab834918d3"
+          },
+          {
+            "id": "3469191a-41c5-4472-b65b-dd61b7baba4b",
+            "stage": "SF2",
+            "state": "Forfeit",
+            "roomId": null,
+            "players": [
+              {
+                "slot": 2,
+                "nickname": "Public fixture 3",
+                "chog": "rogue"
+              },
+              {
+                "slot": 3,
+                "nickname": "Public fixture 4",
+                "chog": "toad"
+              }
+            ],
+            "winnerSlot": 2,
+            "outcome": "Forfeit",
+            "reason": "surrender",
+            "started": 1791920241090,
+            "finished": 1791920241401,
+            "replayHash": "0x0cae2b00250c1ffba479ed81c70bd979793547688e51111396575c07eb934436"
+          }
+        ],
+        "transactions": [
+          {
+            "kind": "lock",
+            "state": "confirmed",
+            "tx_hash": "0x3974746246ac978ce8a863724eb32b550e0c44e4c79acc5c5725b470b4a5c518",
+            "error": null,
+            "recipient": null,
+            "amount": null
+          },
+          {
+            "kind": "result",
+            "state": "confirmed",
+            "tx_hash": "0x8456aefe272e12ee88d64cbffaab352e28f6400cb0f77029c765a909b986c393",
+            "error": null,
+            "recipient": null,
+            "amount": null
+          },
+          {
+            "kind": "result",
+            "state": "confirmed",
+            "tx_hash": "0x128d02b549616abde649ac5d032611acb8454539c182e4638b38723962a97c82",
+            "error": null,
+            "recipient": null,
+            "amount": null
+          },
+          {
+            "kind": "result",
+            "state": "confirmed",
+            "tx_hash": "0xcc3ef07cf1fb64cbc3f51fd10c78d18df37d089050640af74117badf1781db71",
+            "error": null,
+            "recipient": null,
+            "amount": null
+          },
+          {
+            "kind": "withdraw",
+            "state": "paid",
+            "tx_hash": "0x74e92773814c31b580351adb67e92952b7e00eabb305653442cf1cc8f8105dbb",
+            "error": null,
+            "recipient": "0xDe5d16a86De0Ced78CF84bc0676432B2D1371168",
+            "amount": "70000000"
+          },
+          {
+            "kind": "withdraw",
+            "state": "paid",
+            "tx_hash": "0xc2d2710902451a3d007db39861cf187db280e654f05964136eff4ec4a693f1e7",
+            "error": null,
+            "recipient": "0x7f84181682A0f9313F8177C4f9714A217151948D",
+            "amount": "30000000"
+          }
+        ],
+        "championSlot": 0,
+        "counts": {
+          "played": 0,
+          "forfeits": 3,
+          "void": 0
+        },
+        "moneyLabel": "Monad testnet \u00b7 AUSD test token, no monetary value"
+      },
+      "payouts": [
+        {
+          "kind": "withdraw",
+          "state": "paid",
+          "tx_hash": "0x74e92773814c31b580351adb67e92952b7e00eabb305653442cf1cc8f8105dbb",
+          "error": null,
+          "recipient": "0xDe5d16a86De0Ced78CF84bc0676432B2D1371168",
+          "amount": "70000000"
+        },
+        {
+          "kind": "withdraw",
+          "state": "paid",
+          "tx_hash": "0xc2d2710902451a3d007db39861cf187db280e654f05964136eff4ec4a693f1e7",
+          "error": null,
+          "recipient": "0x7f84181682A0f9313F8177C4f9714A217151948D",
+          "amount": "30000000"
+        }
+      ],
+      "completedAt": "2026-10-13T19:37:40.109Z"
+    },
+    "network": {
+      "status": "PASS",
+      "checkedAt": "2026-10-13T19:21:14.606Z",
+      "evidenceType": "Automated bot clients over a real localhost WebSocket proxy; no browser prediction, physical devices or human playtest",
+      "technique": "Seeded uniform delay per direction, ordered delivery; 1% Bernoulli loss on input/snapshot application messages only. Handshake, Ready, ping/pong and control messages retained. This is application-message loss, not TCP/kernel packet loss.",
+      "profiles": [
+        {
+          "targetRttMs": 100,
+          "oneWayJitterRangeMs": [
+            -15,
+            15
+          ],
+          "lossProbability": 0.01,
+          "frames": 117893,
+          "lossEligible": 114955,
+          "dropped": 1120
+        },
+        {
+          "targetRttMs": 200,
+          "oneWayJitterRangeMs": [
+            -15,
+            15
+          ],
+          "lossProbability": 0.01,
+          "frames": 12819,
+          "lossEligible": 12501,
+          "dropped": 120,
+          "stress": true
+        }
+      ],
+      "matches": [
+        {
+          "index": 0,
+          "profileRttMs": 100,
+          "character": "yot",
+          "matchId": "137491a1-b431-4248-8a77-7d784b2ac61b",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 2.0120979999919655,
+          "observedRttMedianMs": 101.97213099999863,
+          "observedRttP95Ms": 121.1175860000003,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4365
+        },
+        {
+          "index": 1,
+          "profileRttMs": 100,
+          "character": "mamio",
+          "matchId": "4e3477e7-61bd-4e1d-9e97-af72860e6f73",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 2.0429580000054557,
+          "observedRttMedianMs": 103.11018999999942,
+          "observedRttP95Ms": 122.20726999999897,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4834
+        },
+        {
+          "index": 3,
+          "profileRttMs": 100,
+          "character": "toad",
+          "matchId": "20f1226c-2f08-4e06-b30b-f9fe59314c84",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 0.5288170000130776,
+          "observedRttMedianMs": 101.83849300000293,
+          "observedRttP95Ms": 121.9384710000013,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4370
+        },
+        {
+          "index": 2,
+          "profileRttMs": 100,
+          "character": "benja",
+          "matchId": "35d230f4-646d-40a5-8540-713f3d27f438",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 0.5847739999881014,
+          "observedRttMedianMs": 100.77836700000626,
+          "observedRttP95Ms": 122.15744400001131,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4506
+        },
+        {
+          "index": 4,
+          "profileRttMs": 100,
+          "character": "ping",
+          "matchId": "1c9a98fa-f924-4d52-9447-840ef90778c4",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 0.7007359999988694,
+          "observedRttMedianMs": 101.04050699999789,
+          "observedRttP95Ms": 123.59712699998636,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 3595
+        },
+        {
+          "index": 5,
+          "profileRttMs": 100,
+          "character": "novee",
+          "matchId": "b322e17f-ebe8-4103-9a6d-2f7ce48948ca",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 2.1514310000056867,
+          "observedRttMedianMs": 102.84088200001861,
+          "observedRttP95Ms": 122.44552800001111,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4876
+        },
+        {
+          "index": 7,
+          "profileRttMs": 100,
+          "character": "bigchog",
+          "matchId": "ac37b192-13fb-4748-953c-38dcf82e236d",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 0.5974999999743886,
+          "observedRttMedianMs": 104.72781000001123,
+          "observedRttP95Ms": 118.83786100003636,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 3115
+        },
+        {
+          "index": 6,
+          "profileRttMs": 100,
+          "character": "tonashiro",
+          "matchId": "02dd84cb-b978-4458-a0ed-208132a14220",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 1.9968479999806732,
+          "observedRttMedianMs": 99.61638600000879,
+          "observedRttP95Ms": 120.23713500000304,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 3643
+        },
+        {
+          "index": 8,
+          "profileRttMs": 100,
+          "character": "rogue",
+          "matchId": "2436cfc3-ccbf-4e3d-9d9a-07801419c032",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 0.7168459999957122,
+          "observedRttMedianMs": 102.55673499999102,
+          "observedRttP95Ms": 119.29588600003626,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4225
+        },
+        {
+          "index": 9,
+          "profileRttMs": 100,
+          "character": "tabsu",
+          "matchId": "981e56c4-ffa9-4277-9df9-c70259ef1442",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 0.726569999998901,
+          "observedRttMedianMs": 101.05950800003484,
+          "observedRttP95Ms": 119.11057700001402,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4426
+        },
+        {
+          "index": 10,
+          "profileRttMs": 200,
+          "character": "cookie",
+          "matchId": "449cc7ac-c30b-40c4-b90e-58f76702a2a6",
+          "outcome": "Finished",
+          "wins": [
+            2,
+            0
+          ],
+          "serverStepP95Ms": 1.0832309999968857,
+          "observedRttMedianMs": 201.34592399996473,
+          "observedRttP95Ms": 223.704813999997,
+          "clientsAgree": true,
+          "replayHashMatches": true,
+          "inputFrames": 4555
+        }
+      ],
+      "completedAt": "2026-10-13T19:28:45.139Z"
+    },
+    "publicSecurity": {
+      "status": "PASS",
+      "checkedAt": "2026-10-13T19:30:00.799544+00:00",
+      "checks": [
+        {
+          "host": "https://chog-clash-two.vercel.app",
+          "path": "/server/.env",
+          "status": 404
+        },
+        {
+          "host": "https://chog-clash-two.vercel.app",
+          "path": "/server/paid-duels.mjs",
+          "status": 404
+        },
+        {
+          "host": "https://chog-clash-two.vercel.app",
+          "path": "/contracts/out/PaidDuelEscrow.sol/PaidDuelEscrow.json",
+          "status": 404
+        },
+        {
+          "host": "https://chog-clash-two.vercel.app",
+          "path": "/.git/config",
+          "status": 404
+        },
+        {
+          "host": "https://chog-clash-backend-production.up.railway.app",
+          "path": "/server/.env",
+          "status": 404
+        },
+        {
+          "host": "https://chog-clash-backend-production.up.railway.app",
+          "path": "/server/paid-duels.mjs",
+          "status": 404
+        },
+        {
+          "host": "https://chog-clash-backend-production.up.railway.app",
+          "path": "/contracts/out/PaidDuelEscrow.sol/PaidDuelEscrow.json",
+          "status": 404
+        },
+        {
+          "host": "https://chog-clash-backend-production.up.railway.app",
+          "path": "/.git/config",
+          "status": 404
+        },
+        {
+          "origin": "https://chog-clash-two.vercel.app",
+          "status": 200
+        },
+        {
+          "origin": "https://chog-clash-backend-production.up.railway.app",
+          "status": 200
+        },
+        {
+          "origin": "https://chog-clash-fnpy8daxl-haikarures-projects.vercel.app",
+          "status": 200
+        },
+        {
+          "origin": "https://chog-clash-two.vercel.app.evil.example",
+          "status": 403
+        },
+        {
+          "origin": "https://foreign.example",
+          "status": 403
+        }
+      ],
+      "publicConfig": {
+        "ruleset": "house-cup-online-v1",
+        "buildHash": "0xb4ba050a3bdc4d6d0c6a155c007cdede12944ca27924375707a22ab5d34bf740",
+        "online": true,
+        "settlement": {
+          "enabled": true,
+          "mode": "testnet",
+          "label": "Monad testnet \u00b7 AUSD test token",
+          "chainId": 10143,
+          "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+          "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "pool": "100",
+          "split": [
+            70,
+            30
+          ],
+          "reason": null
+        },
+        "paidDuel": {
+          "enabled": true,
+          "chainId": 10143,
+          "contract": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "entry": "1",
+          "pool": "2",
+          "feeBps": 500,
+          "winnerAward": "1900000",
+          "treasury": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+          "label": "Monad testnet \u00b7 AUSD test token",
+          "reason": null
+        },
+        "quickMatch": true,
+        "roster": [
+          "yot",
+          "mamio",
+          "benja",
+          "toad",
+          "ping",
+          "novee",
+          "tonashiro",
+          "bigchog",
+          "rogue",
+          "tabsu",
+          "venty",
+          "cookie"
+        ]
+      }
+    }
+  },
+  "pendingAutomatedEvidence": [],
+  "integrity": {
+    "runtimeFiles": 297,
+    "runtimeVersion": "c5d725db0c7a",
+    "landingHashesUnchanged": 12,
+    "serverOrContractFilesInPrecache": false
+  },
+  "trust": "The authoritative gameplay server/result signer is trusted. Escrow validates funds and signed-result terms; replay hashes are audit identifiers, not proof of honest gameplay.",
+  "notCompleted": [
+    "two physical devices and named-device client frame benchmark",
+    "one host plus four human Cup participants and feedback",
+    "human adoption/retention/sponsor ROI measurement"
+  ],
+  "submission": {
+    "formHandledByUser": true,
+    "submittedByAgent": false
+  },
+  "sources": {
+    "cupTestnet": "../validation/testnet/acceptance.json",
+    "paidTestnet": "../validation/testnet/paid-duel-acceptance.json",
+    "paidLocalBrowser": "../validation/final/paid-browser/report.json",
+    "publicBrowser": "../validation/final/public-online/report.json",
+    "publicMobile": "../validation/final/public-mobile/mobile-shell.json",
+    "publicPaidBrowser": "../validation/final/public-paid/report.json",
+    "publicCup": "../validation/final/public-cup.json",
+    "network": "../validation/final/network.json",
+    "publicSecurity": "../validation/final/public-security.json"
+  }
+}

@@ -1,0 +1,32 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Tooling
+node_modules/
+*.log
+
+# Private runtime configuration and persistent player/auth data
+.env
+.env.*
+!.env.example
+server/data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+server/deployment/
+
+# Reproducible contract/Python build output
+contracts/out/
+contracts/cache/
+__pycache__/
+
+# Local Vercel project binding and generated public deployment output
+.vercel/
+.vercel

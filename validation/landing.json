@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "errors": [],
+  "http_errors": [],
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "horizontal_overflow": false,
+      "controls_fit": true
+    }
+  ],
+  "motion": "Live character layer, animated ink particles, pointer parallax, pause/resume and saved preference passed",
+  "crew": "12 personas, accurate previews, move labels, deep links and keyboard navigation passed",
+  "world": "All five arena previews and captions passed",
+  "comic_impact_and_reading_progress": "passed",
+  "responsive_reading": "Eight desktop, tablet, portrait and landscape viewports passed",
+  "game_entry": "Animated Play navigation, browser Back, Cookie selection \u2192 actual match and Training deep link passed",
+  "mobile_entry": "Portrait landing \u2192 tap Play \u2192 landscape game shell passed in Chromium emulation",
+  "reduced_motion_and_no_js_reading": "passed",
+  "all_media_in_chog_namespace": true,
+  "generated_comic_artworks": 4,
+  "locally_hosted_fonts": 3
+}

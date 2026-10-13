@@ -1,0 +1,2431 @@
+{
+  "checked_on": "2026-10-12",
+  "baseline_commit": "1ac9751f86569b6b8c177994d5074a0d85faf94d",
+  "roster": 12,
+  "startup_pairs": 144,
+  "combat_scenarios": 144,
+  "errors": [],
+  "failed_requests": [],
+  "combat_results": [
+    {
+      "id": "yot",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.449999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 50,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 4.616666666666598,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 20,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 36,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.8833333333332347,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "yot",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 540.1006944444445,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 0,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "wolf",
+      "formTime": 10.025000000000112,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 14,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 611.0902777777778,
+      "y": 599
+    },
+    {
+      "id": "mamio",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 0,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "wolf",
+      "formTime": 10.025000000000112,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.449999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 551,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 597.0902777777778,
+      "y": 599
+    },
+    {
+      "id": "benja",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 0,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 32,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 0,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "toad",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 14,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "ping",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "novee",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 551,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 14,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 597.0902777777778,
+      "y": 599
+    },
+    {
+      "id": "tonashiro",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 545,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 96,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 603.0902777777778,
+      "y": 599
+    },
+    {
+      "id": "bigchog",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 80,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.575000000000138
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 14,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "rogue",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 554.6006944444445,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 14,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 597.0902777777778,
+      "y": 599
+    },
+    {
+      "id": "tabsu",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.449999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 699,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 24,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.4583333333332362,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 460,
+      "y": 599
+    },
+    {
+      "id": "venty",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "player",
+      "move": "attack1",
+      "damage": 6,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "player",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "player",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "player",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.40000000000000857,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "player",
+      "move": "skill2",
+      "damage": 0,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "player",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 530,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "enemy",
+      "move": "attack1",
+      "damage": 14,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "enemy",
+      "move": "attack2",
+      "damage": 8,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "enemy",
+      "move": "attack3",
+      "damage": 12,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "enemy",
+      "move": "skill1",
+      "damage": 16,
+      "cooldowns": {
+        "skill1": 0.4583333333333421,
+        "skill2": 0,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "enemy",
+      "move": "skill2",
+      "damage": 0,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 3.399999999999903,
+        "ultimate": 0
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    },
+    {
+      "id": "cookie",
+      "owner": "enemy",
+      "move": "ultimate",
+      "damage": 48,
+      "cooldowns": {
+        "skill1": 0,
+        "skill2": 0,
+        "ultimate": 15.400000000000148
+      },
+      "form": "human",
+      "formTime": 0,
+      "action": null,
+      "x": 625,
+      "y": 599
+    }
+  ],
+  "mamio_forms": [
+    "player base \u2192 empowered \u2192 base",
+    "enemy base \u2192 empowered \u2192 base"
+  ],
+  "counter_and_gravity": [
+    {
+      "fighter": "toad",
+      "owner": "player",
+      "damage": 24
+    },
+    {
+      "fighter": "cookie",
+      "owner": "player",
+      "damage": 24
+    },
+    {
+      "fighter": "toad",
+      "owner": "enemy",
+      "damage": 24
+    },
+    {
+      "fighter": "cookie",
+      "owner": "enemy",
+      "damage": 24
+    }
+  ],
+  "cpu_matches": [
+    {
+      "rival": "yot",
+      "stage": "rayj-house",
+      "level": "easy",
+      "round": 2,
+      "playerHP": 140
+    },
+    {
+      "rival": "mamio",
+      "stage": "cwo-alley",
+      "level": "medium",
+      "round": 2,
+      "playerHP": 184
+    },
+    {
+      "rival": "benja",
+      "stage": "house-cup",
+      "level": "hard",
+      "round": 2,
+      "playerHP": 130
+    },
+    {
+      "rival": "toad",
+      "stage": "neon-street",
+      "level": "excellent",
+      "round": 2,
+      "playerHP": 200
+    },
+    {
+      "rival": "ping",
+      "stage": "cwo-rally",
+      "level": "easy",
+      "round": 2,
+      "playerHP": 184
+    },
+    {
+      "rival": "novee",
+      "stage": "rayj-house",
+      "level": "medium",
+      "round": 2,
+      "playerHP": 160
+    },
+    {
+      "rival": "tonashiro",
+      "stage": "cwo-alley",
+      "level": "hard",
+      "round": 2,
+      "playerHP": 154
+    },
+    {
+      "rival": "bigchog",
+      "stage": "house-cup",
+      "level": "excellent",
+      "round": 2,
+      "playerHP": 106
+    },
+    {
+      "rival": "rogue",
+      "stage": "neon-street",
+      "level": "easy",
+      "round": 2,
+      "playerHP": 154
+    },
+    {
+      "rival": "tabsu",
+      "stage": "cwo-rally",
+      "level": "medium",
+      "round": 2,
+      "playerHP": 144
+    },
+    {
+      "rival": "venty",
+      "stage": "rayj-house",
+      "level": "hard",
+      "round": 2,
+      "playerHP": 138
+    },
+    {
+      "rival": "cookie",
+      "stage": "cwo-alley",
+      "level": "excellent",
+      "round": 2,
+      "playerHP": 106
+    }
+  ],
+  "rounds_results_rematch_timeout": "passed",
+  "keyboard_pause_reset": "passed",
+  "mobile": "Android Chromium emulation: tap selection, touch movement/skill, landscape and portrait shell passed; physical device untested",
+  "status": "passed"
+}

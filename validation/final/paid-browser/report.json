@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "evidenceType": "Automated Chromium with real localhost Anvil escrow and injected simulated player wallets; no physical device or humans",
+  "chainId": 31337,
+  "checks": {
+    "cancelFreeSearch": true,
+    "freeQuickMatchCombatAndResult": true,
+    "localFixtureLabelIsExplicit": true,
+    "minedEntryReloadNeverResends": true,
+    "twoEntriesWinnerFeeVerifiedLedger": true,
+    "paidQueueCancellationRefundLedger": true,
+    "mobileQueueAndDuelReloadRetainContext": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    }
+  ],
+  "errors": [],
+  "walletTransactions": [
+    {
+      "player": 0,
+      "hash": "0x6ff96b38c7c4ce8836aa3bc055a49410d2c00e350717c59551d05cfd4a8d5432",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 0,
+      "hash": "0x23f15e5fcbd82baa7f39d2276f175f98c309bc2af3b57f6e8d2ac72f93a0a78b",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x1cd54"
+    },
+    {
+      "player": 1,
+      "hash": "0x8d2be1fb11e0926eacb516cab238bfffd9c896798f73579bd44e44bcb0c7d88b",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 1,
+      "hash": "0x9636eff7ef02790dff736a6616dd22de5acaaf373f4bfcdc1403f821133b8bb0",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x143ac"
+    },
+    {
+      "player": 0,
+      "hash": "0x10742a725f8bbbd926282281d9f3a902a385fc299d97dda04092ed14aa2838d7",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 0,
+      "hash": "0x275486831a47777922cdc466c6693d440c3db29586e67bce8e6ae8f9b11ec500",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x1cd47"
+    }
+  ]
+}

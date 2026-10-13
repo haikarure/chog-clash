@@ -1,0 +1,246 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-13T19:36:53.278Z",
+  "baseUrl": "https://chog-clash-two.vercel.app",
+  "chainId": 10143,
+  "evidenceType": "Actual Monad testnet Cup over public Vercel HTTPS and Railway WSS; automated simulated players and three Forfeits, no human playtest",
+  "transactions": [
+    {
+      "label": "public Cup approval",
+      "hash": "0x2baf079cb6dbb79833952de6972822dc36a70b192bb7aa90bf3e1bc9b374e68d"
+    },
+    {
+      "label": "public Cup deposit",
+      "hash": "0x1848af524157c14b4962a246d2732f91a460c67a646e07ff6d02a2c5bd518d90"
+    },
+    {
+      "label": "SF1 observed connection",
+      "rttMs": [
+        61.57742999999755,
+        61.315002000003005
+      ]
+    },
+    {
+      "label": "SF2 observed connection",
+      "rttMs": [
+        57.264609999998356,
+        57.123020999999426
+      ]
+    },
+    {
+      "label": "FINAL observed connection",
+      "rttMs": [
+        20.0119299999933,
+        21.392596999998204
+      ]
+    }
+  ],
+  "checks": [
+    "Public host deposited 100 actual test AUSD",
+    "Four distinct SIWE recipients checked in and bracket locked onchain",
+    "Public two semifinal rooms and final settled three explicit Forfeits; actual 70/30 transfers verified"
+  ],
+  "cupId": "9084a0f3-8098-4848-9db8-ce917f45957f",
+  "cup": {
+    "id": "9084a0f3-8098-4848-9db8-ce917f45957f",
+    "name": "Verified public House Cup testnet",
+    "mode": "testnet",
+    "state": "Complete",
+    "host": true,
+    "created": 1791920218613,
+    "locked": 1791920228000,
+    "pool": "100000000",
+    "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+    "chainId": "10143",
+    "fundingTx": "0x1848af524157c14b4962a246d2732f91a460c67a646e07ff6d02a2c5bd518d90",
+    "cancelReason": null,
+    "participants": [
+      {
+        "slot": 0,
+        "nickname": "Public fixture 1",
+        "chog": "mamio",
+        "wallet": "0xde5d16a86de0ced78cf84bc0676432b2d1371168",
+        "checked": true,
+        "accepted": true,
+        "isYou": false
+      },
+      {
+        "slot": 1,
+        "nickname": "Public fixture 2",
+        "chog": "novee",
+        "wallet": "0xa23ab167674db86595751b2e6d705d40957adb03",
+        "checked": true,
+        "accepted": true,
+        "isYou": false
+      },
+      {
+        "slot": 2,
+        "nickname": "Public fixture 3",
+        "chog": "rogue",
+        "wallet": "0x7f84181682a0f9313f8177c4f9714a217151948d",
+        "checked": true,
+        "accepted": true,
+        "isYou": false
+      },
+      {
+        "slot": 3,
+        "nickname": "Public fixture 4",
+        "chog": "toad",
+        "wallet": "0x4483d73fd2264d3deaeb725011840d3bcec82128",
+        "checked": true,
+        "accepted": true,
+        "isYou": false
+      }
+    ],
+    "matches": [
+      {
+        "id": "0a6d2c2a-a471-49d8-9345-6a74eaa24e88",
+        "stage": "FINAL",
+        "state": "Forfeit",
+        "roomId": null,
+        "players": [
+          {
+            "slot": 0,
+            "nickname": "Public fixture 1",
+            "chog": "mamio"
+          },
+          {
+            "slot": 2,
+            "nickname": "Public fixture 3",
+            "chog": "rogue"
+          }
+        ],
+        "winnerSlot": 0,
+        "outcome": "Forfeit",
+        "reason": "surrender",
+        "started": 1791920253861,
+        "finished": 1791920254177,
+        "replayHash": "0xbf97de08911e05534e8cd57894d9818d2ae7b02370584930ae6b0940f581a7d7"
+      },
+      {
+        "id": "42166b8d-b471-4880-8e1c-71d60aa313c3",
+        "stage": "SF1",
+        "state": "Forfeit",
+        "roomId": null,
+        "players": [
+          {
+            "slot": 0,
+            "nickname": "Public fixture 1",
+            "chog": "mamio"
+          },
+          {
+            "slot": 1,
+            "nickname": "Public fixture 2",
+            "chog": "novee"
+          }
+        ],
+        "winnerSlot": 0,
+        "outcome": "Forfeit",
+        "reason": "surrender",
+        "started": 1791920240807,
+        "finished": 1791920241117,
+        "replayHash": "0x9170dedc9f4e96ec4bc2d757dc1bd478330c31dcdeea5beb6a484bab834918d3"
+      },
+      {
+        "id": "3469191a-41c5-4472-b65b-dd61b7baba4b",
+        "stage": "SF2",
+        "state": "Forfeit",
+        "roomId": null,
+        "players": [
+          {
+            "slot": 2,
+            "nickname": "Public fixture 3",
+            "chog": "rogue"
+          },
+          {
+            "slot": 3,
+            "nickname": "Public fixture 4",
+            "chog": "toad"
+          }
+        ],
+        "winnerSlot": 2,
+        "outcome": "Forfeit",
+        "reason": "surrender",
+        "started": 1791920241090,
+        "finished": 1791920241401,
+        "replayHash": "0x0cae2b00250c1ffba479ed81c70bd979793547688e51111396575c07eb934436"
+      }
+    ],
+    "transactions": [
+      {
+        "kind": "lock",
+        "state": "confirmed",
+        "tx_hash": "0x3974746246ac978ce8a863724eb32b550e0c44e4c79acc5c5725b470b4a5c518",
+        "error": null,
+        "recipient": null,
+        "amount": null
+      },
+      {
+        "kind": "result",
+        "state": "confirmed",
+        "tx_hash": "0x8456aefe272e12ee88d64cbffaab352e28f6400cb0f77029c765a909b986c393",
+        "error": null,
+        "recipient": null,
+        "amount": null
+      },
+      {
+        "kind": "result",
+        "state": "confirmed",
+        "tx_hash": "0x128d02b549616abde649ac5d032611acb8454539c182e4638b38723962a97c82",
+        "error": null,
+        "recipient": null,
+        "amount": null
+      },
+      {
+        "kind": "result",
+        "state": "confirmed",
+        "tx_hash": "0xcc3ef07cf1fb64cbc3f51fd10c78d18df37d089050640af74117badf1781db71",
+        "error": null,
+        "recipient": null,
+        "amount": null
+      },
+      {
+        "kind": "withdraw",
+        "state": "paid",
+        "tx_hash": "0x74e92773814c31b580351adb67e92952b7e00eabb305653442cf1cc8f8105dbb",
+        "error": null,
+        "recipient": "0xDe5d16a86De0Ced78CF84bc0676432B2D1371168",
+        "amount": "70000000"
+      },
+      {
+        "kind": "withdraw",
+        "state": "paid",
+        "tx_hash": "0xc2d2710902451a3d007db39861cf187db280e654f05964136eff4ec4a693f1e7",
+        "error": null,
+        "recipient": "0x7f84181682A0f9313F8177C4f9714A217151948D",
+        "amount": "30000000"
+      }
+    ],
+    "championSlot": 0,
+    "counts": {
+      "played": 0,
+      "forfeits": 3,
+      "void": 0
+    },
+    "moneyLabel": "Monad testnet \u00b7 AUSD test token, no monetary value"
+  },
+  "payouts": [
+    {
+      "kind": "withdraw",
+      "state": "paid",
+      "tx_hash": "0x74e92773814c31b580351adb67e92952b7e00eabb305653442cf1cc8f8105dbb",
+      "error": null,
+      "recipient": "0xDe5d16a86De0Ced78CF84bc0676432B2D1371168",
+      "amount": "70000000"
+    },
+    {
+      "kind": "withdraw",
+      "state": "paid",
+      "tx_hash": "0xc2d2710902451a3d007db39861cf187db280e654f05964136eff4ec4a693f1e7",
+      "error": null,
+      "recipient": "0x7f84181682A0f9313F8177C4f9714A217151948D",
+      "amount": "30000000"
+    }
+  ],
+  "completedAt": "2026-10-13T19:37:40.109Z"
+}

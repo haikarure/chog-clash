@@ -1,0 +1,257 @@
+{
+  "checkedAt": "2026-10-13T19:18:54.218Z",
+  "status": "PASS",
+  "chainId": 10143,
+  "contract": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+  "scope": "Actual Monad testnet AUSD and transfers; automated simulated players and surrender result, no human playtest",
+  "checks": [
+    "Deployed runtime, AUSD, signer, relay, treasury and fee verified",
+    "Two distinct simulated player wallets verified through SIWE",
+    "Real 1 AUSD entry recovered after backend restart without a second deposit",
+    "Actual token transfers: winner 1.90 AUSD, treasury 0.10 AUSD; no duplicate payout",
+    "Paid auto-match and single-entry cancellation refund verified; no platform fee",
+    "Backend restart Void returns both real entries, preserves fee balance and leaves escrow solvent"
+  ],
+  "transactions": [
+    {
+      "label": "simulated player test MON faucet",
+      "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0x723b34260b20cd8d879ee46d614f3bd1c3140223ad98d4016b40eb9b6109a8d5"
+    },
+    {
+      "label": "owner remote-session funds simulated player 5 test AUSD",
+      "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0xe1d428f7177e9a5f6e08c1364e139c11ca25f7bf10201fa6b2409f987b255029"
+    },
+    {
+      "label": "simulated player test MON faucet",
+      "recipient": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+      "hash": "0x448130c1b2bb98589ecdcb0610d55aa533e4118449d6c7e5546ca53f1913ee73"
+    },
+    {
+      "label": "owner remote-session funds simulated player 5 test AUSD",
+      "recipient": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+      "hash": "0x1dcafaa3f2809e8ace85b0b0cd0f4976456af83c42c37a601b1d4eeb86f2f06f"
+    },
+    {
+      "label": "approval",
+      "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+      "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0xcca4f2086f0e376bd443e082d92e3dfcc73014093c9463b5ee2be3c784284708"
+    },
+    {
+      "label": "deposit",
+      "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+      "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0xb180bb1613de5198b8ebfc3f88cb99314075d3e9b8517168411ea16eadf76ef6"
+    },
+    {
+      "label": "approval",
+      "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+      "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+      "hash": "0xb7c2a40e0473e95e25c566c9f162e245b387fa06b32212fe0ab89c78a12d4f67"
+    },
+    {
+      "label": "deposit",
+      "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+      "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+      "hash": "0xfc985d2ed62e05d5438d0fff80a2dc63839c3c360be1cc99e99ea18a2cffc8ca"
+    },
+    {
+      "label": "approval",
+      "duelId": "813e84bd-e612-4e3a-beb9-b520fb6ddd63",
+      "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0x8329f83891a6d8a22b5f59e314f7c9a6c1fdb521518f1fb1cd02e8860878195b"
+    },
+    {
+      "label": "deposit",
+      "duelId": "813e84bd-e612-4e3a-beb9-b520fb6ddd63",
+      "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0x2a31b7e255a746b0b953c8274e06a80371100dfc14d06051dac9d0409ab2d67a"
+    },
+    {
+      "label": "approval",
+      "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+      "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0x52d93d27a6ebe0fc7b7dad4e65bf9ca4cbf9fe5bcb9bce0f60c9752c31c90809"
+    },
+    {
+      "label": "deposit",
+      "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+      "player": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+      "hash": "0x32900f1dde704a849c0e85a589b1bc7106898b1b92a175532f40c61f80e2d303"
+    },
+    {
+      "label": "approval",
+      "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+      "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+      "hash": "0x1eb57783a4d04b1bf5b43c7011e2202114f2742859217983143e6596f3a44493"
+    },
+    {
+      "label": "deposit",
+      "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+      "player": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+      "hash": "0x3c94a2bffb6a74b4bc5d0820d406c937c07f75b14282f54c37b86a84e9febe5b"
+    }
+  ],
+  "cases": [
+    {
+      "duelId": "e292f1ee-683b-4899-8e70-6125e7ba29b3",
+      "state": "Complete",
+      "result": {
+        "outcome": "Forfeit",
+        "reason": "surrender",
+        "wins": [
+          0,
+          0
+        ],
+        "replayHash": "0xcbc66d6d458f69a8ccda84e67a7feabfcbbc33b2261b9e513e8bc2c65844df2a",
+        "winnerSeat": 0
+      },
+      "transactions": [
+        {
+          "kind": "duel-create",
+          "state": "confirmed",
+          "hash": "0xc325ec675e7a3be122f2bbb39a7abda1c994e396157d7bfb13c148ebc35aa153",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-activate",
+          "state": "confirmed",
+          "hash": "0x4ea9bd293334c934cde258e00d33a6fef4df13a7398b4789887b1368a157c3b9",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-result",
+          "state": "confirmed",
+          "hash": "0x2493477fe23aa61bf913486eed4602be3bb3d08e69a7afec1eb352e9262cfe6c",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-withdraw",
+          "state": "paid",
+          "hash": "0xf98d1302ca17dab15b80f73a91c14b17c7d734857644189128b7b64c396053fe",
+          "error": null,
+          "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "amount": "1900000"
+        },
+        {
+          "kind": "duel-withdraw",
+          "state": "paid",
+          "hash": "0xe399cc04df4be07787e06c66c01136576e1ec3fd260161204bb2ebc8770be4f8",
+          "error": null,
+          "recipient": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+          "amount": "100000"
+        }
+      ]
+    },
+    {
+      "duelId": "813e84bd-e612-4e3a-beb9-b520fb6ddd63",
+      "state": "Cancelled",
+      "result": null,
+      "transactions": [
+        {
+          "kind": "duel-create",
+          "state": "confirmed",
+          "hash": "0xb13092c74d9415dc1eedbb21e8c80a790383ea1cd1ab1d5bd8978cfa6a1c4c35",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-cancel",
+          "state": "confirmed",
+          "hash": "0x0893a3c9bd6aa1e787790b3e479c5e5165d899cdc34a7bcec9f906ae92c03b70",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-withdraw",
+          "state": "paid",
+          "hash": "0xc1667086137a88938ee5417e0b2abc3a298ccbb2bc49b8b5ef1e409e599ce173",
+          "error": null,
+          "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "amount": "1000000"
+        }
+      ]
+    },
+    {
+      "duelId": "9c95f3f7-dbba-43a8-b435-faff88b3c01b",
+      "state": "Cancelled",
+      "result": {
+        "outcome": "Void",
+        "reason": "room_disposed",
+        "wins": [
+          0,
+          0
+        ],
+        "replayHash": "0x78d06c9d2a20314a67d452b238edafeb092da5992fb95abafac1c1f308dca610",
+        "winnerSeat": null
+      },
+      "transactions": [
+        {
+          "kind": "duel-create",
+          "state": "confirmed",
+          "hash": "0x047902472b62937f8461b37cd19a36d27ad1fff475bc9fbdebbe1ed798f68103",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-activate",
+          "state": "confirmed",
+          "hash": "0xc9d1b51ff98a834c881045738d8f7d9212c7088526768faad11142d7f71dd3a2",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-result",
+          "state": "confirmed",
+          "hash": "0xb6cd69da0f78ad1075825811dc7c4a5c4e1e0b972699c73f3ceba757fdfcf411",
+          "error": null,
+          "recipient": null,
+          "amount": null
+        },
+        {
+          "kind": "duel-withdraw",
+          "state": "paid",
+          "hash": "0xbc70f0a0e4f93be6157fc39279f80c9878aaef5b16f91dced914e6cd9e235593",
+          "error": null,
+          "recipient": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+          "amount": "1000000"
+        },
+        {
+          "kind": "duel-withdraw",
+          "state": "paid",
+          "hash": "0x5a16258fcf942b91eb1e0c1bd756705b67b6d9a03681ef862e4cd701b8022b1b",
+          "error": null,
+          "recipient": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+          "amount": "1000000"
+        }
+      ]
+    }
+  ],
+  "completedAt": "2026-10-13T19:20:15.040Z",
+  "balances": {
+    "players": [
+      {
+        "address": "0x5a7cabfD0B6AF5DB939a5320d6126085DfBFBe5e",
+        "amountUnits": "5900000"
+      },
+      {
+        "address": "0xd1D326716feb5E31d5305085bB9115186D4aD8C9",
+        "amountUnits": "4000000"
+      }
+    ],
+    "treasuryFeeUnits": "100000",
+    "escrowUnits": "0"
+  }
+}

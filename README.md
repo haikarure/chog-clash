@@ -1,0 +1,50 @@
+# CHOG Clash
+
+A browser fighting game for the CHOG community, with free matchmaking, optional paid duels and sponsor-funded tournaments settled on Monad.
+
+**[Play the live demo](https://chog-clash-two.vercel.app)** · [Two-minute demo video](https://github.com/haikarure/chog-clash/releases/download/hackathon-2026-10-14/chog-clash-demo.mp4) · [Submission write-up](docs/SUBMISSION_PACKAGE_2026-10-14.md) · [Acceptance evidence](docs/ONLINE_VALIDATION.json)
+
+## Play
+
+Choose one of 12 CHOG fighters. Invite a friend or use Quick Match for free; no wallet is needed. CPU and Training modes are also available. Keyboard: A/D movement, W jump, Space basic, I/O skills, P ultimate. Mobile has touch controls.
+
+Paid duels use two distinct SIWE wallets: 1 AUSD testnet entry each, winner 1.90 and platform 0.10 (5%). Pairing does not charge an entry. House Cup has four free entrants, a 100 AUSD testnet sponsor pool and 70/30 prizes with zero Cup fee. Cancellation, Void and expiry refund applicable deposits in full. Test tokens have no monetary value; MON network fees are separate.
+
+Combat runs on an authoritative server. Monad escrows validate funding, eligible signed results and fixed payouts. Server/result-signer honesty remains a trust assumption; replay hashes support auditing and do not prove honest gameplay.
+
+## Run locally
+
+Node 24+ is required. From this checkout:
+
+```bash
+npm --prefix server ci
+npm --prefix server start
+```
+
+Open http://localhost:5174/play.html. Free PvP, Practice Cup, CPU and Training work without keys. Copy server/.env.example to server/.env only when configuring your own verified testnet service. Never commit keys. The project runs one backend instance with persistent SQLite; it does not claim distributed matchmaking.
+
+## Contracts and tests
+
+Install Foundry (forge/anvil), then:
+
+```bash
+npm --prefix server run build:contracts
+npm --prefix server test
+npm --prefix server run test:contracts
+```
+
+27 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
+
+[Paid escrow source](https://testnet.monadscan.com/address/0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7#code) · [Cup escrow source](https://testnet.monadscan.com/address/0xeEe983581d5f747eC31Cda37C2645F65af31CB5E#code)
+
+Actual Monad testnet receipts and token transfers prove paid winner/platform payments, Cup 70/30 and refunds. The public Vercel/Railway demo passed browser/payment/mobile acceptance. Network proxy tests completed ten bot matches near 100 ms RTT and one near 200 ms, with uniform jitter ±15 ms per direction and 1% input/snapshot message loss. Both clients and deterministic replay agreed. This is application-message loss, not TCP packet loss or a physical WAN test.
+
+Physical devices, device frame benchmarks and four-human Cup feedback are still unverified. Simulated wallets and Forfeit-based settlement tests do not establish adoption, engagement or sponsor ROI.
+
+## Source and attribution
+
+This repository is a reviewer snapshot of the CHOG Clash working source. It does not reproduce the original working repository's entire history. The combat engine adapts [Aether Clash by Bang Tutorial](https://github.com/bangtutorial/aether-clash), original commit 1ac9751f86569b6b8c177994d5074a0d85faf94d, under MIT. The original copyright is retained in [LICENSE](LICENSE).
+
+CHOG references and their owners' rights, generated art, local rigs/music and synthetic announcer cues are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSE-ASSETS.md](LICENSE-ASSETS.md). This is a community fan adaptation and does not claim official CHOG affiliation. Existing engine code is attributed separately from the CHOG presentation, multiplayer backend, escrows and product flows built for this project.
+
+Credentials, session tokens, player databases, dependency installs and private deployment packets are excluded. Build artifacts can be regenerated. Runtime assets and original generated-art inputs are included.

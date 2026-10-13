@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "evidenceType": "Automated Chromium with actual Monad testnet and public Vercel/Railway escrow and injected simulated player wallets; no physical device or humans",
+  "chainId": 10143,
+  "baseUrl": "https://chog-clash-two.vercel.app",
+  "checks": {
+    "cancelFreeSearch": true,
+    "freeQuickMatchCombatAndResult": true,
+    "fixtureNetworkLabelIsExplicit": true,
+    "minedEntryReloadNeverResends": true,
+    "twoEntriesWinnerFeeVerifiedLedger": true,
+    "paidQueueCancellationRefundLedger": true,
+    "mobileQueueAndDuelReloadRetainContext": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    }
+  ],
+  "errors": [],
+  "timeline": [
+    {
+      "seconds": 4.68,
+      "label": "Free Quick Match"
+    },
+    {
+      "seconds": 30.66,
+      "label": "Paid invitation and two equal entries"
+    },
+    {
+      "seconds": 43.94,
+      "label": "Reload recovers the confirmed first entry"
+    },
+    {
+      "seconds": 62.56,
+      "label": "Paid match; automated opponent surrenders"
+    },
+    {
+      "seconds": 73.46,
+      "label": "Verified winner 1.90 and platform 0.10 transfers"
+    },
+    {
+      "seconds": 73.6,
+      "label": "Paid queue and full cancellation refund"
+    }
+  ],
+  "currentUrl": "https://chog-clash-two.vercel.app/play.html?room=2ATzEeL9_&duel=0587715f-ad3a-49cd-8590-577a009e60f4&touch=0",
+  "walletTransactions": [
+    {
+      "player": 0,
+      "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "hash": "0x6cfea05d4ba3956154dfe91dadb1ed26beda0ffe9d95fa0a8a19db0305661598",
+      "gas": "0x13181"
+    },
+    {
+      "player": 0,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0x590c5a0b3c49d10b206e78006a5909c49b20ed09b5f52d8ae8da239223c5438d",
+      "gas": "0x2949a"
+    },
+    {
+      "player": 0,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0x998f1fd1b33e079261d56c2943c5378e42dbd3763b4203cf2ef97bf6221d5526",
+      "gas": "0x11c7a"
+    },
+    {
+      "player": 0,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0x2b8352623e5528642bfc83886c04ec89762648c75e094de51840202122958621",
+      "gas": "0x1c557"
+    },
+    {
+      "player": 0,
+      "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "hash": "0x1c37d6bd4100f1aa960eb13737b7d74d311067c149c064863dff79caf9d9978f",
+      "gas": "0x13181"
+    },
+    {
+      "player": 0,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0x4f3342b09031dc492be9de89c0358b67dffbb87348b13ad2a002dff9ab77ba61",
+      "gas": "0x2949a"
+    },
+    {
+      "player": 1,
+      "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "hash": "0x59eb9027a98caf0800bc294bc5aa0efa456a11ff1423f32774752678ee990ff5",
+      "gas": "0x13181"
+    },
+    {
+      "player": 1,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0xa397b1deb27f52f161f6136601f3a55d1a541ee3c0525be38c5b8665066ce80d",
+      "gas": "0x20693"
+    },
+    {
+      "player": 0,
+      "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "hash": "0x4ea4291e8b7badce959f0409c9286adfe3280db41531cf669771647cfe291bd4",
+      "gas": "0x13181"
+    },
+    {
+      "player": 0,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0xd279624fff6c456980269268cbcf825e90cc00f87c3d4ab9966943823d08b3ec",
+      "gas": "0x2949a"
+    },
+    {
+      "player": 1,
+      "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "hash": "0x866f7f79b0dcb32d915dbd48c0f4b878471a160b09b5ca1338cefaa88516cf7a",
+      "gas": "0x13181"
+    },
+    {
+      "player": 1,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0x33c01fa3f76c1231b8a99e2c791bb63eeaba969edadc62262d4ac8e3cfe795de",
+      "gas": "0x20693"
+    },
+    {
+      "player": 0,
+      "to": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "hash": "0xcc2e96e5ac2f2bc69b6939f13ed49df70e4a4763751604d2d71b0f0890ea09d8",
+      "gas": "0x13181"
+    },
+    {
+      "player": 0,
+      "to": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "hash": "0xc51c136d0e8ee5bbede69795118cc60324d8e71c3fc9b0209400c0b344308c3e",
+      "gas": "0x2949a"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "mode": "Built-in image_gen; project assets saved locally; no Higgsfield or API key",
+  "date": "2026-10-11",
+  "assets": [
+    {
+      "id": "comic-city",
+      "prompt": "Use case: illustration-story. Asset type: background layer for a motion-comic landing-page cover. Premium American superhero-comic illustration with heavy expressive black inks, chunky outlines, angular dynamic composition, cross-hatching and irregular Ben-Day halftone print shading, flat cel color blocks with slight vintage paper texture. CHOG palette: saturated violet, warm ivory, electric yellow, coral orange and cyan accents. Preserve the charming round compact CHOG mascot proportions; do not turn them into humans. Original CHOG fan-game art; no Marvel characters, logos or copied comic panels. No watermark. No typography or text. A finished illustration, never a UI mockup. Scene: A wildly energetic CHOG community city at sunset, wide low-angle view across mural-covered rooftops and tiny shopfronts toward a distant oversized golden trophy inside a festival hall. Purple rooftops, bunting, electrical cables, warm yellow sky with bold swirling comic clouds, a few inked dramatic rays. Landscape 16:9. Keep left 45 percent relatively calm and dark purple for live HTML title text. City detail concentrated in center and right. No characters anywhere: this is the separate environmental layer for foreground characters animated in HTML. Let the scene breathe, use only several large high-contrast architectural forms, avoid tiny visual noise. Not a fighting-game screenshot.",
+      "transparent_background": false,
+      "source": "/home/haikaru/.codex/generated_images/01a1297d-63df-7851-93a7-7ef4481a4f55/exec-77692675-cb8d-45a3-b40b-f473f88f253e.png",
+      "source_copy": "assets/chog/source-art/comic-city.png",
+      "runtime": "assets/chog/landing/comic-city.webp"
+    },
+    {
+      "id": "comic-heroes",
+      "prompt": "Use case: illustration-story. Asset type: isolated foreground splash illustration for a motion-comic hero. Premium American superhero-comic illustration with heavy expressive black inks, chunky outlines, angular dynamic composition, cross-hatching and irregular Ben-Day halftone print shading, flat cel color blocks with slight vintage paper texture. CHOG palette: saturated violet, warm ivory, electric yellow, coral orange and cyan accents. Preserve the charming round compact CHOG mascot proportions; do not turn them into humans. Original CHOG fan-game art; no Marvel characters, logos or copied comic panels. No watermark. No typography or text. A finished illustration, never a UI mockup. Use the three supplied character references strictly for visual identity, respectively Yot, Rogue and Cookie. Draw exactly these three CHOG in an explosive triangular comic-cover team composition, all faces clearly visible, all silhouettes clean. Rogue is closest to camera in a leaping forward pose with the giant marker, magenta scarf, orange boots and belt. Yot stands behind at upper left with the distinctive frog hood and protest-sign silhouette; make the sign face a simple yellow circular emblem with a purple star, without words. Cookie behind at upper right makes a flying pose with the broad blade, purple hoodie, blond fringe and light-blue trousers. Full bodies and props entirely inside the frame. Strong black silhouettes, cream faces and vivid purple bodies, impactful but friendly expressions. Create a genuinely transparent background, no environment, no ground, no baked shadows outside silhouettes, no paper rectangle, no text. Landscape 4:3 group, filling most of the canvas, generous small margin.",
+      "referenced_image_paths": [
+        "/home/haikaru/Archverse/Lab/Metropolis/game/chog-clash/assets/chog/reference/yot.png",
+        "/home/haikaru/Archverse/Lab/Metropolis/game/chog-clash/assets/chog/reference/rogue.png",
+        "/home/haikaru/Archverse/Lab/Metropolis/game/chog-clash/assets/chog/reference/cookie.png"
+      ],
+      "transparent_background": true,
+      "source": "/home/haikaru/.codex/generated_images/01a1297d-63df-7851-93a7-7ef4481a4f55/exec-676cb472-87f9-4846-88af-abc79fc74566.png",
+      "source_copy": "assets/chog/source-art/comic-heroes.png",
+      "runtime": "assets/chog/landing/comic-heroes.webp"
+    },
+    {
+      "id": "comic-spark",
+      "prompt": "Use case: illustration-story. Asset type: square story panel in CHOG's motion-comic landing. Premium American superhero-comic illustration with heavy expressive black inks, chunky outlines, angular dynamic composition, cross-hatching and irregular Ben-Day halftone print shading, flat cel color blocks with slight vintage paper texture. CHOG palette: saturated violet, warm ivory, electric yellow, coral orange and cyan accents. Preserve the charming round compact CHOG mascot proportions; do not turn them into humans. Original CHOG fan-game art; no Marvel characters, logos or copied comic panels. No watermark. No typography or text. A finished illustration, never a UI mockup. Scene: an original small orange frog creator in a warm cluttered suburban bedroom, drawing on a glowing digital tablet on the desk. A tiny mischievous purple spiky CHOG mascot with cream smiling face and pink cheeks seems to leap from the digital drawing in a swirling violet ink flourish. Large expressive surprised frog face, desk in extreme foreground, drawing tablet as focal point, sunset striped light, cozy orange furniture. Friendly community origin story energy and a sense of playful invention. No superhero costume for the frog. Three-quarter perspective, exaggerated comic foreshortening, angular panel energy. Square 1:1 artwork. No frame, no words, no speech bubbles, no logos, no watermark. This is a fan-art interpretation, not a historical photograph.",
+      "transparent_background": false,
+      "source": "/home/haikaru/.codex/generated_images/01a1297d-63df-7851-93a7-7ef4481a4f55/exec-58117aac-57d0-458f-a0fe-864528ab8bc0.png",
+      "source_copy": "assets/chog/source-art/comic-spark.png",
+      "runtime": "assets/chog/landing/comic-spark.webp"
+    },
+    {
+      "id": "comic-showdown",
+      "prompt": "Use case: illustration-story. Asset type: wide fighting-showcase comic panel for a game landing page. Premium American superhero-comic illustration with heavy expressive black inks, chunky outlines, angular dynamic composition, cross-hatching and irregular Ben-Day halftone print shading, flat cel color blocks with slight vintage paper texture. CHOG palette: saturated violet, warm ivory, electric yellow, coral orange and cyan accents. Preserve the charming round compact CHOG mascot proportions; do not turn them into humans. Original CHOG fan-game art; no Marvel characters, logos or copied comic panels. No watermark. No typography or text. A finished illustration, never a UI mockup. Use supplied references for exact identities: Image 1 Rogue, Image 2 Tabsu. In a vivid purple-and-coral city graffiti alley, Rogue leaps in from the left wielding a giant marker and wearing a magenta scarf and orange boots, while Tabsu on the right in blue futuristic armor blocks with an oversized harmless cartoon foam hammer. A huge yellow-and-cream comic impact burst in center, ink splashes, painted speed lines and dramatic foreshortening. Clearly readable friendly playful combat, no injury or blood. Exactly two characters. Both faces and poses clearly visible. Landscape 16:9 panoramic composition with characters in center two-thirds and room at corners for live HTML captions. No text, no logos, no frame.",
+      "referenced_image_paths": [
+        "/home/haikaru/Archverse/Lab/Metropolis/game/chog-clash/assets/chog/reference/rogue.png",
+        "/home/haikaru/Archverse/Lab/Metropolis/game/chog-clash/assets/chog/reference/tabsu.png"
+      ],
+      "transparent_background": false,
+      "source": "/home/haikaru/.codex/generated_images/01a1297d-63df-7851-93a7-7ef4481a4f55/exec-3cb76c2a-32a5-43be-b1ef-0a2862e0523d.png",
+      "source_copy": "assets/chog/source-art/comic-showdown.png",
+      "runtime": "assets/chog/landing/comic-showdown.webp"
+    }
+  ]
+}
