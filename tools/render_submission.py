@@ -5,6 +5,7 @@ ROOT=Path(__file__).resolve().parent.parent
 OUT=ROOT/'validation/final/submission'
 live=json.loads((ROOT/'validation/final/public-paid/report.json').read_text())
 readonly=json.loads((OUT/'capture.json').read_text())
+combat=json.loads((OUT/'combat-capture.json').read_text())
 font=ROOT/'assets/chog/landing/fonts/Barlow-Bold.ttf';headline=ROOT/'assets/chog/landing/fonts/Bangers-Regular.ttf'
 parts=[]
 def run(args):subprocess.run(args,check=True,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
@@ -23,7 +24,7 @@ def clip(index,label,duration,source=None,start=0,still=False,card=False):
  parts.append(target);print('Rendered',index,label.splitlines()[0],flush=True)
 clip(0,'Community fighting. Settlement on Monad.\n12 CHOG | Free matchmaking | Optional paid duels',12,card=True)
 clip(1,'A browser arcade for the CHOG community.',12,readonly['videoPath'],1.5)
-clip(2,'Free Quick Match: two players, one authoritative arena.',15,live['videoPath'],5)
+clip(2,'Free invite PvP: Mamio transforms, Toad summons, touch controls.',15,combat['videoPath'],combat['fightStartSeconds'])
 clip(3,'Paid invite: each wallet funds exactly 1 AUSD testnet.',20,live['videoPath'],31)
 clip(4,'Paid match. This automated opponent surrenders: Forfeit.',13,live['videoPath'],60)
 clip(5,'Verified token transfers: winner 1.90 | platform 0.10 AUSD.',10,readonly['videoPath'],19.3)

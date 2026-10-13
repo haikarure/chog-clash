@@ -1,0 +1,8 @@
+{
+  "status": "none",
+  "valid": false,
+  "activeSigner": null,
+  "verified": true,
+  "configIsolation": "CHOG-specific CLI configuration outside repository",
+  "backendKeysIndependent": true
+}
