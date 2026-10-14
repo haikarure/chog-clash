@@ -15,7 +15,12 @@
     "deploy:testnet": "node --env-file-if-exists=.env tools/deploy-escrow.mjs",
     "setup:testnet-roles": "node --env-file-if-exists=.env tools/setup-testnet-roles.mjs",
     "prepare:testnet": "node --env-file-if-exists=.env tools/prepare-deployment.mjs",
-    "verify:testnet": "node --env-file-if-exists=.env tools/verify-deployment.mjs"
+    "verify:testnet": "node --env-file-if-exists=.env tools/verify-deployment.mjs",
+    "check:arc-mainnet": "node --env-file-if-exists=../contracts/arc-mainnet.env tools/check-arc-mainnet.mjs",
+    "simulate:arc-mainnet": "node --env-file=../contracts/arc-mainnet.env tools/run-arc-deployment.mjs",
+    "budget:arc-mainnet": "node --env-file=../contracts/arc-mainnet.env tools/run-arc-deployment.mjs --check-budget",
+    "deploy:arc-mainnet": "node --env-file=../contracts/arc-mainnet.env tools/run-arc-deployment.mjs --broadcast",
+    "verify:arc-mainnet": "node --env-file=../contracts/arc-mainnet.env tools/verify-arc-deployment.mjs"
   },
   "dependencies": {
     "@colyseus/core": "0.18.9",

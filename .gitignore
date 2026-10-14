@@ -25,6 +25,8 @@ server/deployment/
 # Reproducible contract/Python build output
 contracts/out/
 contracts/cache/
+contracts/broadcast/
+contracts/arc-mainnet.env
 __pycache__/
 
 # Local Vercel project binding and generated public deployment output

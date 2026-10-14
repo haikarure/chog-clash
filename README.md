@@ -25,6 +25,12 @@ Open http://localhost:5174/play.html. Free PvP, Practice Cup, CPU and Training w
 
 ## Contracts and tests
 
+An [Arc mainnet / USDC deployment guide](contracts/ARC_MAINNET.md) and a
+`contracts/script/DeployArcMainnet.s.sol` script are available for both escrows.
+This contract deployment path is separate from the existing Monad testnet game integration.
+The contracts are deployed; [Arc migration notes](docs/ARC_MAINNET_MIGRATION.md)
+record the production addresses and remaining frontend/backend changes.
+
 Install Foundry (forge/anvil), then:
 
 ```bash
