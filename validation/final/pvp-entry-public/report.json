@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "baseUrl": "https://chog-clash-two.vercel.app",
+  "evidenceType": "Automated browser against the actual frontend/backend, no wallet signing or transaction broadcast and no human/physical-device claim",
+  "checks": {
+    "mainMenuOpensStakeChoice": true,
+    "explicitFreeChoiceSurvivesReload": true,
+    "stakeInviteAndAutoMatchSurviveReload": true,
+    "stakeRequiresWalletBeforeCreatingMatch": true,
+    "mobileStakeChoiceSurvivesReload": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "fits": true,
+      "targetsAtLeast44": true
+    }
+  ],
+  "errors": []
+}

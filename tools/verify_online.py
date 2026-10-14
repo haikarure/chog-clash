@@ -34,7 +34,7 @@ with sync_playwright() as p:
  held_session=[];held_sdk=[]
  a.route('**/api/session',lambda route:held_session.append(route))
  a.route('**/online/vendor/colyseus.js',lambda route:held_sdk.append(route))
- a.goto(BASE+'/play.html?touch=0');ready(a);a.click('[data-cmd=online]');a.wait_for_selector('[data-action=create-room]')
+ a.goto(BASE+'/play.html?touch=0');ready(a);a.click('[data-cmd=online]');a.click('[data-action=pvp-mode][data-mode=casual]');a.wait_for_selector('[data-action=create-room]')
  a.wait_for_timeout(250);a.wait_for_function('document.querySelector("#online-root")&&!document.querySelector("#online-root").hidden')
  for attempt in range(1200):
   if held_session:break
@@ -75,9 +75,9 @@ with sync_playwright() as p:
  a.click('[data-cmd=cup]');a.fill('#cup-name','Browser smoke Cup');a.click('[data-action=create-cup]');a.wait_for_selector('.online-participants article');assert a.locator('.online-participants article').count()==4;assert 'no prize' in a.locator('.online-test-label').inner_text();assert a.locator('[data-action=start-cup]').is_disabled();a.screenshot(path=str(OUT/'cup-check-in.png'));report['checks']['cupHostInvitesAndUnreadyLock']=True
  a.locator('[data-action=exit]').first.click()
  for width,height in [(1440,900),(1280,720),(1024,768),(768,1024),(844,390),(740,360),(390,844)]:
-  a.set_viewport_size({'width':width,'height':height});a.click('[data-cmd=online]');wait(a,'d.view==="entry"');a.wait_for_function('!document.querySelector("[data-action=create-room]").disabled');fit(a,['.online-persona','[data-action=create-room]','.online-header .paper-button']);a.screenshot(path=str(OUT/f'entry-{width}x{height}.png'));a.locator('[data-action=exit]').first.click();report['viewports'].append({'width':width,'height':height,'roster':12,'targetsAtLeast44':True,'horizontalFit':True})
+  a.set_viewport_size({'width':width,'height':height});a.click('[data-cmd=online]');a.click('[data-action=pvp-mode][data-mode=casual]');wait(a,'d.view==="entry"');a.wait_for_function('!document.querySelector("[data-action=create-room]").disabled');fit(a,['.online-persona','[data-action=create-room]','.online-header .paper-button']);a.screenshot(path=str(OUT/f'entry-{width}x{height}.png'));a.locator('[data-action=exit]').first.click();report['viewports'].append({'width':width,'height':height,'roster':12,'targetsAtLeast44':True,'horizontalFit':True})
  # Actual touch input events in a landscape mobile browser context.
- touch=browser.new_context(viewport={'width':844,'height':390},has_touch=True,is_mobile=True,service_workers='block');tp=touch.new_page();tp.on('pageerror',lambda e:report['errors'].append('touch: '+str(e)));tp.goto(BASE+'/play.html?touch=1&embed=1');ready(tp);tp.locator('[data-cmd=online]').tap();wait(tp,'d.view==="entry"');tp.wait_for_function('!document.querySelector("[data-action=create-room]").disabled');tp.locator('[data-chog=cookie]').tap();assert tp.locator('[data-chog=cookie]').get_attribute('aria-pressed')=='true';fit(tp,['.online-persona','[data-action=create-room]']);report['checks']['touchRoster']=True
+ touch=browser.new_context(viewport={'width':844,'height':390},has_touch=True,is_mobile=True,service_workers='block');tp=touch.new_page();tp.on('pageerror',lambda e:report['errors'].append('touch: '+str(e)));tp.goto(BASE+'/play.html?touch=1&embed=1');ready(tp);tp.locator('[data-cmd=online]').tap();tp.locator('[data-action=pvp-mode][data-mode=casual]').tap();wait(tp,'d.view==="entry"');tp.wait_for_function('!document.querySelector("[data-action=create-room]").disabled');tp.locator('[data-chog=cookie]').tap();assert tp.locator('[data-chog=cookie]').get_attribute('aria-pressed')=='true';fit(tp,['.online-persona','[data-action=create-room]']);report['checks']['touchRoster']=True
  report['correctionsPx']=diag(b)['corrections'] if diag(b) else []
  browser.close()
 landing=json.loads((ROOT/'validation/audit/landing-baseline.json').read_text());assert all(hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest for name,digest in landing.items());report['checks']['landing12HashesUnchanged']=True

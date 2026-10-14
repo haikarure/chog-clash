@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "evidenceType": "Automated Chromium with localhost Anvil escrow and injected simulated player wallets; no physical device or humans",
+  "chainId": 31337,
+  "baseUrl": "http://localhost:35695",
+  "checks": {
+    "cancelFreeSearch": true,
+    "freeQuickMatchCombatAndResult": true,
+    "main1v1EntryDefaultsToStake": true,
+    "fixtureNetworkLabelIsExplicit": true,
+    "minedEntryReloadNeverResends": true,
+    "winnerPrizeVisibleOnMatchResult": true,
+    "twoEntriesWinnerFeeVerifiedLedger": true,
+    "paidQueueCancellationRefundLedger": true,
+    "mobileQueueAndDuelReloadRetainContext": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    }
+  ],
+  "errors": [],
+  "timeline": [
+    {
+      "seconds": 1.51,
+      "label": "Free Quick Match"
+    },
+    {
+      "seconds": 11.84,
+      "label": "Paid invitation and two equal entries"
+    },
+    {
+      "seconds": 18.81,
+      "label": "Reload recovers the confirmed first entry"
+    },
+    {
+      "seconds": 32.44,
+      "label": "Paid match; automated opponent surrenders"
+    },
+    {
+      "seconds": 42.94,
+      "label": "Verified winner 1.90 and platform 0.10 transfers"
+    },
+    {
+      "seconds": 43.0,
+      "label": "Paid queue and full cancellation refund"
+    }
+  ],
+  "currentUrl": "http://localhost:35695/play.html?room=tjc77JOsU&duel=bf65a08c-0f63-48c8-b8e6-8cf7cda28741&touch=0",
+  "walletTransactions": [
+    {
+      "player": 0,
+      "hash": "0x7044fd54b13f743c5ab0b846a10ab82c2d49dd21dcf41fce0d5d1d6892a8e9dc",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 0,
+      "hash": "0xf705860d0d91dd75a8b439182f21d232e311453943f2dbc15209be953cfddc04",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x1cd54"
+    },
+    {
+      "player": 1,
+      "hash": "0x628a01a15ec0d9683879a15c9d71f9bdf346513ffd1e9c4c7e6f635e4904a8c7",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 1,
+      "hash": "0x494bb8bc26a21d956dbe3c5f40951b871f8e6a00aa78b0d7269a9749d6fa48ff",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x143ac"
+    },
+    {
+      "player": 0,
+      "hash": "0x1b98494c71352d2d56819f72c1c9136499931641e7f6761a82ec49666e2d5858",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 0,
+      "hash": "0x250ab203dca9af7ab3cc31242891b8cdf9c9f45a96fc7f55f557fe2adaa56505",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x1cd54"
+    },
+    {
+      "player": 1,
+      "hash": "0x796383187266a327008f9f34c89cff7c96e1c5df1d9daa2be3e533f1fbe8637e",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 1,
+      "hash": "0x1e62ae83fbc8e2963b15a2614e52085a54a91ead02cde80489d255f6af3202ab",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x143ac"
+    },
+    {
+      "player": 0,
+      "hash": "0xe53c4aeb57d8b10d678f1b3bffbd9912ad3cba816b9b35be90be66f92ff0d3a0",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 0,
+      "hash": "0x458f0e66189598543ff643060426ee5b8237c05bb982fdbb240da02e28408bf8",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x1cd54"
+    }
+  ]
+}

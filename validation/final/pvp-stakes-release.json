@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-14T00:49:17.222123+00:00",
+  "productionUrl": "https://chog-clash-two.vercel.app",
+  "deploymentUrl": "https://chog-clash-2ddm65rt1-haikarures-projects.vercel.app",
+  "deploymentId": "dpl_J7U46u7mauYR6U9LpWGsXWuZjCv3",
+  "runtimeVersion": "a6bba5a58068",
+  "checks": {
+    "house-menu.js": {
+      "matchesLocalBuild": true,
+      "sha256": "600ab160fbab0618b41ef3c6461be2a11b78e96be1cadd58a50d11908776c754"
+    },
+    "online/client.mjs": {
+      "matchesLocalBuild": true,
+      "sha256": "d3d886880772ae39cb4abf28d131e6c7f831519a42023335ea2dfecd0611f6e1"
+    },
+    "online/online.css": {
+      "matchesLocalBuild": true,
+      "sha256": "9e53f898e931a9efbe44c720f98b100a3d1123993738c72d8afda233adc221df"
+    },
+    "paidTestnetConfig": true,
+    "escrowAddressUnchanged": true
+  },
+  "scope": "Public frontend bytes/config checked; new paid-match prize display and escrow/payment flows were verified separately on Anvil. Previously recorded Monad testnet escrow addresses are unchanged."
+}

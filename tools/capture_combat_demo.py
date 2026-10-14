@@ -11,7 +11,7 @@ with sync_playwright() as p:
  browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
  ca=browser.new_context(viewport={'width':1280,'height':720},service_workers='block',record_video_dir=str(OUT/'combat-video'),record_video_size={'width':1280,'height':720})
  cb=browser.new_context(viewport={'width':844,'height':390},has_touch=True,is_mobile=True,service_workers='block');a=ca.new_page();b=cb.new_page();start=time.monotonic()
- a.goto(BASE+'/play.html?online=friend&touch=0');ready(a);a.click('[data-chog=mamio]');a.click('[data-action=create-room]');a.wait_for_selector('input[aria-label="Room invite link"]');invite=a.locator('input[aria-label="Room invite link"]').input_value()
+ a.goto(BASE+'/play.html?online=casual&touch=0');ready(a);a.click('[data-chog=mamio]');a.click('[data-action=create-room]');a.wait_for_selector('input[aria-label="Room invite link"]');invite=a.locator('input[aria-label="Room invite link"]').input_value()
  u=urlsplit(invite);query=dict(parse_qsl(u.query));query.update(touch='1',embed='1');b.goto(urlunsplit((u.scheme,u.netloc,u.path,urlencode(query),u.fragment)));ready(b);b.locator('[data-chog=toad]').tap();wait(a,'d.authority.slots[1].chog==="toad"')
  for page in [a,b]:page.click('[data-action=ready]')
  wait(a,'d.authority?.sim?.rules?.phase==="fight"');wait(b,'d.view==="match"');b.locator('.dbtn-left').wait_for(state='visible');fight=time.monotonic()-start

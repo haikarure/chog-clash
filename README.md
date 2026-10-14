@@ -33,7 +33,7 @@ npm --prefix server test
 npm --prefix server run test:contracts
 ```
 
-34 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
+38 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
 
 [Paid escrow source](https://testnet.monadscan.com/address/0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7#code) · [Cup escrow source](https://testnet.monadscan.com/address/0xeEe983581d5f747eC31Cda37C2645F65af31CB5E#code)
 
@@ -52,3 +52,7 @@ Credentials, session tokens, player databases, dependency installs and private d
 ## In-game AUSD faucet
 
 The paid duel create/join/funding UI includes a Claim testnet AUSD button. Players use their own connected wallet on Monad testnet to call Agora’s published faucet; MON testnet gas is required. The UI verifies the AUSD transfer to the recipient, shows the balance/transaction link, handles cooldown and wallet rejection, and recovers pending transactions across reload. Seven faucet tests use a simulated EIP-1193 provider. [Public release checks](validation/final/faucet-release.json) and [simulated-wallet UI tests on the public deployment](validation/final/faucet-public-browser/report.json) record the current behavior.
+
+## 1v1 stake selection
+
+The main 1v1 Duel menu shows the 1 AUSD stake choice alongside explicit Free 1v1. Invitation and automatic matchmaking both use the existing PaidDuelEscrow. Players approve one test AUSD each before the match locks; the winner receives 1.90 and the treasury 0.10. The result screen shows reward/refund progress and only marks a payment verified after its token transfer. Existing free invitations remain free. [Full local-EVM browser acceptance](validation/final/pvp-stakes-local/report.json), [public entry/mobile checks](validation/final/pvp-entry-public/report.json), [public deployment checks](validation/final/pvp-stakes-release.json).
