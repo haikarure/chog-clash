@@ -51,9 +51,9 @@ The combat engine adapts MIT-licensed Aether Clash by Bang Tutorial. The origina
 - Public Cup runner-up 30 AUSD: [transfer](https://testnet.monadscan.com/tx/0xc2d2710902451a3d007db39861cf187db280e654f05964136eff4ec4a693f1e7)
 - Public paid winner 1.90 AUSD: [transfer](https://testnet.monadscan.com/tx/0x38d8d6d314e271a823de1cea07fd95561ec0db65cf30dad139da2bd353fcd969)
 - Public platform fee 0.10 AUSD: [transfer](https://testnet.monadscan.com/tx/0xb321a242b0878645fc3aacb1418235716026e5cc595618be76f7a26ef14d33e5)
-- Paid duel and refund hashes: [testnet acceptance](../../game/chog-clash/validation/testnet/paid-duel-acceptance.json).
-- Public Cup: [acceptance](../../game/chog-clash/validation/final/public-cup.json).
-- Network: [10 played matches plus 200 ms stress](../../game/chog-clash/validation/final/network.json).
+- Paid duel and refund hashes: [testnet acceptance](../validation/testnet/paid-duel-acceptance.json).
+- Public Cup: [acceptance](../validation/final/public-cup.json).
+- Network: [10 played matches plus 200 ms stress](../validation/final/network.json).
 
 ## Reviewer walkthrough
 
