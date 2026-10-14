@@ -18,6 +18,8 @@ export async function connectVerifiedWallet({provider,chainId,request,onSession=
  const proof=await request('/auth/challenge',{address});
  const hex='0x'+[...new TextEncoder().encode(proof.message)].map(value=>value.toString(16).padStart(2,'0')).join('');
  const signature=await provider.request({method:'personal_sign',params:[hex,address]});
+ const selected=await provider.request({method:'eth_accounts'});
+ if(!same(selected?.[0],address)||BigInt(await provider.request({method:'eth_chainId'}))!==BigInt(chainId))throw Error('Wallet account or network changed during login. Connect again.');
  const verified=await request('/auth/verify',{message:proof.message,signature});
  if(!same(verified.wallet,address))throw Error('The verified wallet does not match the selected account');
  session=await request('/session');onSession(session);

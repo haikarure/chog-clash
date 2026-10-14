@@ -1,0 +1,14 @@
+[data-wallet-controls]{display:flex;align-items:center;flex:0 0 auto;min-width:0}
+.wallet-connect{box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:128px;min-height:44px;padding:9px 12px;border:2px solid #24182e;background:#f8f0dd;color:#24182e;box-shadow:3px 3px 0 #24182e;font:700 10px/1.2 Arial,sans-serif;letter-spacing:.4px;white-space:nowrap;cursor:pointer}
+.wallet-connect:hover{background:#ffe33f}.wallet-connect:focus-visible{outline:3px solid #9149e8;outline-offset:4px}
+.wallet-connect.is-connected{background:#9149e8;color:white}.wallet-connect strong{font-size:11px}.wallet-connect small{font-size:8px;letter-spacing:.8px}
+.wallet-connect:disabled{opacity:.65;cursor:wait}
+.wallet-login-status{position:fixed;z-index:1000;top:88px;right:16px;max-width:min(370px,calc(100vw - 32px));padding:14px 18px;margin:0;border:2px solid #24182e;box-shadow:4px 4px 0 #24182e;background:#ffe33f;color:#24182e;font:700 13px/1.5 Arial,sans-serif;overflow-wrap:anywhere}
+.wallet-login-status[hidden]{display:none}
+.comic-nav .motion-toggle{margin-left:0}.comic-nav [data-wallet-controls]{margin-left:0}
+.house-topbar nav{align-items:center}.house-topbar [data-wallet-controls]{margin-left:8px}
+.online-header{flex-wrap:wrap}.online-header .online-location{flex:1}.online-header [data-wallet-controls]{margin-left:auto}
+@media(max-width:1300px){.comic-nav{gap:16px}.comic-nav .nav-edition{display:none}}
+@media(max-width:1000px){.comic-nav nav{display:none}.comic-nav .motion-toggle{margin-left:auto}}
+@media(max-width:600px){.comic-nav{gap:12px}.comic-nav .motion-toggle{display:none}.comic-nav [data-wallet-controls]{margin-left:auto}.comic-nav .nav-play{min-height:44px;display:flex;align-items:center}.wallet-connect{min-width:122px;padding:8px;font-size:9px}.online-header .online-location{display:none}.online-header [data-wallet-controls]{margin-left:0}.online-header{gap:10px}.online-header .online-brand{margin-right:auto}.house-topbar{flex-wrap:wrap;gap:8px}.house-topbar .house-location{display:none}.house-topbar nav{gap:6px}.house-topbar [data-wallet-controls]{margin-left:0}.house-topbar .quiet-button{font-size:9px;padding:8px}.wallet-login-status{top:76px}}
+@media(max-width:400px){.comic-nav{padding-inline:12px;gap:9px}.comic-nav .nav-play>span{margin-left:5px}.wallet-connect{min-width:116px}.online-header .paper-button{padding:8px;font-size:9px}}

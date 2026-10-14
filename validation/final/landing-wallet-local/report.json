@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "baseUrl": "http://localhost:40601",
+  "evidenceType": "Actual backend SIWE and local Anvil test-wallet signatures; automated Chromium, no human/device or public-chain transaction claim.",
+  "checks": {
+    "landingLoadsWithoutWalletPrompt": true,
+    "landingWalletLogin": true,
+    "landingToHubToPaidDuelReusesLogin": true,
+    "serverLogoutPersistsAcrossReloadAndTabs": true,
+    "reconnectKeepsPaidDuelParticipant": true,
+    "accountSwitchInvalidatesOldLogin": true,
+    "walletRejectionStaysDisconnected": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "landingWalletFits": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "landingWalletFits": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "landingWalletFits": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "landingWalletFits": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "landingWalletFits": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "landingWalletFits": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "landingWalletFits": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "landingWalletFits": true
+    }
+  ],
+  "errors": [],
+  "signatureCounts": {
+    "originalPlayer": 2,
+    "switchedPlayer": 1
+  }
+}

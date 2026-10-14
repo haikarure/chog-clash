@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f8f0dd">
 <meta name="description" content="Twelve CHOG. Five places. One very loud House Cup. Meet the crew and play the free 2D browser fighting game.">
-<link rel="icon" href="assets/chog/ui/favicon.svg"><link rel="preload" href="assets/chog/landing/fonts/Bangers-Regular.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="assets/chog/landing/comic-heroes.webp" as="image" fetchpriority="high">
+<link rel="icon" href="assets/chog/ui/favicon.svg"><link rel="stylesheet" href="online/wallet.css"><link rel="preload" href="assets/chog/landing/fonts/Bangers-Regular.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="assets/chog/landing/comic-heroes.webp" as="image" fetchpriority="high">
 <noscript><style>*,*:before,*:after{animation:none!important}.motion-toggle{display:none!important}.reveal{opacity:1!important;translate:none!important}</style></noscript><title>CHOG CLASH — Issue #01: The House Cup</title><script>document.documentElement.classList.add('js');</script><link rel="stylesheet" href="comic.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 <header class="comic-nav">
 <a class="comic-logo" href="#top" aria-label="CHOG Clash home"><span>CHOG</span><b>CLASH</b></a><span class="nav-edition">THE HOUSE CUP<br><b>A CHOG ORIGINAL / ISSUE 01</b></span>
 <nav aria-label="Chapters"><a href="#story">THE STORY</a><a href="#crew">THE CREW</a><a href="#world">THE WORLD</a></nav>
-<button class="motion-toggle" id="motion-toggle" aria-pressed="true" aria-label="Pause page animation"><i aria-hidden="true"></i><span>MOTION ON</span></button><a class="nav-play game-link" href="play.html">PLAY NOW <span aria-hidden="true">↗</span></a><div class="reading-progress" aria-hidden="true"></div>
+<button class="motion-toggle" id="motion-toggle" aria-pressed="true" aria-label="Pause page animation"><i aria-hidden="true"></i><span>MOTION ON</span></button><div data-wallet-controls><button class="wallet-connect" type="button" disabled>CONNECT WALLET</button></div><a class="nav-play game-link" href="play.html">PLAY NOW <span aria-hidden="true">↗</span></a><div class="reading-progress" aria-hidden="true"></div>
 </header>
 <main id="main">
 <section class="cover-wrap" id="top" aria-label="Issue 01, the House Cup">
@@ -81,5 +81,5 @@
 <section class="final-chapter" aria-labelledby="final-title"><div class="chapter final-layout reveal"><div><span class="chapter-tag">TO BE CONTINUED… <i>/</i> BY YOU.</span><h2 id="final-title">YOUR NEXT PANEL<br><em>STARTS HERE.</em></h2><p>Bring your favourite CHOG. We'll bring the chaos.</p><div class="final-actions"><a class="comic-button game-link" href="play.html?mode=versus">ENTER THE HOUSE CUP <span aria-hidden="true">↗</span></a><a class="text-link game-link" href="play.html?mode=training">JUST WARMING UP? <span aria-hidden="true">↗</span></a></div><span class="final-platform">FREE BROWSER GAME / DESKTOP + TOUCH / VS COMPUTER + TRAINING</span></div><div class="final-stamp" aria-hidden="true"><span>THE<br>HOUSE</span><b>CUP!</b><i>EVERYONE'S INVITED</i></div></div></section>
 </main>
 <footer class="comic-footer"><a class="comic-logo" href="#top" aria-label="Back to the cover"><span>CHOG</span><b>CLASH</b></a><p>A CHOG community fan game. Character references: <a href="https://www.chog.xyz/team" target="_blank" rel="noopener">CHOG Team</a>.<br>Combat engine adapted from <a href="https://github.com/bangtutorial/aether-clash" target="_blank" rel="noopener">Aether Clash by BangTutorial</a> under MIT.</p><a class="text-link" href="#top">BACK TO THE COVER <span aria-hidden="true">↑</span></a><span class="footer-issue">END OF ISSUE 01.</span></footer>
-<div class="page-turn" aria-hidden="true"><span>THE NEXT CHAPTER…</span></div><script src="chog-roster.js"></script><script src="match.js"></script><script src="comic.js"></script>
+<div class="page-turn" aria-hidden="true"><span>THE NEXT CHAPTER…</span></div><script src="chog-roster.js"></script><script src="match.js"></script><script src="comic.js"></script><script type="module" src="online/wallet-ui.mjs"></script>
 </body></html>

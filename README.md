@@ -33,7 +33,7 @@ npm --prefix server test
 npm --prefix server run test:contracts
 ```
 
-43 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
+51 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
 
 [Paid escrow source](https://testnet.monadscan.com/address/0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7#code) · [Cup escrow source](https://testnet.monadscan.com/address/0xeEe983581d5f747eC31Cda37C2645F65af31CB5E#code)
 
@@ -55,8 +55,14 @@ The paid duel create/join/funding UI includes a Claim testnet AUSD button. Playe
 
 ## 1v1 stake selection
 
-The main 1v1 Duel menu shows the 1 AUSD stake choice alongside explicit Free 1v1. Invitation and automatic matchmaking both use the existing PaidDuelEscrow. Players approve one test AUSD each before the match locks; the winner receives 1.90 and the treasury 0.10. The result screen shows reward/refund progress and only marks a payment verified after its token transfer. Existing free invitations remain free. [Full local-EVM browser acceptance](validation/final/pvp-stakes-local/report.json), [public entry/mobile checks](validation/final/pvp-entry-public/report.json), [public deployment checks](validation/final/pvp-stakes-release.json).
+The main 1v1 Duel menu shows the 1 AUSD stake choice alongside explicit Free 1v1. Invitation and automatic matchmaking both use the existing PaidDuelEscrow. Players deposit one test AUSD each before the match locks; the winner receives 1.90 and the treasury 0.10. The result screen shows reward/refund progress and only marks a payment verified after its token transfer. Existing free invitations remain free. [Full local-EVM browser acceptance](validation/final/pvp-stakes-local/report.json), [public entry/mobile checks](validation/final/pvp-entry-public/report.json), [public deployment checks](validation/final/pvp-stakes-release.json).
 
 ## Fewer wallet confirmations
 
 Active, matching backend wallet sessions are reused; expired or changed-account sessions still require a signature. Chain switching is skipped when already correct. Entry funding offers a bounded 10 AUSD spending limit for up to ten one-token entries, with a one-token limit option. The token, spender, entry and calldata are checked before preparing the larger limit. Each deposit remains 1 AUSD and requires the player’s own confirmation. [Local-EVM browser evidence](validation/final/simple-wallet-local/report.json) records one login signature per player and a later entry funded with one transaction. [Public release](validation/final/simple-wallet-release.json), [UI edge cases](validation/final/simple-wallet-faucet/report.json).
+
+## Connect from the landing page
+
+Connect Wallet is available on the landing page and the hub/PvP/Cup headers. The same HttpOnly game session carries across pages, so an active wallet login does not need another SIWE signature. The address button disconnects the site login in one click without a transaction. Logout invalidates pending login proofs and unpaired paid queues while preserving the game session and invitation ownership; other tabs refresh their wallet state. The first connection still needs the wallet’s own approval and signature. Auth tokens and signatures are not stored in localStorage.
+
+[Local browser acceptance](validation/final/landing-wallet-local/report.json), [paid duel regression](validation/final/landing-wallet-paid/report.json), [public UI checks](validation/final/landing-wallet-public/report.json). The public-release evidence records the deployed bytes at the time of its check; the current source additionally prevents a stale session response from restoring wallet auth after logout.

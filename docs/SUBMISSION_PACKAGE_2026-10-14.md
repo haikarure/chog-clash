@@ -57,17 +57,17 @@ The combat engine adapts MIT-licensed Aether Clash by Bang Tutorial. The origina
 
 ## Reviewer walkthrough
 
-1. Open the demo and enter the arcade. Try VS Computer or Training immediately, without a wallet.
-2. Open Play with a Friend. Create an invitation or select Quick Match in two browser sessions. Both players confirm Ready.
-3. Select Paid Testnet Duel. Use two distinct EVM wallets on Monad testnet with test AUSD and test MON. Create an invitation or enter the paid queue; pairing does not charge an entry.
-4. Each player approves/deposits 1 test AUSD. Open the match after both entries lock. A surrender is explicitly a Forfeit. View verified winner/platform transactions in the escrow report.
+1. Open the demo. Connect Wallet is available from the landing navigation, with one-click Disconnect after login. VS Computer and Training work immediately without a wallet.
+2. Choose 1v1 Duel and Free 1v1. Create an invitation or select Quick Match in two browser sessions. Both players confirm Ready.
+3. Choose 1 AUSD Duel. Use two distinct EVM wallets on Monad testnet with test AUSD and test MON. An active landing-page login is reused. Create an invitation or enter the paid queue; pairing does not charge an entry.
+4. On first funding, set the token spending limit and deposit exactly 1 test AUSD each. Later entries need only the deposit confirmation while the login and allowance are valid. Open the match after both entries lock. A surrender is explicitly a Forfeit. View verified winner/platform transactions in the escrow report.
 5. Host a House Cup: Practice needs no wallet; Testnet Cup needs a sponsor's 100 test AUSD and four separate SIWE wallets. Player entry is free. Only the locked final allocates 70/30.
 
 Keyboard: A/D movement, W jump, Space basic, I/O skills, P ultimate. Touch controls appear on mobile. Settings do not pause the opponent in online play.
 
 ## Validation and limits
 
-43 Node tests and 38 contract tests passed. Local real-EVM browser tests cover seven viewports, lost confirmation/reload, paid queue refund and mobile URLs. Ten played bot matches completed at around 100 ms RTT, plus one at around 200 ms, with ordered uniform jitter ±15 ms per direction and 1% input/snapshot message loss. Both clients and deterministic replay agreed with the server. This simulates application-message loss through a WebSocket proxy, not TCP packet loss or a physical WAN benchmark.
+51 Node tests and 38 contract tests passed. Local real-EVM browser tests cover seven viewports, lost confirmation/reload, paid queue refund and mobile URLs. Ten played bot matches completed at around 100 ms RTT, plus one at around 200 ms, with ordered uniform jitter ±15 ms per direction and 1% input/snapshot message loss. Both clients and deterministic replay agreed with the server. This simulates application-message loss through a WebSocket proxy, not TCP packet loss or a physical WAN benchmark.
 
 Public Cup acceptance uses four simulated wallet clients and three Forfeits, not a four-human event. Physical device frame performance, two-device testing, human tournament feedback and adoption/retention are not yet measured. The 5% duel fee is a demo product choice, not a proven optimal business model.
 

@@ -1,6 +1,7 @@
 import {createCombat,BUTTONS,RULESET} from './core.mjs';
 import {BUILD_HASH} from './build.mjs';
-import {CupFunding,DuelFunding,TestnetFaucet,AUSD_FAUCET,formatTestAUSD,connectVerifiedWallet,ensureWalletNetwork,sendWalletTransaction,walletReceipt} from './payments.mjs';
+import {CupFunding,DuelFunding,TestnetFaucet,AUSD_FAUCET,formatTestAUSD,ensureWalletNetwork,sendWalletTransaction,walletReceipt} from './payments.mjs';
+import {getWalletSession,injectedWallet} from './wallet-session.mjs';
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const short=address=>address?address.slice(0,6)+'…'+address.slice(-4):'Connect wallet';
 const game=()=>window.__game;
@@ -17,6 +18,8 @@ export function paidPrizeStatus(duel,winnerSeat,playerSeat){
  return {refund,playerWon:!refund&&winnerSeat===playerSeat,amount:amount.toString(),confirmed:transfer?.state==='paid',hash:transfer?.hash||null};
 }
 class OnlineApp {
+ get walletBusy(){return !!this._walletBusy||!!this.auth?.snapshot().busy;}
+ set walletBusy(value){this._walletBusy=!!value;}
  constructor(){
   this.root=document.createElement('section');this.root.id='online-root';this.root.setAttribute('aria-label','CHOG online arcade');this.root.hidden=true;document.body.append(this.root);
   this.view='entry';this.nickname='CHOG player';this.chog='yot';this.stage='house-cup';this.cupName='CHOG House Cup';this.cupMode='practice';this.error='';this.room=null;this.net=null;this.seat=0;this.model=null;this.prepared='';this.preparing=false;this.seq=0;this.bits=0;this.pulses=0;this.pending=[];this.confirmedEvents=new Set();this.currentMatch=null;this.cup=null;this.lastRender='';this.connected=true;this.corrections=[];this.timer=null;this.lastStep=performance.now();
@@ -29,8 +32,15 @@ class OnlineApp {
   this.root.addEventListener('change',e=>{if(e.target.id==='duel-reuse-approval'){this.duelApprovalEntries=e.target.checked?10:1;try{localStorage.setItem('chog-duel-approval-choice-v1:'+this.wallet.toLowerCase(),String(this.duelApprovalEntries));}catch{}if(this.duelFunding&&!this.duelFunding.busy)this.duelFunding.setApprovalEntries(this.duelApprovalEntries);this.render(true);}});
   document.addEventListener('visibilitychange',()=>{if(document.hidden)this.input(null,false);});
   window.addEventListener('blur',()=>this.input(null,false));
+  this.auth=getWalletSession();this.auth.subscribe(state=>{
+   this.wallet=state.wallet;this.token=this.auth.token();
+   if(!state.wallet&&!state.busy&&this.queueActive&&this.queue?.kind==='paid'&&this.queue.state!=='Matched'){
+    this.queueActive=false;this.queue=null;this.view='paid-create';this.navigate('play.html?online=paid');
+   }
+   this.render();
+  });
  }
- async request(path,body){const response=await fetch('/api'+path,{method:body===undefined?'GET':'POST',headers:{'Content-Type':'application/json',...(this.token?{'Authorization':'Bearer '+this.token}:{})},...(body===undefined?{}:{body:JSON.stringify(body)})});let result;try{result=await response.json();}catch{throw Error('Online play is unavailable on this host. Return to the local arcade.');}if(!response.ok)throw Error(result.error||'The request could not be verified');return result;}
+ async request(path,body){return this.auth.request(path,body);}
  navigate(address){const url=new URL(address,location.href),current=new URLSearchParams(location.search);for(const key of ['touch','embed'])if(current.has(key))url.searchParams.set(key,current.get(key));history.replaceState(null,'',url.href);if(window.parent!==window)window.parent.postMessage({type:'chog-navigation',query:url.search},location.origin);}
  async open(view){
   this.onlineReady=false;
@@ -38,7 +48,7 @@ class OnlineApp {
   this.pvpMode=view==='casual'?'casual':'paid';this.view=view==='cup'?'cup-create':view==='paid'?'paid-create':'entry';this.error='';this.render(true);
   try{
    this.config=await this.request('/config');if(this.config.buildHash!==BUILD_HASH)throw Error('Your game version changed. Reload to join online.');
-   const session=await this.request('/session');this.token=session.token;this.wallet=Number(session.walletExpires)>Date.now()?session.wallet:null;
+   const session=await this.auth.refresh();this.token=session.token;this.wallet=this.auth.snapshot().wallet;
    await this.sdk();
    const params=new URLSearchParams(location.search);
    if(params.has('room')){this.cupId=params.get('cup');this.duelId=params.get('duel');await this.join(params.get('room'),params.get('invite'));}
@@ -51,7 +61,7 @@ class OnlineApp {
   }catch(error){this.notify(error.message);}
  }
  async sdk(){if(window.Colyseus)return;await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='online/vendor/colyseus.js';script.onload=resolve;script.onerror=()=>reject(Error('Could not load the online connection. Retry.'));document.head.append(script);});}
- header(label='PLAY TOGETHER'){return `<header class="online-header"><button class="online-brand" data-action="exit"><img src="assets/chog/ui/favicon.svg" alt=""><span>CHOG <b>CLASH</b><small>THE HOUSE CUP</small></span></button><span class="online-location">${label}</span><button class="paper-button" data-action="exit">BACK TO ARCADE</button></header>`;}
+ header(label='PLAY TOGETHER'){return `<header class="online-header"><button class="online-brand" data-action="exit"><img src="assets/chog/ui/favicon.svg" alt=""><span>CHOG <b>CLASH</b><small>THE HOUSE CUP</small></span></button><span class="online-location">${label}</span><div data-wallet-controls></div><button class="paper-button" data-action="exit">BACK TO ARCADE</button></header>`;}
  message(){return `<p class="online-message" id="online-message" role="status" ${this.error?'':'hidden'}>${escape(this.error)}</p>`;}
  personaGrid(selected=this.chog,disabled=false){return `<div class="online-roster" role="group" aria-label="Choose your CHOG">${CHOG.characters.map(c=>`<button class="online-persona ${c.id===selected?'selected':''}" data-action="pick" data-chog="${c.id}" aria-label="${c.displayName}" aria-pressed="${c.id===selected}" ${disabled?'disabled':''} style="--persona:${c.color}"><img src="${c.portrait}" alt=""><span>${c.id==='ping'?'Ping ×4':c.displayName}</span></button>`).join('')}</div>`;}
  preview(chog,side,label){const c=get(chog)||get('yot');return `<article class="online-showcase ${side}"><small>${escape(label)}</small><img src="${c.reference}" alt="${c.displayName}"><h2>${c.displayName}</h2><p>${c.title}</p></article>`;}
@@ -74,7 +84,7 @@ class OnlineApp {
  faucetController(){
   if(!this.faucetAvailable()||!this.wallet)throw Error('Connect a wallet on Monad testnet first');
   if(this.faucet?.wallet.toLowerCase()!==this.wallet.toLowerCase()){
-   const flow=new TestnetFaucet({wallet:this.wallet,storage:localStorage,provider:()=>window.ethereum,onChange:()=>{if(this.faucet===flow&&this.wallet?.toLowerCase()===flow.wallet.toLowerCase())this.render();}});this.faucet=flow;this.faucetInput='';
+   const flow=new TestnetFaucet({wallet:this.wallet,storage:localStorage,provider:()=>injectedWallet(),onChange:()=>{if(this.faucet===flow&&this.wallet?.toLowerCase()===flow.wallet.toLowerCase())this.render();}});this.faucet=flow;this.faucetInput='';
   }return this.faucet;
  }
  faucetPanel(){
@@ -95,7 +105,7 @@ class OnlineApp {
   ${d.result?`<section class="online-cup-result"><span class="eyebrow">${escape(d.result.outcome)}</span><h2>${d.result.winnerSeat===null?'FULL ENTRY REFUND':escape(d.participants[d.result.winnerSeat]?.nickname)+' WINS'}</h2><p>${escape(d.result.reason?.replaceAll('_',' ')||'')} · ${escape(d.cancelReason||'')}</p></section>`:''}<section class="online-report"><h2>ESCROW TRANSACTIONS</h2><p>Payout is complete only when the token transfer is verified. Awaiting/failed transactions retain unpaid credits.</p>${d.transactions.length?d.transactions.map(t=>`<div class="online-tx"><span>${escape(t.kind.replace('duel-',''))} · ${escape(t.state)}${t.amount?' · '+(Number(t.amount)/1000000).toFixed(2)+' '+this.duelUnit():''}</span>${t.hash?this.paidTransaction(t.hash):''}${t.error?`<p>${escape(t.error)}</p>`:''}</div>`).join(''):'<p>Invite your rival first. Funding becomes available after the duel escrow is confirmed.</p>'}</section>${this.message()}</main>`;
  }
  duelApprovalChoice(){if(this.wallet&&this.approvalChoiceWallet!==this.wallet.toLowerCase()){this.approvalChoiceWallet=this.wallet.toLowerCase();try{const saved=localStorage.getItem('chog-duel-approval-choice-v1:'+this.approvalChoiceWallet);this.duelApprovalEntries=saved==='1'?1:10;}catch{this.duelApprovalEntries=10;}}return this.duelApprovalEntries;}
- paidFundingController(){const context={cupId:this.duelId,chainId:this.config?.paidDuel.chainId,contract:this.config?.paidDuel.contract,token:this.config?.paidDuel.token,wallet:this.wallet};if(!context.contract||!context.wallet)throw Error('Verify the wallet assigned to this duel first');const key=[context.cupId,context.chainId,context.contract,context.wallet].join(':');if(this.duelFunding?.contextKey!==key){const flow=new DuelFunding({context,approvalEntries:this.duelApprovalChoice(),storage:localStorage,provider:()=>window.ethereum,request:(...args)=>this.request(...args),onChange:state=>{if(this.duelId===context.cupId&&this.duelFunding===flow){this.duelPayment=state;if(state.report)this.duel=state.report;this.render();}}});flow.contextKey=key;this.duelFunding=flow;this.duelPayment=flow.snapshot();}if(!this.duelFunding.busy)this.duelFunding.setApprovalEntries(this.duelApprovalChoice());return this.duelFunding;}
+ paidFundingController(){const context={cupId:this.duelId,chainId:this.config?.paidDuel.chainId,contract:this.config?.paidDuel.contract,token:this.config?.paidDuel.token,wallet:this.wallet};if(!context.contract||!context.wallet)throw Error('Verify the wallet assigned to this duel first');const key=[context.cupId,context.chainId,context.contract,context.wallet].join(':');if(this.duelFunding?.contextKey!==key){const flow=new DuelFunding({context,approvalEntries:this.duelApprovalChoice(),storage:localStorage,provider:()=>injectedWallet(),request:(...args)=>this.request(...args),onChange:state=>{if(this.duelId===context.cupId&&this.duelFunding===flow){this.duelPayment=state;if(state.report)this.duel=state.report;this.render();}}});flow.contextKey=key;this.duelFunding=flow;this.duelPayment=flow.snapshot();}if(!this.duelFunding.busy)this.duelFunding.setApprovalEntries(this.duelApprovalChoice());return this.duelFunding;}
  async refreshDuel(){if(!this.duelId)return;const id=this.duelId,d=await this.request(`/duels/${id}`);if(this.duelId!==id)return;this.duel=d;if(d.participants.some(p=>p.isYou)&&d.state==='Funding'&&this.wallet&&this.config?.paidDuel.enabled)try{await this.paidFundingController().sync();}catch{}if(this.view==='duel'||(this.view==='match'&&this.net?.duelId))this.render();}
  entry(){if(this.pvpMode==='paid')return this.paidCreate();return `${this.header('FREE 1v1 · NO STAKES')}<main class="online-entry"><div class="online-title"><span class="eyebrow">ONE LINK. TWO CHOG. YOUR RIVAL.</span><h1>BRING A <em>FRIEND.</em></h1><p>Pick a persona, share your room, and settle it in the arena. All 12 fighters are free.</p></div><div class="online-selection">${this.preview(this.chog,'player','YOUR CHOG')}<section class="online-pick-panel">${this.pvpModePicker()}${this.nicknameField()}${this.personaGrid()}<label class="online-field">THE PLACE<select id="online-stage">${Object.entries(MatchRules.stages).map(([id,s])=>`<option value="${id}" ${id===this.stage?'selected':''}>${escape(s.name)}</option>`).join('')}</select></label><button class="solid-button" data-action="create-room" ${this.onlineReady&&!this.creating?'':'disabled'}>${this.creating?'CREATING ROOM…':this.onlineReady?'INVITE FRIEND · FREE ↗':'CONNECTING…'}</button><button class="paper-button" data-action="quick-match" ${this.onlineReady&&!this.creating?'':'disabled'}>QUICK MATCH · FREE ↗</button><button class="paper-button" data-action="paid-create">PAID TESTNET DUEL</button><button class="paper-button" data-action="cup-create">HOST A HOUSE CUP</button><p class="online-note">Free casual PvP · no wallet required</p></section>${this.preview('mamio','rival','WHO WILL YOU INVITE?')}</div>${this.message()}</main>`;}
  lobby(){const slots=this.net?.slots||[{chog:this.chog,nickname:this.nickname},{chog:'mamio',nickname:'Waiting for friend'}],me=slots[this.seat],other=slots[1-this.seat],cup=!!this.net?.cupId,paid=!!this.net?.duelId,locked=cup||paid;
@@ -127,7 +137,9 @@ class OnlineApp {
   return `<div class="online-match-toolbar"><span id="online-network-status">${this.connected?paid?'1 '+this.duelUnit()+' PvP':this.net.cupId?'CUP PvP':'FREE PvP':'RECONNECTING'} · ${Math.round(this.net.slots[this.seat].rtt||0)} ms</span><button data-action="surrender" ${ended?'disabled':''}>SURRENDER</button>${exit}</div>${offline&&!ended?`<section class="online-reconnect" role="status"><h2>RECONNECTING</h2><p>Both fighters are paused while the disconnected player returns.</p><strong>${Math.ceil(Math.min(...this.net.slots.filter(s=>!s.connected).map(s=>s.graceRemaining)))}s</strong></section>`:''}${ended?`<section class="online-match-result"><span class="eyebrow">${this.net.persisted?'SERVER VERIFIED':'SAVING RESULT'} · ${escape(r.outcome||'RESULT')}</span><h1>${winner?escape(winner.nickname)+' WINS':'MATCH VOID'}</h1><p>${escape(r.reason?.replaceAll('_',' ')||'')} · ${r.wins[0]} — ${r.wins[1]}</p>${paid?this.paidMatchPrize():'<p class="online-note">'+(this.net.cupId?'House Cup result · prizes are tracked in the bracket':'Free 1v1 · no stake or token payout')+'</p>'}${resultActions}${this.message()}</section>`:''}`;
  }
 
- render(force=false){if(this.root.hidden)return;
+ render(force=false){
+  this.auth?.setBlocked(!!(this._walletBusy||this.creating||this.funding?.busy||this.duelFunding?.busy||this.faucet?.snapshot().busy));
+  if(this.root.hidden)return;
   const key=JSON.stringify({view:this.view,pvpMode:this.pvpMode,chog:this.chog,error:this.error,config:!!this.config,queue:this.view==='queue'?this.queue:null,duel:this.view==='duel'||(this.view==='match'&&this.net?.duelId)?this.duel:null,duelPayment:this.view==='duel'?this.duelPayment:null,cup:this.view==='cup'?this.cup:null,payment:this.view==='cup'?this.payment:null,faucet:this.faucet?.snapshot(),walletBusy:this.walletBusy,slots:this.net?.slots?.map(s=>({chog:s.chog,nickname:s.nickname,connected:s.connected,ready:s.ready,rematch:s.rematch,grace:Math.ceil(s.graceRemaining),samples:this.view==='lobby'?Math.min(10,s.rttSamples):0})),match:this.net?.sim?.rules.phase,matchId:this.net?.matchId,persisted:this.net?.persisted,preparing:this.preparing,wallet:this.wallet});
   const status=this.root.querySelector('#online-network-status');if(status&&this.net)status.textContent=`${this.connected?this.net.duelId?'1 '+this.duelUnit()+' PvP':this.net.cupId?'CUP PvP':'FREE PvP':'RECONNECTING'} · ${Math.round(this.net.slots[this.seat].rtt||0)} ms`;
   if(!force&&key===this.lastRender)return;this.lastRender=key;
@@ -196,12 +208,13 @@ class OnlineApp {
   if(action==='claim')await this.walletAction('claim','confirm-claim');
   if(action==='refund'){await this.request(`/cups/${this.cupId}/refund-expired`,{});await this.refreshCup();}
  }
- async switchWalletNetwork(network=this.config.settlement.chainId){await ensureWalletNetwork(window.ethereum,network);}
+ async switchWalletNetwork(network=this.config.settlement.chainId){await ensureWalletNetwork(injectedWallet(),network);}
  async connectWallet(){
   if(this.walletConnection)return this.walletConnection;
   const previousBusy=this.walletBusy;this.walletBusy=true;this.render(true);
   const work=async()=>{
-   const connected=await connectVerifiedWallet({provider:window.ethereum,chainId:this.config.settlement.chainId,request:(...args)=>this.request(...args),onSession:session=>{this.token=session.token;this.wallet=Number(session.walletExpires)>Date.now()?session.wallet:null;}});
+   // This app already reserved the operation above; the header remains blocked.
+   this.auth.chainId=this.config.settlement.chainId;const connected=await this.auth.connect({allowBlocked:true});
    this.wallet=connected.wallet;this.render(true);if(this.faucetAvailable())this.faucetController().sync();if(this.cupId)await this.refreshCup();if(this.duelId)await this.refreshDuel();
   };
   this.walletConnection=work();try{await this.walletConnection;}finally{this.walletConnection=null;this.walletBusy=previousBusy;this.render(true);}
@@ -212,13 +225,13 @@ class OnlineApp {
   catch(error){if(!flow?.snapshot().error)throw error;}
   finally{this.walletBusy=false;this.render(true);}
  }
- async claimDuel(){if(this.walletBusy)return;if(!this.wallet)await this.connectWallet();this.walletBusy=true;this.render(true);const key=['chog-duel-claim-v1',this.duelId,this.config.paidDuel.chainId,this.wallet].join(':');try{let hash=localStorage.getItem(key);if(!/^0x[0-9a-f]{64}$/i.test(hash||'')){const transaction=await this.request(`/duels/${this.duelId}/claim`,{});hash=await sendWalletTransaction({provider:window.ethereum,transaction,wallet:this.wallet,chainId:this.config.paidDuel.chainId,onSubmitted:h=>localStorage.setItem(key,h)});}await walletReceipt(window.ethereum,hash);await this.request(`/duels/${this.duelId}/confirm-claim`,{hash});localStorage.removeItem(key);await this.refreshDuel();}finally{this.walletBusy=false;this.render(true);}}
+ async claimDuel(){if(this.walletBusy)return;if(!this.wallet)await this.connectWallet();this.walletBusy=true;this.render(true);const key=['chog-duel-claim-v1',this.duelId,this.config.paidDuel.chainId,this.wallet].join(':');try{let hash=localStorage.getItem(key);if(!/^0x[0-9a-f]{64}$/i.test(hash||'')){const transaction=await this.request(`/duels/${this.duelId}/claim`,{});hash=await sendWalletTransaction({provider:injectedWallet(),transaction,wallet:this.wallet,chainId:this.config.paidDuel.chainId,onSubmitted:h=>localStorage.setItem(key,h)});}await walletReceipt(injectedWallet(),hash);await this.request(`/duels/${this.duelId}/confirm-claim`,{hash});localStorage.removeItem(key);await this.refreshDuel();}finally{this.walletBusy=false;this.render(true);}}
  fundingController(){
   const context={cupId:this.cupId,chainId:this.config?.settlement.chainId,contract:this.config?.settlement.contract,wallet:this.wallet};
   if(!context.contract||!context.wallet)throw Error('Connect the sponsor wallet and enable the Cup funding service first');
   const key=[context.cupId,context.chainId,context.contract,context.wallet].join(':');
   if(this.funding?.contextKey!==key){
-   const flow=new CupFunding({context,storage:window.localStorage,provider:()=>window.ethereum,request:(...args)=>this.request(...args),onChange:state=>{if(this.cupId===context.cupId&&this.funding===flow){this.payment=state;if(state.report)this.cup=state.report;this.render();}}});
+   const flow=new CupFunding({context,storage:window.localStorage,provider:()=>injectedWallet(),request:(...args)=>this.request(...args),onChange:state=>{if(this.cupId===context.cupId&&this.funding===flow){this.payment=state;if(state.report)this.cup=state.report;this.render();}}});
    flow.contextKey=key;this.funding=flow;this.payment=flow.snapshot();
   }
   return this.funding;
@@ -231,9 +244,9 @@ class OnlineApp {
    let hash=localStorage.getItem(key);
    if(!/^0x[0-9a-f]{64}$/i.test(hash||'')){
     const transaction=await this.request(`/cups/${cupId}/${action}`,{});
-    hash=await sendWalletTransaction({provider:window.ethereum,transaction,wallet,chainId,onSubmitted:hash=>localStorage.setItem(key,hash)});
+    hash=await sendWalletTransaction({provider:injectedWallet(),transaction,wallet,chainId,onSubmitted:hash=>localStorage.setItem(key,hash)});
    }
-   try{await walletReceipt(window.ethereum,hash);}catch(error){if(error.reverted)localStorage.removeItem(key);throw error;}
+   try{await walletReceipt(injectedWallet(),hash);}catch(error){if(error.reverted)localStorage.removeItem(key);throw error;}
    await this.request(`/cups/${cupId}/${confirmation}`,{hash});localStorage.removeItem(key);await this.refreshCup();
   }finally{this.walletBusy=false;this.render(true);}
  }

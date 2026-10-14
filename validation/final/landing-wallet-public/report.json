@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "baseUrl": "https://chog-clash-two.vercel.app",
+  "evidenceType": "Actual public UI/API with fresh anonymous browser sessions; no wallet signatures, faucet claims, or onchain broadcasts.",
+  "checks": {
+    "landingConnectAvailable": true,
+    "logoutEndpointPreservesAnonymousGameSession": true,
+    "missingWalletDoesNotBlockFreeMode": true,
+    "hubWalletControlAvailable": true,
+    "mobileHeaderWalletControlAvailable": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "fits": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fits": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "fits": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "fits": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "fits": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "fits": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "fits": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "fits": true
+    }
+  ],
+  "errors": []
+}

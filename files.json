@@ -1,6 +1,6 @@
 {
-  "files": 302,
-  "bytes": 28021163,
+  "files": 305,
+  "bytes": 28033093,
   "list": [
     {
       "file": "announcer.js",
@@ -56,11 +56,11 @@
     },
     {
       "file": "house-menu.js",
-      "bytes": 21493
+      "bytes": 21525
     },
     {
       "file": "index.html",
-      "bytes": 18249
+      "bytes": 18464
     },
     {
       "file": "isolde.js",
@@ -92,7 +92,7 @@
     },
     {
       "file": "play.html",
-      "bytes": 15481
+      "bytes": 15587
     },
     {
       "file": "preload.js",
@@ -1112,7 +1112,7 @@
     },
     {
       "file": "online/client.mjs",
-      "bytes": 59344
+      "bytes": 59515
     },
     {
       "file": "online/core.mjs",
@@ -1176,7 +1176,7 @@
     },
     {
       "file": "online/payments.mjs",
-      "bytes": 19046
+      "bytes": 19297
     },
     {
       "file": "online/port-provenance.json",
@@ -1191,8 +1191,20 @@
       "bytes": 221712
     },
     {
+      "file": "online/wallet-session.mjs",
+      "bytes": 6348
+    },
+    {
+      "file": "online/wallet-ui.mjs",
+      "bytes": 2239
+    },
+    {
+      "file": "online/wallet.css",
+      "bytes": 2431
+    },
+    {
       "file": "precache.js",
-      "bytes": 18668
+      "bytes": 18805
     },
     {
       "file": "LICENSE",

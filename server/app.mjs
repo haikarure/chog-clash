@@ -100,6 +100,9 @@ export async function startServer(options={}) {
  route('post','/api/queue/ack',req=>{const s=authenticated(req);if(store.queueStatus(s.id)?.state==='Matched')store.queueClear(s.id);return {ok:true};});
  route('post','/api/auth/challenge',req=>createChallenge(store,authenticated(req),req.body.address,origin,chain.chainId));
  route('post','/api/auth/verify',async req=>({wallet:await verifyChallenge(store,authenticated(req),req.body.message,req.body.signature,origin,chain.chainId)}));
+ // Keep the anonymous game session and its invitations; revoke wallet auth and
+ // outstanding login nonces so a delayed signature cannot restore a logout.
+ route('post','/api/auth/logout',req=>{store.logoutWallet(authenticated(req));return {wallet:null,walletExpires:0};});
  const requiredDuel=id=>{const d=store.duel(id);if(!d)throw Error('Duel not found');return d;};
  route('post','/api/duels',req=>duels.create(authenticated(req),req.body));
  route('get','/api/duels/:id',req=>duels.report(req.params.id,session(req)?.id));

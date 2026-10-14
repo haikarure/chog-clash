@@ -78,6 +78,11 @@ export class Store {
  }
  newSession(){const token=randomBytes(32).toString('hex'),id=randomUUID();this.db.prepare('INSERT INTO sessions VALUES(?,?,?,?,?)').run(id,tokenHash(token),Date.now()+86400000,null,0);return {id,token};}
  session(token){if(typeof token!=='string'||token.length!==64)return null;return this.db.prepare('SELECT * FROM sessions WHERE token_hash=? AND expires>?').get(tokenHash(token),Date.now())||null;}
+ logoutWallet(session){return this.transaction(()=>{
+  this.db.prepare('UPDATE sessions SET wallet=NULL,wallet_expires=0 WHERE id=?').run(session.id);
+  this.db.prepare('DELETE FROM nonces WHERE session_id=?').run(session.id);
+  this.db.prepare("DELETE FROM match_queue WHERE session_id=? AND kind='paid' AND state='Queued'").run(session.id);
+ });}
  putNonce(session,message,address,nonce){this.db.prepare('INSERT INTO nonces(nonce,session_id,message,address,expires) VALUES(?,?,?,?,?)').run(nonce,session.id,message,address.toLowerCase(),Date.now()+600000);}
  nonce(nonce,session){return this.db.prepare('SELECT * FROM nonces WHERE nonce=? AND session_id=? AND used=0 AND expires>?').get(nonce,session.id,Date.now());}
  consumeNonce(nonce,session,address){return this.transaction(()=>{const r=this.db.prepare('UPDATE nonces SET used=1 WHERE nonce=? AND session_id=? AND used=0 AND expires>?').run(nonce,session.id,Date.now());if(r.changes!==1)throw Error('Login nonce expired or already used');this.db.prepare('UPDATE sessions SET wallet=?,wallet_expires=? WHERE id=?').run(address.toLowerCase(),Date.now()+3600000,session.id);});}

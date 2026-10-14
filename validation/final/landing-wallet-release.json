@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "baseUrl": "https://chog-clash-two.vercel.app",
+  "files": {
+    "index.html": {
+      "bytes": 18464,
+      "sha256": "d245d6cbaa8a617ede8139287a058c30ad1823fea88a7b60c10af78ae5e24eda"
+    },
+    "play.html": {
+      "bytes": 15587,
+      "sha256": "e608e3d46a05849f8927591ce3e34ae76abfbf29e2125b243fef83e653bcde34"
+    },
+    "house-menu.js": {
+      "bytes": 21525,
+      "sha256": "2a0f76c28d289f41f4d0f18ca7e87b129c1c29bc68d8935ff1eda1916efa0359"
+    },
+    "online/client.mjs": {
+      "bytes": 59515,
+      "sha256": "42dce09a1ecc6af9176753b0bd181f5b24dfbd40247dff190f9ce8ea8ddc7d2c"
+    },
+    "online/payments.mjs": {
+      "bytes": 19297,
+      "sha256": "93699f90e7609693b789edd9ae31c5dc95c630df4f8f8ed0ac48890610ca9499"
+    },
+    "online/wallet-session.mjs": {
+      "bytes": 6283,
+      "sha256": "de8aef5870e0fe2e8dd003f65e23d4465a1c71841401ee603bff7edb5c0394b2"
+    },
+    "online/wallet-ui.mjs": {
+      "bytes": 2239,
+      "sha256": "75ece91bc3fb21c4c7281e580fb8177cc78a3ba0ea5cc6be39be2cdf1d831f1b"
+    },
+    "online/wallet.css": {
+      "bytes": 2431,
+      "sha256": "7893994e46c3773f3d06d0c2aef8949b530fb16a46357582aa747adf707decdb"
+    },
+    "precache.js": {
+      "bytes": 18805,
+      "sha256": "9f7847ce5ac07bd9b7ef748ff0fc46b635ed1745e7d764c4186d70e492a5313e"
+    }
+  },
+  "apiConfig": {
+    "ruleset": "house-cup-online-v1",
+    "buildHash": "0xb4ba050a3bdc4d6d0c6a155c007cdede12944ca27924375707a22ab5d34bf740",
+    "online": true,
+    "settlement": {
+      "enabled": true,
+      "mode": "testnet",
+      "label": "Monad testnet \u00b7 AUSD test token",
+      "chainId": 10143,
+      "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+      "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "pool": "100",
+      "split": [
+        70,
+        30
+      ],
+      "reason": null
+    },
+    "paidDuel": {
+      "enabled": true,
+      "chainId": 10143,
+      "contract": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+      "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+      "entry": "1",
+      "pool": "2",
+      "feeBps": 500,
+      "winnerAward": "1900000",
+      "treasury": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+      "label": "Monad testnet \u00b7 AUSD test token",
+      "reason": null
+    },
+    "quickMatch": true,
+    "roster": [
+      "yot",
+      "mamio",
+      "benja",
+      "toad",
+      "ping",
+      "novee",
+      "tonashiro",
+      "bigchog",
+      "rogue",
+      "tabsu",
+      "venty",
+      "cookie"
+    ]
+  },
+  "evidenceType": "Actual public UI/API with fresh anonymous browser sessions; no wallet signatures, faucet claims, or onchain broadcasts.",
+  "nodeTestsPassed": 50,
+  "contractSourceUnchanged": true,
+  "vercel": {
+    "deploymentId": "dpl_A5Vyqi37np6ChGYBkBC3ZbZswF87",
+    "url": "https://chog-clash-ptbxbbeu7-haikarures-projects.vercel.app",
+    "alias": "https://chog-clash-two.vercel.app",
+    "status": "READY",
+    "scope": "haikarures-projects"
+  },
+  "railway": {
+    "deploymentId": "4d9cf5a7-85e9-4fc9-a7fd-679008d02779",
+    "status": "SUCCESS",
+    "projectId": "daf7e8c1-fc5d-41ba-83c6-1f1b4769ef4a",
+    "serviceId": "e7e6dc69-d302-4ae3-9082-52dd93c46ff9",
+    "workspace": "haikarure"
+  },
+  "runtimeVersion": "a5af67b8095d"
+}

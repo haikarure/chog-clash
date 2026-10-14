@@ -6,7 +6,8 @@
     "pendingReloadNoResendAndVerifiedCredit": true,
     "cooldownDoesNotSend": true,
     "missingGasDoesNotSend": true,
-    "faucetAlsoAvailableBeforeEntryFunding": true
+    "faucetAlsoAvailableBeforeEntryFunding": true,
+    "boundedApprovalChoicesVisibleAndResponsive": true
   },
   "viewports": [
     {
@@ -53,7 +54,7 @@
     }
   ],
   "errors": [],
-  "baseUrl": "http://127.0.0.1:54135",
+  "baseUrl": "http://127.0.0.1:46941",
   "walletTransactions": 1,
   "calldataAndGasVerified": true
 }

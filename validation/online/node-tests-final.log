@@ -1,0 +1,77 @@
+npm notice run chog-house-cup-server@2.0.0 test
+npm notice run node --test --test-force-exit test/*.test.mjs
+✔ SIWE binds session, domain, chain and single-use nonce (32.038558ms)
+✔ check-in replacement revokes old invite; result and outbox commit once (5.877784ms)
+✔ local RPC: SIWE, funded Cup, signed results, durable outbox and verified 70/30 transfer (40865.086967ms)
+✔ 144 online pairings initialize and advance without browser globals (248.526927ms)
+✔ basic, both skills and all 12 ultimates run on both owners (481.78488ms)
+✔ damage and displacement match when a kit changes sides (244.322379ms)
+✔ simultaneous attacks trade and held buttons do not repeat (2.007999ms)
+✔ complete snapshots reproduce future state including summons and transform (157.202926ms)
+✔ three draws plus overtime terminate as Void (157.937248ms)
+✔ forfeit and Void are terminal and cannot be overwritten (0.382267ms)
+✔ all 12 kits finish a played two-round match through combat inputs (410.502229ms)
+✔ faucet targets only the connected recipient and verifies actual token credit with bounded gas (59.132325ms)
+✔ pending faucet claim survives reload and is confirmed without sending a second request (3.447697ms)
+✔ cooldown, wrong network, mismatched account and insufficient gas never ask the wallet to send (2.092943ms)
+✔ wallet rejection allows retry, while an unknown wallet result blocks another send (2.499004ms)
+✔ a successful receipt without the expected AUSD transfer never reports a successful claim (1.02245ms)
+✔ reverted faucet claims can be retried and journals are isolated between wallets (1.875491ms)
+✔ recovery verifies the faucet receipt and recipient without opening another wallet transaction (1.421321ms)
+✔ funding recovery handles a ten-block RPC limit and resumes its persisted scan after restart (22.404845ms)
+Room connection was closed unexpectedly (4002):
+PvP reached fight
+[Colyseus reconnection]: ⏳ will retry in 1.0 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId 'dN8H8QBz1' with roomId '46Ce3fA_-'... (attempt 1 of 15)
+[Colyseus reconnection]: ✅ reconnection successful!
+Authority damage received
+Forfeit persisted
+Rematch verified
+Cup semifinals created
+Cup final created
+✔ real WebSocket PvP, server authority, rematch and a four-player Practice Cup (24720.847913ms)
+Paid duel winner 1.90 and treasury 0.10 transfers verified
+Partial paid entry cancellation refunded with no fee
+Paid server restart creates Void and both entry refunds
+Paid room creation failure produces Void and full refunds
+Direct wallet cancellation is reconciled and refunded by the backend
+✔ paid invite/auto-match: real two-entry escrow, recovered deposit, fee, cancel refund and restart Void (61001.249647ms)
+✔ funding reload after approval resumes with only one deposit (15.681964ms)
+✔ funding reload after a mined deposit recovers a failed backend confirmation without resending (5.673513ms)
+✔ pending deposit survives reload and cannot submit another deposit (5.553591ms)
+✔ failed gas estimation never opens a transaction request; successful retry sends explicit bounded gas (4.103132ms)
+✔ wallet rejection permits retry; an interrupted wallet request requires reconciliation (4.12573ms)
+✔ funding journals are isolated by Cup, chain and sponsor; wrong chain cannot send (7.404658ms)
+✔ two concurrent funding actions send only one approval and one deposit (1.363612ms)
+✔ winning a paid duel never claims the prize is paid before the winner transfer is verified (2.4078ms)
+✔ winner and loser see the same verified payout without giving the loser a win (0.42289ms)
+✔ a Void reports each player’s own verified refund, never another player’s transfer (0.396964ms)
+✔ a combined winner and treasury credit remains a verified winner payment (0.3672ms)
+✔ queue leases, cancellation and repeated search preserve one FIFO entry (4.320375ms)
+✔ paid queue never pairs two sessions controlling the same wallet (2.258522ms)
+Room connection was closed unexpectedly (4002):
+✔ concurrent Quick Match requests reserve exactly two seats and reject an outsider (296.967523ms)
+✔ SIGKILL during a real match recovers SQLite to Void, never an invented winner (6702.248317ms)
+✔ signed outbox bytes, nonce and credits metadata survive a database reopen (3.217933ms)
+✔ manual retry rebroadcasts an unconfirmed transaction without replacing its hash, nonce or signed bytes (2.785287ms)
+✔ an active matching wallet login needs no network switch, permission prompt or new signature (4.516312ms)
+✔ expired or different-account sessions require one fresh signature then become reusable (1.023446ms)
+✔ unknown Monad network is added once and a failed chain switch cannot start login (1.441058ms)
+✔ the reusable approval is bounded at ten entries and never changes the one-token deposit (5.829753ms)
+✔ reusable approval rejects a changed token, spender, entry, native value or approval calldata (3.754595ms)
+✔ landing/session initialization is silent, deduplicated, and reuses an active login (4.08965ms)
+✔ disconnect revokes wallet auth and the next connection needs one new signature (3.011654ms)
+✔ logout during a pending signature prevents a late login from restoring auth (1.65853ms)
+✔ a failed logout retains visible auth and allows retry; an account change clears it (6.640044ms)
+✔ account changes during a wallet operation are signed out when that operation finishes (5.009796ms)
+✔ a changed account during the signature cannot verify the old wallet (0.857423ms)
+✔ a session refresh started during logout cannot restore its stale wallet response (3.693987ms)
+✔ server logout invalidates signed and pending nonces while preserving game ownership (219.948815ms)
+ℹ tests 51
+ℹ suites 0
+ℹ pass 51
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 61922.637319
