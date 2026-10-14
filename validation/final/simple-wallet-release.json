@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-14T01:40:10.012307+00:00",
+  "productionUrl": "https://chog-clash-two.vercel.app",
+  "deploymentUrl": "https://chog-clash-9pbhlmr4v-haikarures-projects.vercel.app",
+  "deploymentId": "dpl_8eA5mMa7MCgeUP4ZHxfKVM2Zkcfx",
+  "runtimeVersion": "e662921f97a9",
+  "checks": {
+    "online/client.mjs": {
+      "matchesLocalBuild": true,
+      "sha256": "d87c83b92f827ae6d09eef82be723256b1480491a74e758af8cbb745b4e2bc08"
+    },
+    "online/payments.mjs": {
+      "matchesLocalBuild": true,
+      "sha256": "a11831e50f3f88180721aed5496cc9983e02225e699eddeed23a0195fb83e999"
+    },
+    "online/online.css": {
+      "matchesLocalBuild": true,
+      "sha256": "1a4a6bfea3f045dfb702af24aa82a4adba62fd249fb8701b23c8807c75d20c05"
+    },
+    "paidTestnetEnabled": true
+  },
+  "scope": "Public build bytes and backend config verified; wallet prompt counts, bounded approval and later-deposit flow tested with real local-EVM transactions and simulated player wallets. No backend or escrow redeployment.",
+  "approvalLimitAUSD": 10,
+  "entryAUSD": 1,
+  "walletSessionReuseRespectsExpiry": true
+}

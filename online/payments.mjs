@@ -1,6 +1,29 @@
 const hashPattern=/^0x[0-9a-f]{64}$/i;
 const same=(a,b)=>String(a).toLowerCase()===String(b).toLowerCase();
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+export async function ensureWalletNetwork(provider,chainId){
+ if(!provider)throw Error('Open this game in a browser with an EVM wallet. Free modes work without a wallet.');
+ if(BigInt(await provider.request({method:'eth_chainId'}))===BigInt(chainId))return;
+ const network='0x'+Number(chainId).toString(16);
+ try{await provider.request({method:'wallet_switchEthereumChain',params:[{chainId:network}]});}
+ catch(error){if(error.code!==4902||Number(chainId)!==10143)throw error;await provider.request({method:'wallet_addEthereumChain',params:[{chainId:network,chainName:'Monad Testnet',nativeCurrency:{name:'MON',symbol:'MON',decimals:18},rpcUrls:['https://testnet-rpc.monad.xyz'],blockExplorerUrls:['https://testnet.monadscan.com']}]});await provider.request({method:'wallet_switchEthereumChain',params:[{chainId:network}]});}
+ if(BigInt(await provider.request({method:'eth_chainId'}))!==BigInt(chainId))throw Error('The wallet did not switch to the game network');
+}
+export async function connectVerifiedWallet({provider,chainId,request,onSession=()=>{},now=()=>Date.now()}){
+ await ensureWalletNetwork(provider,chainId);
+ let accounts=await provider.request({method:'eth_accounts'});if(!accounts?.length)accounts=await provider.request({method:'eth_requestAccounts'});
+ const address=accounts?.[0];if(!/^0x[0-9a-f]{40}$/i.test(address||''))throw Error('Select an EVM wallet account first');
+ let session=await request('/session');onSession(session);
+ if(same(session.wallet,address)&&Number(session.walletExpires)>now())return {wallet:session.wallet,session,reused:true};
+ const proof=await request('/auth/challenge',{address});
+ const hex='0x'+[...new TextEncoder().encode(proof.message)].map(value=>value.toString(16).padStart(2,'0')).join('');
+ const signature=await provider.request({method:'personal_sign',params:[hex,address]});
+ const verified=await request('/auth/verify',{message:proof.message,signature});
+ if(!same(verified.wallet,address))throw Error('The verified wallet does not match the selected account');
+ session=await request('/session');onSession(session);
+ if(!same(session.wallet,address)||Number(session.walletExpires)<=now())throw Error('The wallet login expired. Sign in again.');
+ return {wallet:session.wallet,session,reused:false};
+}
 export function gasWithBuffer(estimate){
  const gas=BigInt(estimate);if(gas<=0n||gas>30000000n)throw Error('This transaction has an invalid gas estimate');
  const buffered=(gas*110n+99n)/100n;return buffered>30000000n?30000000n:buffered;
@@ -114,6 +137,7 @@ export class CupFunding {
   return {...this.backend,steps:structuredClone(this.steps),busy:this.busy,canFund:!!this.backend.canFund&&!this.busy&&!uncertain,error:this.error};
  }
  emit(){this.onChange(this.snapshot());}
+ prepareFundingPlan(plan){return plan;}
  async sync(){
   if(this.syncing)return this.syncing;
   this.syncing=this.reconcile();try{return await this.syncing;}finally{this.syncing=null;}
@@ -157,7 +181,7 @@ export class CupFunding {
     await this.sync();
     if(this.backend.phase==='confirmed')return;
     if(!this.backend.canFund)throw Error('The deposit is pending or its receipt is being recovered. Check confirmation before sending another.');
-    const plan=await this.request(`${this.resourcePath}/funding`,{});
+    const plan=this.prepareFundingPlan(await this.request(`${this.resourcePath}/funding`,{}));
     if(plan.alreadyFunded){this.backend=plan.status;this.emit();return;}
     for(const {phase,transaction} of plan.steps){
      try{
@@ -190,5 +214,17 @@ export class CupFunding {
 }
 
 export class DuelFunding extends CupFunding {
- constructor(options){super({...options,resourcePath:`/duels/${options.context.cupId}`,journalNamespace:'chog-duel-funding-v1'});}
+ constructor(options){super({...options,resourcePath:`/duels/${options.context.cupId}`,journalNamespace:'chog-duel-funding-v1'});this.setApprovalEntries(options.approvalEntries??1);}
+ setApprovalEntries(entries){if(![1,10].includes(entries))throw Error('Choose an approval limit of 1 or 10 entries');if(this.busy)throw Error('Wait for the current wallet request');this.approvalEntries=entries;}
+ prepareFundingPlan(plan){
+  if(this.approvalEntries===1||plan.alreadyFunded||!plan.steps?.some(step=>step.phase==='approval'))return plan;
+  if(!addressPattern.test(this.context.token||'')||!same(plan.token,this.context.token)||!same(plan.contract,this.context.contract)||plan.amount!=='1000000')throw Error('The duel approval plan does not match the verified token, escrow or entry');
+  const expected='0x095ea7b3'+addressWord(this.context.contract)+(1000000n).toString(16).padStart(64,'0');
+  return {...plan,steps:plan.steps.map(step=>{
+   if(step.phase!=='approval')return step;
+   const tx=step.transaction;
+   if(!same(tx.to,this.context.token)||!same(tx.data,expected)||BigInt(tx.value||0)!==0n)throw Error('The duel approval request does not match its spending limit');
+   return {...step,transaction:{...tx,data:'0x095ea7b3'+addressWord(this.context.contract)+(10000000n).toString(16).padStart(64,'0')}};
+  })};
+ }
 }

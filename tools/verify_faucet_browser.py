@@ -33,7 +33,7 @@ def provider(source,args):
 def api(route):
  path=route.request.url.split('/api/',1)[1]
  if path=='config':value={'online':True,'buildHash':BUILD,'quickMatch':True,'settlement':{'enabled':True,'chainId':10143,'contract':'0xeEe983581d5f747eC31Cda37C2645F65af31CB5E','token':TOKEN,'label':'Monad testnet · AUSD test token','mode':'testnet'},'paidDuel':{'enabled':True,'chainId':10143,'token':TOKEN,'contract':'0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7','feeBps':500,'winnerAward':'1900000','label':'Monad testnet · AUSD test token'}}
- elif path=='session':value={'token':'ui-test-session','wallet':WALLET if state['verified'] else None}
+ elif path=='session':value={'token':'ui-test-session','wallet':WALLET if state['verified'] else None,'walletExpires':int(time.time()*1000)+3600000 if state['verified'] else 0}
  elif path=='auth/challenge':value={'message':'Simulated UI-only wallet proof'}
  elif path=='auth/verify':state['verified']=True;value={'wallet':WALLET}
  elif path=='duels/fixture/funding-status':value={'phase':'approval-ready','canFund':True,'approvalNeeded':True}
@@ -72,6 +72,10 @@ try:
   state['mode']='cooldown';page.click('[data-action=claim-faucet]');page.wait_for_function('document.querySelector(".online-faucet-status").textContent.includes("cooling down")');assert len(state['sent'])==1;report['checks']['cooldownDoesNotSend']=True
   state['mode']='success';state['native']=0;page.click('[data-action=claim-faucet]');page.wait_for_function('document.querySelector(".online-faucet-status").textContent.includes("need MON testnet")');assert len(state['sent'])==1;report['checks']['missingGasDoesNotSend']=True
   state['native']=10**18;open_page('/play.html?duel=fixture&touch=0');assert page.locator('[data-action=fund-duel]').count()==1;assert page.locator('.online-faucet').count()==1;report['checks']['faucetAlsoAvailableBeforeEntryFunding']=True
+  assert page.locator('#duel-reuse-approval').is_checked();page.locator('#duel-reuse-approval').uncheck();assert 'ALLOW 1 & DEPOSIT 1 AUSD' in page.locator('[data-action=fund-duel]').inner_text();page.locator('#duel-reuse-approval').check();assert 'ALLOW 10 & DEPOSIT 1 AUSD' in page.locator('[data-action=fund-duel]').inner_text()
+  for width,height in [(1280,720),(844,390),(390,844)]:
+   page.set_viewport_size({'width':width,'height':height});assert page.evaluate('document.documentElement.scrollWidth<=innerWidth');page.locator('.online-approval-choice').scroll_into_view_if_needed();page.screenshot(path=str(OUT/f'approval-choice-{width}x{height}.png'))
+  report['checks']['boundedApprovalChoicesVisibleAndResponsive']=True
   assert not report['errors'];report['status']='PASS';report['baseUrl']=base;report['walletTransactions']=len(state['sent']);report['calldataAndGasVerified']=True
   (OUT/'report.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2));context.close();browser.close()
 finally:local.terminate();local.wait(timeout=10)

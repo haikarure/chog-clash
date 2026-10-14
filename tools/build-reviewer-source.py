@@ -71,7 +71,7 @@ npm --prefix server test
 npm --prefix server run test:contracts
 ```
 
-38 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
+43 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
 
 [Paid escrow source](https://testnet.monadscan.com/address/0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7#code) · [Cup escrow source](https://testnet.monadscan.com/address/0xeEe983581d5f747eC31Cda37C2645F65af31CB5E#code)
 

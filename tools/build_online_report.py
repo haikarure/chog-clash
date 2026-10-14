@@ -21,6 +21,7 @@ landing=read('validation/audit/landing-baseline.json');assert all(hashlib.sha256
 paths={'cupTestnet':'validation/testnet/acceptance.json','paidTestnet':'validation/testnet/paid-duel-acceptance.json','paidLocalBrowser':'validation/final/paid-browser/report.json','publicBrowser':'validation/final/public-online/report.json','publicMobile':'validation/final/public-mobile/mobile-shell.json','publicPaidBrowser':'validation/final/public-paid/report.json','publicCup':'validation/final/public-cup.json','network':'validation/final/network.json','publicSecurity':'validation/final/public-security.json'}
 paths.update({'faucetBrowser':'validation/final/faucet-browser/report.json','faucetPublicRelease':'validation/final/faucet-release.json'})
 paths.update({'pvpStakeLocalBrowser':'validation/final/pvp-stakes-local/report.json','pvpEntryPublicBrowser':'validation/final/pvp-entry-public/report.json','pvpStakeRelease':'validation/final/pvp-stakes-release.json'})
+paths.update({'simpleWalletLocal':'validation/final/simple-wallet-local/report.json','simpleWalletUi':'validation/final/simple-wallet-faucet/report.json','simpleWalletRelease':'validation/final/simple-wallet-release.json'})
 if not (ROOT/paths['publicMobile']).exists():paths['publicMobile']='validation/final/public-mobile/report.json'
 evidence={key:read(p) for key,p in paths.items()}
 pending=[key for key,value in evidence.items() if not value or value.get('status')!='PASS']

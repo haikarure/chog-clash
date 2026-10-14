@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "evidenceType": "Automated Chromium, simulated wallet/API and receipts. This UI test does not broadcast testnet transactions or prove physical-device behavior.",
+  "checks": {
+    "connectSwitchAndRejection": true,
+    "pendingReloadNoResendAndVerifiedCredit": true,
+    "cooldownDoesNotSend": true,
+    "missingGasDoesNotSend": true,
+    "faucetAlsoAvailableBeforeEntryFunding": true,
+    "boundedApprovalChoicesVisibleAndResponsive": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "fits": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "fits": true,
+      "targetsAtLeast44": true
+    }
+  ],
+  "errors": [],
+  "baseUrl": "http://127.0.0.1:53769",
+  "walletTransactions": 1,
+  "calldataAndGasVerified": true
+}

@@ -67,7 +67,7 @@ Keyboard: A/D movement, W jump, Space basic, I/O skills, P ultimate. Touch contr
 
 ## Validation and limits
 
-38 Node tests and 38 contract tests passed. Local real-EVM browser tests cover seven viewports, lost confirmation/reload, paid queue refund and mobile URLs. Ten played bot matches completed at around 100 ms RTT, plus one at around 200 ms, with ordered uniform jitter ±15 ms per direction and 1% input/snapshot message loss. Both clients and deterministic replay agreed with the server. This simulates application-message loss through a WebSocket proxy, not TCP packet loss or a physical WAN benchmark.
+43 Node tests and 38 contract tests passed. Local real-EVM browser tests cover seven viewports, lost confirmation/reload, paid queue refund and mobile URLs. Ten played bot matches completed at around 100 ms RTT, plus one at around 200 ms, with ordered uniform jitter ±15 ms per direction and 1% input/snapshot message loss. Both clients and deterministic replay agreed with the server. This simulates application-message loss through a WebSocket proxy, not TCP packet loss or a physical WAN benchmark.
 
 Public Cup acceptance uses four simulated wallet clients and three Forfeits, not a four-human event. Physical device frame performance, two-device testing, human tournament feedback and adoption/retention are not yet measured. The 5% duel fee is a demo product choice, not a proven optimal business model.
 
@@ -82,3 +82,7 @@ Paid duel create/join/funding screens include a Claim testnet AUSD button using 
 ## 1v1 stake selection update
 
 The main 1v1 Duel entry shows a 1 AUSD stake option and an explicit Free 1v1 option. Both friend invitation and automatic matchmaking support stakes using the existing deployed PaidDuelEscrow. Players approve their own entries before the match locks. The result screen shows the 1.90 AUSD winner reward and payout progress; it marks payout verified only after the winner token transfer is verified. Free rooms already created remain free. Four additional Node tests and a full local-EVM browser run cover the payout display and selection/reload flow.
+
+## Fewer wallet confirmations
+
+Active matching wallet sessions are reused, and network switching is skipped when already correct. Players can authorize a bounded 10 AUSD spending limit for up to ten one-token entries, or choose a one-token limit. Each deposit still requires the player’s confirmation. Local-EVM browser tests verify one login signature per player and one transaction for later entries. First-time funding still needs token approval and deposit confirmations; expired or changed-account sessions still require login.

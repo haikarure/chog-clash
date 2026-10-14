@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "evidenceType": "Automated Chromium with localhost Anvil escrow and injected simulated player wallets; no physical device or humans",
+  "chainId": 31337,
+  "baseUrl": "http://localhost:46821",
+  "checks": {
+    "cancelFreeSearch": true,
+    "freeQuickMatchCombatAndResult": true,
+    "main1v1EntryDefaultsToStake": true,
+    "fixtureNetworkLabelIsExplicit": true,
+    "minedEntryReloadNeverResends": true,
+    "winnerPrizeVisibleOnMatchResult": true,
+    "twoEntriesWinnerFeeVerifiedLedger": true,
+    "paidQueueCancellationRefundLedger": true,
+    "laterDuelNeedsOnlyOneDepositConfirmation": true,
+    "oneLoginSignaturePerPlayer": true,
+    "mobileQueueAndDuelReloadRetainContext": true
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 740,
+      "height": 360,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalFit": true,
+      "targetsAtLeast44": true
+    }
+  ],
+  "errors": [],
+  "timeline": [
+    {
+      "seconds": 2.13,
+      "label": "Free Quick Match"
+    },
+    {
+      "seconds": 13.15,
+      "label": "Paid invitation and two equal entries"
+    },
+    {
+      "seconds": 19.46,
+      "label": "Reload recovers the confirmed first entry"
+    },
+    {
+      "seconds": 33.72,
+      "label": "Paid match; automated opponent surrenders"
+    },
+    {
+      "seconds": 44.55,
+      "label": "Verified winner 1.90 and platform 0.10 transfers"
+    },
+    {
+      "seconds": 44.65,
+      "label": "Paid queue and full cancellation refund"
+    }
+  ],
+  "currentUrl": "http://localhost:46821/play.html?room=-j9lANVKX&duel=5b403d7f-8573-4e78-99ce-c7d915055fbd&touch=0",
+  "walletTransactions": [
+    {
+      "player": 0,
+      "hash": "0x8d7191488d9cd70e4be5a9b615d15eb50c32584986aa4e79474eca5717f7d166",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 0,
+      "hash": "0xf958fa753bf21bcd9c3bd2624a6ce0613d242beed7b00aafe9ae67f653f5d60f",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x1cd54"
+    },
+    {
+      "player": 1,
+      "hash": "0xf2827b4738dff0c932de199bdc2c4c55baae4a3e33a8a3c82315b0793f6450b1",
+      "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "gas": "0xc552"
+    },
+    {
+      "player": 1,
+      "hash": "0xb12136c778ab185983c67d354e6a376eb812215696c1449336f1fe21bec20243",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x143ac"
+    },
+    {
+      "player": 0,
+      "hash": "0x4799738bb32397eaf8074f865a241e3c17f7e52be8d5ca7032a6b225fc1baf37",
+      "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+      "gas": "0x1cd54"
+    }
+  ],
+  "remainingApprovalAUSD": [
+    "8",
+    "9"
+  ],
+  "loginSignatureCountByPlayer": [
+    1,
+    1
+  ],
+  "firstDuelFundingTransactionsPerPlayer": 2,
+  "laterDuelFundingTransactionsPerPlayer": 1
+}

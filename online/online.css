@@ -41,3 +41,7 @@ body.in-online .training-data{display:none}body.in-online #pause-btn{display:non
 .online-result-stake strong{font:30px var(--display)}.online-result-stake p{font-size:12px;line-height:1.4}.online-result-stake a{display:flex;align-items:center;justify-content:center;min-height:44px;font-size:11px;font-weight:bold;color:var(--ink)}
 .online-match-toolbar button{min-width:44px}
 .online-result-stake code{font-size:10px;max-width:100%;overflow-wrap:anywhere}
+.online-approval-choice{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--ink);padding:12px;background:var(--lilac);font-size:12px;font-weight:bold;margin:12px 0}
+.online-approval-choice input{width:44px;height:44px;flex:0 0 44px;accent-color:var(--purple)}.online-approval-choice small{display:block;font-size:11px;font-weight:normal;line-height:1.5;margin-top:5px}
+.online-funding-details{grid-column:1/-1;min-width:0}.online-funding-details summary{min-height:44px;padding:12px 0;cursor:pointer;font-size:11px;font-weight:bold}
+.online-funding-details[open]{display:flex;flex-direction:column;gap:12px}.online-funding-details .online-field{max-width:100%}
