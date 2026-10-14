@@ -23,8 +23,8 @@
       "sha256": "93699f90e7609693b789edd9ae31c5dc95c630df4f8f8ed0ac48890610ca9499"
     },
     "online/wallet-session.mjs": {
-      "bytes": 6283,
-      "sha256": "de8aef5870e0fe2e8dd003f65e23d4465a1c71841401ee603bff7edb5c0394b2"
+      "bytes": 6348,
+      "sha256": "093f7cde00549a583a5383bc3cf7f70c4157365d886151d3cad84bcad6001ff3"
     },
     "online/wallet-ui.mjs": {
       "bytes": 2239,
@@ -36,7 +36,7 @@
     },
     "precache.js": {
       "bytes": 18805,
-      "sha256": "9f7847ce5ac07bd9b7ef748ff0fc46b635ed1745e7d764c4186d70e492a5313e"
+      "sha256": "c5230461d54d855f2f447b3ce8df19e6144d668de7fd78de46614ef00ab11389"
     }
   },
   "apiConfig": {
@@ -87,11 +87,11 @@
     ]
   },
   "evidenceType": "Actual public UI/API with fresh anonymous browser sessions; no wallet signatures, faucet claims, or onchain broadcasts.",
-  "nodeTestsPassed": 50,
+  "nodeTestsPassed": 51,
   "contractSourceUnchanged": true,
   "vercel": {
-    "deploymentId": "dpl_A5Vyqi37np6ChGYBkBC3ZbZswF87",
-    "url": "https://chog-clash-ptbxbbeu7-haikarures-projects.vercel.app",
+    "deploymentId": "dpl_8JrVaum6oEdwxdgFTPxq5HyCokrX",
+    "url": "https://chog-clash-mjtg86g9g-haikarures-projects.vercel.app",
     "alias": "https://chog-clash-two.vercel.app",
     "status": "READY",
     "scope": "haikarures-projects"
@@ -103,5 +103,5 @@
     "serviceId": "e7e6dc69-d302-4ae3-9082-52dd93c46ff9",
     "workspace": "haikarure"
   },
-  "runtimeVersion": "a5af67b8095d"
+  "runtimeVersion": "d6f6a34bebc1"
 }

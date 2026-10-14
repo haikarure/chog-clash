@@ -1,6 +1,6 @@
 {
   "status": "PASS_AUTOMATED_RELEASE",
-  "recordedAt": "2026-10-14T01:45:51.494597+00:00",
+  "recordedAt": "2026-10-14T04:01:37.165869+00:00",
   "product": "CHOG Clash",
   "baselinePrdVersion": "2.0",
   "extensions": [
@@ -9,8 +9,8 @@
   ],
   "combatBuildHash": "0xb4ba050a3bdc4d6d0c6a155c007cdede12944ca27924375707a22ab5d34bf740",
   "nodeTests": {
-    "tests": 43,
-    "pass": 43,
+    "tests": 51,
+    "pass": 51,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0
@@ -1394,7 +1394,8 @@
         "pendingReloadNoResendAndVerifiedCredit": true,
         "cooldownDoesNotSend": true,
         "missingGasDoesNotSend": true,
-        "faucetAlsoAvailableBeforeEntryFunding": true
+        "faucetAlsoAvailableBeforeEntryFunding": true,
+        "boundedApprovalChoicesVisibleAndResponsive": true
       },
       "viewports": [
         {
@@ -1441,7 +1442,7 @@
         }
       ],
       "errors": [],
-      "baseUrl": "http://127.0.0.1:54135",
+      "baseUrl": "http://127.0.0.1:46941",
       "walletTransactions": 1,
       "calldataAndGasVerified": true
     },
@@ -1923,14 +1924,364 @@
       "approvalLimitAUSD": 10,
       "entryAUSD": 1,
       "walletSessionReuseRespectsExpiry": true
+    },
+    "landingWalletLocal": {
+      "status": "PASS",
+      "baseUrl": "http://localhost:40601",
+      "evidenceType": "Actual backend SIWE and local Anvil test-wallet signatures; automated Chromium, no human/device or public-chain transaction claim.",
+      "checks": {
+        "landingLoadsWithoutWalletPrompt": true,
+        "landingWalletLogin": true,
+        "landingToHubToPaidDuelReusesLogin": true,
+        "serverLogoutPersistsAcrossReloadAndTabs": true,
+        "reconnectKeepsPaidDuelParticipant": true,
+        "accountSwitchInvalidatesOldLogin": true,
+        "walletRejectionStaysDisconnected": true
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "landingWalletFits": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "landingWalletFits": true
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "landingWalletFits": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "landingWalletFits": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "landingWalletFits": true
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "landingWalletFits": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "landingWalletFits": true
+        },
+        {
+          "width": 320,
+          "height": 640,
+          "landingWalletFits": true
+        }
+      ],
+      "errors": [],
+      "signatureCounts": {
+        "originalPlayer": 2,
+        "switchedPlayer": 1
+      }
+    },
+    "landingWalletPaidRegression": {
+      "status": "PASS",
+      "evidenceType": "Automated Chromium with localhost Anvil escrow and injected simulated player wallets; no physical device or humans",
+      "chainId": 31337,
+      "baseUrl": "http://localhost:40601",
+      "checks": {
+        "cancelFreeSearch": true,
+        "freeQuickMatchCombatAndResult": true,
+        "main1v1EntryDefaultsToStake": true,
+        "fixtureNetworkLabelIsExplicit": true,
+        "minedEntryReloadNeverResends": true,
+        "winnerPrizeVisibleOnMatchResult": true,
+        "twoEntriesWinnerFeeVerifiedLedger": true,
+        "paidQueueCancellationRefundLedger": true,
+        "laterDuelNeedsOnlyOneDepositConfirmation": true,
+        "oneLoginSignaturePerPlayer": true,
+        "mobileQueueAndDuelReloadRetainContext": true
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "horizontalFit": true,
+          "targetsAtLeast44": true
+        }
+      ],
+      "errors": [],
+      "timeline": [
+        {
+          "seconds": 2.26,
+          "label": "Free Quick Match"
+        },
+        {
+          "seconds": 14.43,
+          "label": "Paid invitation and two equal entries"
+        },
+        {
+          "seconds": 21.99,
+          "label": "Reload recovers the confirmed first entry"
+        },
+        {
+          "seconds": 36.16,
+          "label": "Paid match; automated opponent surrenders"
+        },
+        {
+          "seconds": 47.09,
+          "label": "Verified winner 1.90 and platform 0.10 transfers"
+        },
+        {
+          "seconds": 47.16,
+          "label": "Paid queue and full cancellation refund"
+        }
+      ],
+      "currentUrl": "http://localhost:40601/play.html?room=yKi9MX3wn&duel=380db465-224f-4711-bc0c-7def1d60213e&touch=0",
+      "walletTransactions": [
+        {
+          "player": 0,
+          "hash": "0x8d7191488d9cd70e4be5a9b615d15eb50c32584986aa4e79474eca5717f7d166",
+          "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+          "gas": "0xc552"
+        },
+        {
+          "player": 0,
+          "hash": "0x57a0d5b00a8200282a44272524bf1e4fa25f794a2276a38debdd29e453f8497f",
+          "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+          "gas": "0x1cd54"
+        },
+        {
+          "player": 1,
+          "hash": "0xf2827b4738dff0c932de199bdc2c4c55baae4a3e33a8a3c82315b0793f6450b1",
+          "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+          "gas": "0xc552"
+        },
+        {
+          "player": 1,
+          "hash": "0x0c44aa1a57c139737a4e56867407048199c2e114192441e95a77f441d30088b3",
+          "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+          "gas": "0x143ac"
+        },
+        {
+          "player": 0,
+          "hash": "0xc97773d49b37a8ee8fac3ef9b89c559942b05eb1b892709ad24f78303c0a1804",
+          "to": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+          "gas": "0x1cd47"
+        }
+      ]
+    },
+    "landingWalletPublic": {
+      "status": "PASS",
+      "baseUrl": "https://chog-clash-two.vercel.app",
+      "evidenceType": "Actual public UI/API with fresh anonymous browser sessions; no wallet signatures, faucet claims, or onchain broadcasts.",
+      "checks": {
+        "landingConnectAvailable": true,
+        "logoutEndpointPreservesAnonymousGameSession": true,
+        "missingWalletDoesNotBlockFreeMode": true,
+        "hubWalletControlAvailable": true,
+        "mobileHeaderWalletControlAvailable": true
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "fits": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "fits": true
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "fits": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "fits": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "fits": true
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "fits": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "fits": true
+        },
+        {
+          "width": 320,
+          "height": 640,
+          "fits": true
+        }
+      ],
+      "errors": []
+    },
+    "landingWalletRelease": {
+      "status": "PASS",
+      "baseUrl": "https://chog-clash-two.vercel.app",
+      "files": {
+        "index.html": {
+          "bytes": 18464,
+          "sha256": "d245d6cbaa8a617ede8139287a058c30ad1823fea88a7b60c10af78ae5e24eda"
+        },
+        "play.html": {
+          "bytes": 15587,
+          "sha256": "e608e3d46a05849f8927591ce3e34ae76abfbf29e2125b243fef83e653bcde34"
+        },
+        "house-menu.js": {
+          "bytes": 21525,
+          "sha256": "2a0f76c28d289f41f4d0f18ca7e87b129c1c29bc68d8935ff1eda1916efa0359"
+        },
+        "online/client.mjs": {
+          "bytes": 59515,
+          "sha256": "42dce09a1ecc6af9176753b0bd181f5b24dfbd40247dff190f9ce8ea8ddc7d2c"
+        },
+        "online/payments.mjs": {
+          "bytes": 19297,
+          "sha256": "93699f90e7609693b789edd9ae31c5dc95c630df4f8f8ed0ac48890610ca9499"
+        },
+        "online/wallet-session.mjs": {
+          "bytes": 6348,
+          "sha256": "093f7cde00549a583a5383bc3cf7f70c4157365d886151d3cad84bcad6001ff3"
+        },
+        "online/wallet-ui.mjs": {
+          "bytes": 2239,
+          "sha256": "75ece91bc3fb21c4c7281e580fb8177cc78a3ba0ea5cc6be39be2cdf1d831f1b"
+        },
+        "online/wallet.css": {
+          "bytes": 2431,
+          "sha256": "7893994e46c3773f3d06d0c2aef8949b530fb16a46357582aa747adf707decdb"
+        },
+        "precache.js": {
+          "bytes": 18805,
+          "sha256": "c5230461d54d855f2f447b3ce8df19e6144d668de7fd78de46614ef00ab11389"
+        }
+      },
+      "apiConfig": {
+        "ruleset": "house-cup-online-v1",
+        "buildHash": "0xb4ba050a3bdc4d6d0c6a155c007cdede12944ca27924375707a22ab5d34bf740",
+        "online": true,
+        "settlement": {
+          "enabled": true,
+          "mode": "testnet",
+          "label": "Monad testnet · AUSD test token",
+          "chainId": 10143,
+          "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
+          "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "pool": "100",
+          "split": [
+            70,
+            30
+          ],
+          "reason": null
+        },
+        "paidDuel": {
+          "enabled": true,
+          "chainId": 10143,
+          "contract": "0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7",
+          "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
+          "entry": "1",
+          "pool": "2",
+          "feeBps": 500,
+          "winnerAward": "1900000",
+          "treasury": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
+          "label": "Monad testnet · AUSD test token",
+          "reason": null
+        },
+        "quickMatch": true,
+        "roster": [
+          "yot",
+          "mamio",
+          "benja",
+          "toad",
+          "ping",
+          "novee",
+          "tonashiro",
+          "bigchog",
+          "rogue",
+          "tabsu",
+          "venty",
+          "cookie"
+        ]
+      },
+      "evidenceType": "Actual public UI/API with fresh anonymous browser sessions; no wallet signatures, faucet claims, or onchain broadcasts.",
+      "nodeTestsPassed": 51,
+      "contractSourceUnchanged": true,
+      "vercel": {
+        "deploymentId": "dpl_8JrVaum6oEdwxdgFTPxq5HyCokrX",
+        "url": "https://chog-clash-mjtg86g9g-haikarures-projects.vercel.app",
+        "alias": "https://chog-clash-two.vercel.app",
+        "status": "READY",
+        "scope": "haikarures-projects"
+      },
+      "railway": {
+        "deploymentId": "4d9cf5a7-85e9-4fc9-a7fd-679008d02779",
+        "status": "SUCCESS",
+        "projectId": "daf7e8c1-fc5d-41ba-83c6-1f1b4769ef4a",
+        "serviceId": "e7e6dc69-d302-4ae3-9082-52dd93c46ff9",
+        "workspace": "haikarure"
+      },
+      "runtimeVersion": "d6f6a34bebc1"
     }
   },
   "pendingAutomatedEvidence": [],
   "integrity": {
-    "runtimeFiles": 297,
-    "runtimeVersion": "e662921f97a9",
-    "landingHashesUnchanged": 12,
-    "serverOrContractFilesInPrecache": false
+    "runtimeFiles": 300,
+    "runtimeVersion": "d6f6a34bebc1",
+    "landingHashesUnchanged": 11,
+    "serverOrContractFilesInPrecache": false,
+    "landingBaselineChangedFiles": [
+      "index.html"
+    ],
+    "landingChangeReason": "User-requested Connect/Disconnect controls on the landing page; released bytes verified against the approved source."
   },
   "trust": "The authoritative gameplay server/result signer is trusted. Escrow validates funds and signed-result terms; replay hashes are audit identifiers, not proof of honest gameplay.",
   "notCompleted": [
@@ -1959,6 +2310,10 @@
     "pvpStakeRelease": "../validation/final/pvp-stakes-release.json",
     "simpleWalletLocal": "../validation/final/simple-wallet-local/report.json",
     "simpleWalletUi": "../validation/final/simple-wallet-faucet/report.json",
-    "simpleWalletRelease": "../validation/final/simple-wallet-release.json"
+    "simpleWalletRelease": "../validation/final/simple-wallet-release.json",
+    "landingWalletLocal": "../validation/final/landing-wallet-local/report.json",
+    "landingWalletPaidRegression": "../validation/final/landing-wallet-paid/report.json",
+    "landingWalletPublic": "../validation/final/landing-wallet-public/report.json",
+    "landingWalletRelease": "../validation/final/landing-wallet-release.json"
   }
 }
