@@ -1,6 +1,6 @@
 {
   "status": "PASS_AUTOMATED_RELEASE",
-  "recordedAt": "2026-10-13T19:44:18.976483+00:00",
+  "recordedAt": "2026-10-14T00:21:37.192403+00:00",
   "product": "CHOG Clash",
   "baselinePrdVersion": "2.0",
   "extensions": [
@@ -9,8 +9,8 @@
   ],
   "combatBuildHash": "0xb4ba050a3bdc4d6d0c6a155c007cdede12944ca27924375707a22ab5d34bf740",
   "nodeTests": {
-    "tests": 27,
-    "pass": 27,
+    "tests": 34,
+    "pass": 34,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0
@@ -803,7 +803,8 @@
           "hash": "0xc51c136d0e8ee5bbede69795118cc60324d8e71c3fc9b0209400c0b344308c3e",
           "gas": "0x2949a"
         }
-      ]
+      ],
+      "videoPath": "/home/haikaru/Archverse/Lab/Metropolis/game/chog-clash/validation/final/public-paid/raw-video/page@ab627e980e287a13d5eeabf8b4706dc2.webm"
     },
     "publicCup": {
       "status": "PASS",
@@ -1029,7 +1030,7 @@
           "forfeits": 3,
           "void": 0
         },
-        "moneyLabel": "Monad testnet \u00b7 AUSD test token, no monetary value"
+        "moneyLabel": "Monad testnet · AUSD test token, no monetary value"
       },
       "payouts": [
         {
@@ -1344,7 +1345,7 @@
         "settlement": {
           "enabled": true,
           "mode": "testnet",
-          "label": "Monad testnet \u00b7 AUSD test token",
+          "label": "Monad testnet · AUSD test token",
           "chainId": 10143,
           "contract": "0xeEe983581d5f747eC31Cda37C2645F65af31CB5E",
           "token": "0xa9012a055bd4e0eDfF8Ce09f960291C09D5322dC",
@@ -1365,7 +1366,7 @@
           "feeBps": 500,
           "winnerAward": "1900000",
           "treasury": "0x9c94E607b1b97ffAaF4670272814C2DAEE638c63",
-          "label": "Monad testnet \u00b7 AUSD test token",
+          "label": "Monad testnet · AUSD test token",
           "reason": null
         },
         "quickMatch": true,
@@ -1384,12 +1385,97 @@
           "cookie"
         ]
       }
+    },
+    "faucetBrowser": {
+      "status": "PASS",
+      "evidenceType": "Automated Chromium, simulated wallet/API and receipts. This UI test does not broadcast testnet transactions or prove physical-device behavior.",
+      "checks": {
+        "connectSwitchAndRejection": true,
+        "pendingReloadNoResendAndVerifiedCredit": true,
+        "cooldownDoesNotSend": true,
+        "missingGasDoesNotSend": true,
+        "faucetAlsoAvailableBeforeEntryFunding": true
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "fits": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1280,
+          "height": 720,
+          "fits": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "fits": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 768,
+          "height": 1024,
+          "fits": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "fits": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 740,
+          "height": 360,
+          "fits": true,
+          "targetsAtLeast44": true
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "fits": true,
+          "targetsAtLeast44": true
+        }
+      ],
+      "errors": [],
+      "baseUrl": "http://127.0.0.1:54135",
+      "walletTransactions": 1,
+      "calldataAndGasVerified": true
+    },
+    "faucetPublicRelease": {
+      "checkedAt": "2026-10-14T00:20:34.870503+00:00",
+      "status": "PASS",
+      "productionUrl": "https://chog-clash-two.vercel.app",
+      "deploymentUrl": "https://chog-clash-26cp0yqtt-haikarures-projects.vercel.app",
+      "deploymentId": "dpl_2m2s6miUq1aVm3u4YCuH82UurkC4",
+      "runtimeVersion": "55ec7f3c1f79",
+      "checks": {
+        "online/client.mjs": {
+          "matchesLocalBuild": true,
+          "sha256": "298b727605c0d2d5ef313364ee9b6362c8c2fa96cb899e099fc729c3f771258d"
+        },
+        "online/payments.mjs": {
+          "matchesLocalBuild": true,
+          "sha256": "383e34e3c5f509f3c810ece9ff172b1e6b660108e4aa5cd1e885f5c373d934a5"
+        },
+        "online/online.css": {
+          "matchesLocalBuild": true,
+          "sha256": "ac383efd50fc21099aaeb3b0d9296606b07a90b13b0ae9189cfd0bda3467a46f"
+        },
+        "actualBackendConfig": true,
+        "actualPublicUiVisibleAndMissingWalletHandled": true
+      },
+      "scope": "Actual public deployment and backend config; read-only browser smoke. Faucet wallet edge cases tested with a simulated provider in separate reports.",
+      "browserErrors": []
     }
   },
   "pendingAutomatedEvidence": [],
   "integrity": {
     "runtimeFiles": 297,
-    "runtimeVersion": "c5d725db0c7a",
+    "runtimeVersion": "55ec7f3c1f79",
     "landingHashesUnchanged": 12,
     "serverOrContractFilesInPrecache": false
   },
@@ -1404,14 +1490,16 @@
     "submittedByAgent": false
   },
   "sources": {
-    "cupTestnet": "../validation/testnet/acceptance.json",
-    "paidTestnet": "../validation/testnet/paid-duel-acceptance.json",
-    "paidLocalBrowser": "../validation/final/paid-browser/report.json",
-    "publicBrowser": "../validation/final/public-online/report.json",
-    "publicMobile": "../validation/final/public-mobile/mobile-shell.json",
-    "publicPaidBrowser": "../validation/final/public-paid/report.json",
-    "publicCup": "../validation/final/public-cup.json",
-    "network": "../validation/final/network.json",
-    "publicSecurity": "../validation/final/public-security.json"
+    "cupTestnet": "../../game/chog-clash/validation/testnet/acceptance.json",
+    "paidTestnet": "../../game/chog-clash/validation/testnet/paid-duel-acceptance.json",
+    "paidLocalBrowser": "../../game/chog-clash/validation/final/paid-browser/report.json",
+    "publicBrowser": "../../game/chog-clash/validation/final/public-online/report.json",
+    "publicMobile": "../../game/chog-clash/validation/final/public-mobile/mobile-shell.json",
+    "publicPaidBrowser": "../../game/chog-clash/validation/final/public-paid/report.json",
+    "publicCup": "../../game/chog-clash/validation/final/public-cup.json",
+    "network": "../../game/chog-clash/validation/final/network.json",
+    "publicSecurity": "../../game/chog-clash/validation/final/public-security.json",
+    "faucetBrowser": "../../game/chog-clash/validation/final/faucet-browser/report.json",
+    "faucetPublicRelease": "../../game/chog-clash/validation/final/faucet-release.json"
   }
 }

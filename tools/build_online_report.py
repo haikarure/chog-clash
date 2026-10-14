@@ -11,7 +11,7 @@ def read(relative):
 log=(ROOT/'validation/online/node-tests-final.log').read_text()
 counts={name:int(re.search(r'ℹ '+name+r' (\d+)',log).group(1)) for name in ['tests','pass','fail','cancelled','skipped']}
 assert counts['tests']==counts['pass'] and counts['fail']==counts['cancelled']==counts['skipped']==0
-summary={'status':'PASS','recordedAt':datetime.now(timezone.utc).isoformat(),'counts':counts,'log':'node-tests-final.log','scope':'Shared combat, auth, real rooms/Cup, queue, real local-EVM paid settlement, retries and restart/refund recovery'}
+summary={'status':'PASS','recordedAt':datetime.now(timezone.utc).isoformat(),'counts':counts,'log':'node-tests-final.log','scope':'Shared combat, auth, real rooms/Cup, queue, real local-EVM paid settlement, retries and restart/refund recovery; simulated EIP-1193 faucet claim/recovery/transfer validation'}
 (ROOT/'validation/online/test-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
 contracts=read('validation/final/contracts.json');assert contracts['status']=='PASS'
 for name,digest in contracts['sourceSha256'].items():assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest
@@ -19,6 +19,7 @@ cache=json.JSONDecoder().raw_decode((ROOT/'precache.js').read_text().split('=',1
 for name,size,digest in cache['files']:assert (ROOT/name).stat().st_size==size and hashlib.sha1((ROOT/name).read_bytes()).hexdigest()[:12]==digest
 landing=read('validation/audit/landing-baseline.json');assert all(hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest for name,digest in landing.items())
 paths={'cupTestnet':'validation/testnet/acceptance.json','paidTestnet':'validation/testnet/paid-duel-acceptance.json','paidLocalBrowser':'validation/final/paid-browser/report.json','publicBrowser':'validation/final/public-online/report.json','publicMobile':'validation/final/public-mobile/mobile-shell.json','publicPaidBrowser':'validation/final/public-paid/report.json','publicCup':'validation/final/public-cup.json','network':'validation/final/network.json','publicSecurity':'validation/final/public-security.json'}
+paths.update({'faucetBrowser':'validation/final/faucet-browser/report.json','faucetPublicRelease':'validation/final/faucet-release.json'})
 if not (ROOT/paths['publicMobile']).exists():paths['publicMobile']='validation/final/public-mobile/report.json'
 evidence={key:read(p) for key,p in paths.items()}
 pending=[key for key,value in evidence.items() if not value or value.get('status')!='PASS']

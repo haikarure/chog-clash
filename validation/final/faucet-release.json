@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-14T00:20:34.870503+00:00",
+  "status": "PASS",
+  "productionUrl": "https://chog-clash-two.vercel.app",
+  "deploymentUrl": "https://chog-clash-26cp0yqtt-haikarures-projects.vercel.app",
+  "deploymentId": "dpl_2m2s6miUq1aVm3u4YCuH82UurkC4",
+  "runtimeVersion": "55ec7f3c1f79",
+  "checks": {
+    "online/client.mjs": {
+      "matchesLocalBuild": true,
+      "sha256": "298b727605c0d2d5ef313364ee9b6362c8c2fa96cb899e099fc729c3f771258d"
+    },
+    "online/payments.mjs": {
+      "matchesLocalBuild": true,
+      "sha256": "383e34e3c5f509f3c810ece9ff172b1e6b660108e4aa5cd1e885f5c373d934a5"
+    },
+    "online/online.css": {
+      "matchesLocalBuild": true,
+      "sha256": "ac383efd50fc21099aaeb3b0d9296606b07a90b13b0ae9189cfd0bda3467a46f"
+    },
+    "actualBackendConfig": true,
+    "actualPublicUiVisibleAndMissingWalletHandled": true
+  },
+  "scope": "Actual public deployment and backend config; read-only browser smoke. Faucet wallet edge cases tested with a simulated provider in separate reports.",
+  "browserErrors": []
+}

@@ -51,9 +51,9 @@ The combat engine adapts MIT-licensed Aether Clash by Bang Tutorial. The origina
 - Public Cup runner-up 30 AUSD: [transfer](https://testnet.monadscan.com/tx/0xc2d2710902451a3d007db39861cf187db280e654f05964136eff4ec4a693f1e7)
 - Public paid winner 1.90 AUSD: [transfer](https://testnet.monadscan.com/tx/0x38d8d6d314e271a823de1cea07fd95561ec0db65cf30dad139da2bd353fcd969)
 - Public platform fee 0.10 AUSD: [transfer](https://testnet.monadscan.com/tx/0xb321a242b0878645fc3aacb1418235716026e5cc595618be76f7a26ef14d33e5)
-- Paid duel and refund hashes: [testnet acceptance](../validation/testnet/paid-duel-acceptance.json).
-- Public Cup: [acceptance](../validation/final/public-cup.json).
-- Network: [10 played matches plus 200 ms stress](../validation/final/network.json).
+- Paid duel and refund hashes: [testnet acceptance](../../game/chog-clash/validation/testnet/paid-duel-acceptance.json).
+- Public Cup: [acceptance](../../game/chog-clash/validation/final/public-cup.json).
+- Network: [10 played matches plus 200 ms stress](../../game/chog-clash/validation/final/network.json).
 
 ## Reviewer walkthrough
 
@@ -67,10 +67,14 @@ Keyboard: A/D movement, W jump, Space basic, I/O skills, P ultimate. Touch contr
 
 ## Validation and limits
 
-27 Node tests and 38 contract tests passed. Local real-EVM browser tests cover seven viewports, lost confirmation/reload, paid queue refund and mobile URLs. Ten played bot matches completed at around 100 ms RTT, plus one at around 200 ms, with ordered uniform jitter ±15 ms per direction and 1% input/snapshot message loss. Both clients and deterministic replay agreed with the server. This simulates application-message loss through a WebSocket proxy, not TCP packet loss or a physical WAN benchmark.
+34 Node tests and 38 contract tests passed. Local real-EVM browser tests cover seven viewports, lost confirmation/reload, paid queue refund and mobile URLs. Ten played bot matches completed at around 100 ms RTT, plus one at around 200 ms, with ordered uniform jitter ±15 ms per direction and 1% input/snapshot message loss. Both clients and deterministic replay agreed with the server. This simulates application-message loss through a WebSocket proxy, not TCP packet loss or a physical WAN benchmark.
 
 Public Cup acceptance uses four simulated wallet clients and three Forfeits, not a four-human event. Physical device frame performance, two-device testing, human tournament feedback and adoption/retention are not yet measured. The 5% duel fee is a demo product choice, not a proven optimal business model.
 
 ## Before sending the form
 
 Use the same portal login provider used to register. Attach the final source and MP4/video URL, verify the demo opens, and copy only the fields the form requests. The user handles submission and its final confirmation. Do not claim the project was submitted from this document.
+
+## Testnet onboarding update
+
+Paid duel create/join/funding screens include a Claim testnet AUSD button using the published Agora faucet. Players approve the transaction in their own wallet and pay MON testnet gas. The UI shows the balance, verifies the token Transfer before confirming a claim, links its transaction and recovers a pending hash after reload. Seven faucet tests use a simulated EIP-1193 provider; UI tests cover seven viewports. The public deployment and actual backend configuration were checked separately.

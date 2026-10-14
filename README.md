@@ -33,7 +33,7 @@ npm --prefix server test
 npm --prefix server run test:contracts
 ```
 
-27 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
+34 Node tests and 38 Solidity tests passed. The Node suite deploys real local-EVM fixtures and tests invitation/queue, payout/fee, cancellation, failed transfers, missing hashes, retry, restart Void and direct-wallet cancellation. Four Solidity fuzz tests each run 256 cases.
 
 [Paid escrow source](https://testnet.monadscan.com/address/0xB15097FcB9DE04A2CEb844f1a9C88929E3d8cAd7#code) · [Cup escrow source](https://testnet.monadscan.com/address/0xeEe983581d5f747eC31Cda37C2645F65af31CB5E#code)
 
@@ -48,3 +48,7 @@ This repository is a reviewer snapshot of the CHOG Clash working source. It does
 CHOG references and their owners' rights, generated art, local rigs/music and synthetic announcer cues are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [LICENSE-ASSETS.md](LICENSE-ASSETS.md). This is a community fan adaptation and does not claim official CHOG affiliation. Existing engine code is attributed separately from the CHOG presentation, multiplayer backend, escrows and product flows built for this project.
 
 Credentials, session tokens, player databases, dependency installs and private deployment packets are excluded. Build artifacts can be regenerated. Runtime assets and original generated-art inputs are included.
+
+## In-game AUSD faucet
+
+The paid duel create/join/funding UI includes a Claim testnet AUSD button. Players use their own connected wallet on Monad testnet to call Agora’s published faucet; MON testnet gas is required. The UI verifies the AUSD transfer to the recipient, shows the balance/transaction link, handles cooldown and wallet rejection, and recovers pending transactions across reload. Seven faucet tests use a simulated EIP-1193 provider. [Public release checks](validation/final/faucet-release.json) and [simulated-wallet UI tests on the public deployment](validation/final/faucet-public-browser/report.json) record the current behavior.

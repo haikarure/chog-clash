@@ -1,6 +1,6 @@
 {
   "files": 302,
-  "bytes": 28000441,
+  "bytes": 28011660,
   "list": [
     {
       "file": "announcer.js",
@@ -1112,7 +1112,7 @@
     },
     {
       "file": "online/client.mjs",
-      "bytes": 51577
+      "bytes": 55076
     },
     {
       "file": "online/core.mjs",
@@ -1172,11 +1172,11 @@
     },
     {
       "file": "online/online.css",
-      "bytes": 13653
+      "bytes": 14486
     },
     {
       "file": "online/payments.mjs",
-      "bytes": 8642
+      "bytes": 15528
     },
     {
       "file": "online/port-provenance.json",
@@ -1192,7 +1192,7 @@
     },
     {
       "file": "precache.js",
-      "bytes": 18667
+      "bytes": 18668
     },
     {
       "file": "LICENSE",

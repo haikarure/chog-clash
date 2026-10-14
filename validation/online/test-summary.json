@@ -1,13 +1,13 @@
 {
   "status": "PASS",
-  "recordedAt": "2026-10-13T19:44:18.899054+00:00",
+  "recordedAt": "2026-10-14T00:21:37.159454+00:00",
   "counts": {
-    "tests": 27,
-    "pass": 27,
+    "tests": 34,
+    "pass": 34,
     "fail": 0,
     "cancelled": 0,
     "skipped": 0
   },
   "log": "node-tests-final.log",
-  "scope": "Shared combat, auth, real rooms/Cup, queue, real local-EVM paid settlement, retries and restart/refund recovery"
+  "scope": "Shared combat, auth, real rooms/Cup, queue, real local-EVM paid settlement, retries and restart/refund recovery; simulated EIP-1193 faucet claim/recovery/transfer validation"
 }
